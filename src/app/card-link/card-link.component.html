@@ -1,0 +1,49 @@
+<!-- <mat-grid-list cols="2" rowHeight="2:1" class="grid-layout-custom">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list> -->
+
+
+<mat-grid-list cols="3" rowHeight="200px" class="grid-layout-custom">
+  <mat-grid-tile colspan="1"><img mat-card-sm-image [src]="iconPath" ></mat-grid-tile>
+  <mat-grid-tile colspan="2">
+    <mat-card appearance="outlined" class="no-border">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title><a [href]="titleHref">{{ titleText }}</a></mat-card-title>
+          <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>        
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content/>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <img mat-card-sm-image [src]="iconPath" > -->
+<!-- <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title><a [href]="titleHref">{{ titleText }}</a></mat-card-title>
+        <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>        
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content />
+  </mat-card> -->
+
+  
+  
+
+
+  <!-- 
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title><a [href]="titleHref">{{ titleText }}</a></mat-card-title>
+        <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>        
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content/>
+  </mat-card>     
+-->
