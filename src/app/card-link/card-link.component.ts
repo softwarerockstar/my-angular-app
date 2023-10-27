@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {Input, Output, EventEmitter} from '@angular/core'
 
 @Component({
   selector: 'card-link',
@@ -10,8 +11,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [MatCardModule, MatGridListModule],
 })
 export class CardLinkComponent {
-  titleText: string = 'ABC';
-  titleHref: string = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
-  subTitle: string = 'def';
-  iconPath: string = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+  
+  @Output() onClick = new EventEmitter<Event>();
+
+  @Input() titleText: string = 'Ahkjhkjh jhjhjhkhj BC';  
+  @Input() subTitle: string = 'def';
+  @Input() iconPath: string = 'https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png'
+
+  raiseClickEvent(args: Event) {
+    this.onClick.emit(args);
+  }
 }
