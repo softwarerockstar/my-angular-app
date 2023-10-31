@@ -5,9 +5,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {Input, Output, EventEmitter} from '@angular/core'
 
 @Component({
-  selector: 'multi-card-link',
-  templateUrl: './multi-card-link.component.html',
-  styleUrls: ['./multi-card-link.component.css'],
+  selector: 'card-link-list',
+  templateUrl: './card-link-list.component.html',
+  styleUrls: ['./card-link-list.component.css'],
   standalone: true,
   imports: [CommonModule, MatCardModule, MatGridListModule],
 })

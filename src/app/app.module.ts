@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardLinkComponent } from './card-link/card-link.component';
-import { MultiCardLinkComponent } from './multi-card-link/multi-card-link.component';
+import { MultiCardLinkComponent } from './card-link-list/card-link-list.component';
 
 @NgModule({
   declarations: [
