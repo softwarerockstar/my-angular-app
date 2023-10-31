@@ -21,15 +21,20 @@ export class MultiCardLinkComponent {
     subTitle: string;
     iconPath: string;
   }[] = [{
-    title: "abc",
-    subTitle: "def",
+    title: "I am link one",
+    subTitle: "Please click link one",
     iconPath: "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+  },
+  {
+    title: "I am link two",
+    subTitle: "Or you may click link two",
+    iconPath: "https://myaccount.uhcsr.com/assets/images/ico-completed-claims.png"
   }];
 
   @Input() footerLinkTitle: string | undefined;
 
   raiseClickEvent(args: Event) {
-    this.onClick.emit(args);
+    this.onClick.emit(args);    
   }
 
 }

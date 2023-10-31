@@ -5,8 +5,8 @@
       </mat-card-title-group>
     </mat-card-header>
     <mat-card-content *ngIf="links">
-        <mat-card class="mat-elevation-z8" *ngFor="let link of links">
-            <mat-card-header>
+        <mat-card class="link-button" *ngFor="let link of links; let i = index" >
+            <mat-card-header [class.no-bottom-border] = "i >= links.length - 1">
               <mat-card-title-group>
                 <mat-card-title>        
                     <div class="icon"><img mat-card-xs-image [src]="link.iconPath" /></div>
@@ -24,7 +24,7 @@
           </mat-card>
     </mat-card-content>
     <mat-card-footer *ngIf="footerLinkTitle">
-        <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ footerLinkTitle }}</a>
+        <div class="content"><a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ footerLinkTitle }}</a></div>
     </mat-card-footer>
 </mat-card>
   

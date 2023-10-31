@@ -423,14 +423,17 @@
     </button>
   </div>
 
-  <multi-card-link heading="Care Options" footerLinkTitle="Explore" />
+  <div style="margin: 40px; width: 380px">
+    <multi-card-link heading="Care Options" footerLinkTitle="Explore" (onClick)="cardLinkOnClick($event)" />
+  </div>
 
-  <card-link 
-    titleText="This is a test"    
-    subTitle="Please click here"
-    iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
-    (onClick)="cardLinkOnClick($event)" />
-    
+  <div style="margin: 40px; width: 300px">
+    <card-link 
+      titleText="This is a test"    
+      subTitle="Please click here"
+      iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+      (onClick)="cardLinkOnClick($event)" />
+  </div>    
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>

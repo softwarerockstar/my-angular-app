@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-angular-app';
 
-  cardLinkOnClick(args: Event){
-    console.log(args);
+  cardLinkOnClick(args: any){
+    console.log(args.srcElement.innerText);
   }
 }
