@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardLinkComponent } from './card-link/card-link.component';
+import { MultiCardLinkComponent } from './multi-card-link/multi-card-link.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CardLinkComponent } from './card-link/card-link.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CardLinkComponent
+    CardLinkComponent,
+    MultiCardLinkComponent,    
   ],
   providers: [],
   bootstrap: [AppComponent]

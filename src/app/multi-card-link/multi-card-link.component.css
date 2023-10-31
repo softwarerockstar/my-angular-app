@@ -1,0 +1,10 @@
+mat-card.container {
+    border-top: 3px solid #003da1;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+mat-card-footer {
+    margin: auto;
+
+}

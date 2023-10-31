@@ -1,0 +1,32 @@
+<mat-card class="container">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title *ngIf="heading">{{heading}}</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content *ngIf="links">
+        <mat-card class="mat-elevation-z8" *ngFor="let link of links">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>        
+                    <div class="icon"><img mat-card-xs-image [src]="link.iconPath" /></div>
+                    <div class="anchor">
+                      <div>
+                        <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ link.title }}</a>
+                      </div>
+                      <div>
+                        {{ link.subTitle }}
+                      </div>
+                    </div>        
+                </mat-card-title>          
+              </mat-card-title-group>
+            </mat-card-header>
+          </mat-card>
+    </mat-card-content>
+    <mat-card-footer *ngIf="footerLinkTitle">
+        <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ footerLinkTitle }}</a>
+    </mat-card-footer>
+</mat-card>
+  
+  
+  
