@@ -1,0 +1,258 @@
+/* ".inherited-styles-for-exported-element" is a generated class for the inherited styles of the exported element, feel free to rename it. */
+
+/* span {
+    padding-bottom: 0;
+  }
+  
+  b, img {
+    font-size: inherit;
+  }
+  
+  a, b, i, img, span {
+    font-family: inherit;
+  }
+  
+  a, b, i, img {
+    padding: 0;
+  }
+  
+  a, b, img, span {
+    margin: 0;
+  }
+  
+  i {
+    font-size: inherit;
+    margin-left: 0;
+  }
+  
+  a, b, div, h2, i, img, span {
+    border-style: initial;
+    border-width: 0;
+    font-feature-settings: inherit;
+    font-kerning: inherit;
+    font-optical-sizing: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-variant-position: inherit;
+    font-variation-settings: inherit;
+    font-weight: inherit;
+    vertical-align: baseline;
+  }
+  
+  a, b, div, h2, i, img {
+    line-height: inherit;
+  }
+  
+  h2, span {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  h2 {
+    padding-top: 0;
+  }
+  
+  div {
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .inherited-styles-for-exported-element {
+    line-height: 18px;
+  }
+  
+  [ui-sref] {
+    cursor: pointer;
+  } */
+  
+  .widget {
+    background-color: #fff;
+    border: 1px solid #bdcacd;
+    border-radius: 2px;
+    border-top: 3px solid #003da1;
+    box-shadow: #d7d7d7 0 2px 2px;
+    margin-bottom: 30px;    
+  }
+
+  .widget mat-card-header, .widget mat-card-content {
+    padding: 20px;
+  }
+
+  .widget mat-card-content {
+    min-height: 85px;
+  }
+
+  .widget mat-card-footer {
+    background: #e9f7f9;    
+    padding: 18px;
+  }
+  
+  @media (max-width: 959px) and (min-width: 600px) {
+    .widget {
+      margin-bottom: 14px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .widget {
+      margin-bottom: 14px;
+    }
+  }
+ 
+  a:-webkit-any-link {
+    text-decoration: none;
+  }
+  
+  .widget a, .widget.myclaims .card div a:hover {
+    text-decoration: none;
+  }
+  
+  .header {
+    color: #000;
+    font-family: uhc_sansbold;
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  
+  [tabindex="-1"]:focus {
+    outline: 0;
+  }
+  
+  .widget.myclaims {
+    color: #003da1;
+    font-family: uhc_sansmedium;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 767px) {
+    .widget.myclaims {
+      overflow: hidden;
+      padding-bottom: 13px;
+    }
+  }
+  
+  @media (max-width: 375px) and (min-width: 320px) {
+    .widget.myclaims {
+      margin-bottom: 14px;
+      overflow: hidden;
+      padding-bottom: 0;
+    }
+  }
+  
+  .widget.myclaims {
+    min-height: 255px;
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 1136px) {
+    .widget.myclaims {
+      min-height: 266px;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 766px) {
+    .widget.myclaims {
+      min-height: 266px;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 766px) and (orientation:landscape) {
+    .widget.myclaims {
+      padding-bottom: 13px;
+    }
+  }
+  
+  .widget.myclaims i {
+    display: inline-block;
+    height: 36px;
+    margin-bottom: 25px;
+    margin-right: 28px;
+    margin-top: 6px;
+    width: 36px;
+  }
+  
+  .widget.myclaims span {
+    color: rgba(0, 0, 0, .87);
+    display: block;
+    font-size: 14px;
+  }
+  
+  .widget.myclaims a {
+    color: #003da1;
+    font-size: 16px;
+  }
+  
+  .widget.myclaims .card div {
+    border-bottom: 1px solid #e6eaeb;
+    line-height: 20px;
+    padding: 18px 0;
+  }
+  
+  .widget.myclaims .card div img {
+    transition: all .3s linear;    
+  }
+  
+  .widget.myclaims .card div:first-child {
+    padding: 0 0 12px;
+  }
+  
+  .widget.myclaims .card div:nth-child(3) {
+    border-style: none;
+    padding: 18px 0 0;
+  }
+  
+  .widget.myclaims .card div:last-child {
+    border-style: none;
+    padding: 18px 0 0;
+  }
+  
+  .widget.myclaims .card div:first-child span {
+    line-height: 16px;
+    padding-top: 3px;
+  }
+  
+  .widget.myclaims .card div:hover img {
+    transform: scale(1.1);
+  }
+  
+  .widget.myclaims .card div a b:hover {
+    text-decoration: underline;
+  }
+  
+  ::placeholder {
+    color: #003da1 !important;
+  }
+  
+  @media (max-width: 767px) {
+    .widget.myclaims {
+      padding-bottom: 13px !important;
+    }
+  }
+  
+  .widget.myclaims {
+    max-height: none !important;
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 1136px) {
+    .widget.myclaims {
+      max-height: none !important;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 766px) {
+    .widget.myclaims {
+      max-height: none !important;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 766px) and (orientation:landscape) {
+    .widget.myclaims {
+      height: 281px !important;
+      max-height: 282px !important;
+      min-height: 281px !important;
+    }
+  }
+  

@@ -1,17 +1,29 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {Directive, Input, Output, EventEmitter} from '@angular/core'
 import {MatCardModule} from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {Input, Output, EventEmitter} from '@angular/core'
+
+@Directive({
+  selector: 'card-link-list-footer',
+  standalone: true
+})
+export class CardLinkFooterDirective{}
+
+@Directive({
+  selector: 'card-link-list-content',
+  standalone: true
+})
+export class CardLinkContentDirective{}
+
 
 @Component({
-  selector: 'card-link-list',
-  templateUrl: './card-link-list.component.html',
-  styleUrls: ['./card-link-list.component.css'],
+  selector: 'card-link-list2',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatGridListModule],
+  imports: [CommonModule, MatCardModule],
+  templateUrl: './card-link-list2.component.html',
+  styleUrls: ['./card-link-list2.component.css']
 })
-export class CardLinkListComponent {
+export class CardLinkList2Component {
   @Output() onClick = new EventEmitter<Event>();
 
   @Input() heading?: string;  
@@ -29,13 +41,10 @@ export class CardLinkListComponent {
     title: "I am link two",
     subTitle: "Or you may click link two",
     iconPath: "https://myaccount.uhcsr.com/assets/images/ico-completed-claims.png"
-  }];
-
-  @Input() footerLinkTitle: string | undefined;
+  }];  
 
   raiseClickEvent(args: Event) {
     this.onClick.emit(args);    
   }
 
 }
-

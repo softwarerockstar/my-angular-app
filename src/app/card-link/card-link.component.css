@@ -10,13 +10,16 @@ mat-card-title {
 .icon {
   position: absolute;
   top: 0;
-  bottom: 0;
-  background: #e9f7f9;
+  bottom: 0;  
   width: 60px;
   float: left;
 }
 
-.icon:before {
+.raised .icon {
+  background: #e9f7f9;
+}
+
+.raised .icon:before {
   top: 0;
   width: 20px;
   height: 50%;
@@ -26,7 +29,7 @@ mat-card-title {
   background: linear-gradient(to right top, #e9f7f9 50%, rgba(0, 0, 0, 0) 50%);
 }
 
-.icon:after {
+.raised .icon:after {
   top: 50%;
   width: 20px;
   height: 50%;
@@ -49,4 +52,6 @@ mat-card-title {
   margin: 0 12px 0 85px
 }
 
-
+.flat {
+  box-shadow: none;
+}

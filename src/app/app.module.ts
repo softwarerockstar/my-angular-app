@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardLinkComponent } from './card-link/card-link.component';
-import { MultiCardLinkComponent } from './card-link-list/card-link-list.component';
+import { CardLinkListComponent } from './card-link-list/card-link-list.component';
+import { CardLinkList2Component, CardLinkContentDirective, CardLinkFooterDirective } from './card-link-list2/card-link-list2.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,10 @@ import { MultiCardLinkComponent } from './card-link-list/card-link-list.componen
     BrowserModule,
     BrowserAnimationsModule,
     CardLinkComponent,
-    MultiCardLinkComponent,    
+    CardLinkListComponent,   
+    CardLinkList2Component,
+    CardLinkContentDirective,
+    CardLinkFooterDirective
   ],
   providers: [],
   bootstrap: [AppComponent]

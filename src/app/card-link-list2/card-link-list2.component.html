@@ -1,0 +1,9 @@
+<mat-card class="widget myclaims">
+    <mat-card-header *ngIf="heading"><div class="header">{{ heading }}</div></mat-card-header>
+    <mat-card-content>
+        <ng-content select="card-link-list-content"></ng-content>
+    </mat-card-content>
+    <mat-card-footer>
+        <ng-content select="card-link-list-footer"></ng-content>
+    </mat-card-footer>
+</mat-card>
