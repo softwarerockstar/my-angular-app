@@ -1,5 +1,5 @@
 <mat-card class="container">
-    <mat-card-header>
+    <mat-card-header class="title">
       <mat-card-title-group>
         <mat-card-title *ngIf="heading">{{heading}}</mat-card-title>
       </mat-card-title-group>
@@ -11,10 +11,10 @@
                 <mat-card-title>        
                     <div class="icon"><img mat-card-xs-image [src]="link.iconPath" /></div>
                     <div class="anchor">
-                      <div>
+                      <div class="header">
                         <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ link.title }}</a>
                       </div>
-                      <div>
+                      <div class="text">
                         {{ link.subTitle }}
                       </div>
                     </div>        
@@ -23,7 +23,7 @@
             </mat-card-header>
           </mat-card>
     </mat-card-content>
-    <mat-card-footer *ngIf="footerLinkTitle">
+    <mat-card-footer *ngIf="footerLinkTitle" class="footer">
         <div class="content"><a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ footerLinkTitle }}</a></div>
     </mat-card-footer>
 </mat-card>

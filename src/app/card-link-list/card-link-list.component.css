@@ -1,7 +1,29 @@
 mat-card.container {
-    border-top: 2px solid #003da1;
+    font-family: uhc_sansmedium;
+    font-size: 16px;
+    color: #003da1;
     border-radius: 2px;
-    margin-bottom: 30px;
+    box-shadow: 0 2px 2px #d7d7d7;
+    border-top: 3px solid #003da1;
+    padding: 0px;
+    background: #fff;
+    margin-bottom: 30px;    
+}
+
+mat-card.container a {
+    color: #003da1;
+}
+
+mat-card-title.title {
+    padding-top: 0;
+}
+
+.title  mat-card-title {
+    font-family: uhc_sansbold;
+    font-size: 18px;
+    color: #000;
+    margin: 0;
+    padding-bottom: 25px;
 }
 
 mat-card-footer {
@@ -11,12 +33,10 @@ mat-card-footer {
 
 mat-card.link-button  {
     box-shadow: none;
-}
-
-mat-card.link-button  mat-card-header {
-    padding: 0;    
-    margin-bottom: 18px;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #e6eaeb;
+    line-height: 20px; 
+    padding-bottom: 12px;  
+    line-height: 23px; 
 }
 
 .no-bottom-border {
@@ -36,7 +56,8 @@ mat-card-footer {
 
 mat-card-footer .content {
     margin: auto;
-    width: 25%;
+    width: 50%;
+    text-align: center;    
 }
   
   .icon {
@@ -56,9 +77,34 @@ mat-card-footer .content {
     
   }
   
-  .anchor {
+.anchor {
     margin: 0 12px 0 85px
-  }
+}
+
+.anchor .header {
+    font-family: "uhc_sansmedium";
+    font-size: 16px;
+    color: #003da1;    
+}
+
+.anchor .header a, 
+.footer .content a {
+    text-decoration: none;
+}
+
+.anchor .header a:hover, 
+.footer .content a:hover {
+    text-decoration: underline;
+}
+
+.anchor .text {
+    font-family: "uhc_sansmedium";
+    font-size: 14px;
+    color: rgba(0,0,0,.87);
+    line-height: 16px;
+    padding-top: 3px;
+}
+
   
   
   
