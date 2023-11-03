@@ -9,7 +9,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-angular-app';
 
-  cardLinkOnClick(args: any){
-    console.log(args.srcElement.innerText);
-  }
 }

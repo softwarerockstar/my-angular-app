@@ -1,32 +1,11 @@
-<mat-card class="container">
-    <mat-card-header class="title">
-      <mat-card-title-group>
-        <mat-card-title *ngIf="heading">{{heading}}</mat-card-title>
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content *ngIf="links">
-        <mat-card class="link-button" *ngFor="let link of links; let i = index" >
-            <mat-card-header [class.no-bottom-border] = "i >= links.length - 1">
-              <mat-card-title-group>
-                <mat-card-title>        
-                    <div class="icon"><img mat-card-xs-image [src]="link.iconPath" /></div>
-                    <div class="anchor">
-                      <div class="header">
-                        <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ link.title }}</a>
-                      </div>
-                      <div class="text">
-                        {{ link.subTitle }}
-                      </div>
-                    </div>        
-                </mat-card-title>          
-              </mat-card-title-group>
-            </mat-card-header>
-          </mat-card>
+<mat-card class="widget">
+    <mat-card-header *ngIf="heading"><div class="header">{{ heading }}</div></mat-card-header>
+    <mat-card-content>
+        <div class="content-links">
+            <ng-content select="card-link-list-content"></ng-content>
+        </div>
     </mat-card-content>
-    <mat-card-footer *ngIf="footerLinkTitle" class="footer">
-        <div class="content"><a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ footerLinkTitle }}</a></div>
+    <mat-card-footer>
+        <ng-content select="card-link-list-footer"></ng-content>
     </mat-card-footer>
 </mat-card>
-  
-  
-  

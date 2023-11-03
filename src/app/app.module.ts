@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardLinkComponent } from './card-link/card-link.component';
-import { CardLinkListComponent } from './card-link-list/card-link-list.component';
-import { CardLinkList2Component, CardLinkContentDirective, CardLinkFooterDirective } from './card-link-list2/card-link-list2.component';
+import { DemoSharedComponentsComponent } from './demo-shared-components/demo-shared-components.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +11,7 @@ import { CardLinkList2Component, CardLinkContentDirective, CardLinkFooterDirecti
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CardLinkComponent,
-    CardLinkListComponent,   
-    CardLinkList2Component,
-    CardLinkContentDirective,
-    CardLinkFooterDirective
+    DemoSharedComponentsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
