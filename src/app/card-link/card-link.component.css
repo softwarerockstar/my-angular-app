@@ -1,57 +1,102 @@
-mat-card-header {
+mat-card.card-link-item mat-card-header {
   padding: 0;
 }
 
-mat-card-title {
+mat-card.card-link-item mat-card-title {
   display: flex;    
   position:relative;
 }
 
-.icon {
+mat-card.card-link-item .icon {
   position: absolute;
   top: 0;
   bottom: 0;  
   width: 60px;
-  float: left;
+  float: left;    
 }
 
-.raised .icon {
+mat-card.card-link-item .icon img {
+  transition: all .3s linear;
+}
+
+mat-card.card-link-item.raised .icon {
   background: #e9f7f9;
 }
 
-.raised .icon:before {
+mat-card.card-link-item.raised .icon img {
+  padding-left: 12px;  
+  transform: translateY(50%);
+}
+
+mat-card.card-link-item.raised {
+  border: solid 1px #bdcacd;
+  box-shadow: 0 2px 2px #d7d7d7;
+}
+mat-card.card-link-item.raised .icon:before {
   top: 0;
   width: 20px;
   height: 50%;
-  position:absolute;
+  position: absolute;
   left: 100%;
   content: "";
   background: linear-gradient(to right top, #e9f7f9 50%, rgba(0, 0, 0, 0) 50%);
 }
 
-.raised .icon:after {
+mat-card.card-link-item.raised .icon:after {
   top: 50%;
   width: 20px;
   height: 50%;
-  position:absolute;
+  position: absolute;
   left: 100%;
   content: "";
   background: linear-gradient(to right bottom, #e9f7f9 50%, rgba(0, 0, 0, 0) 50%);
 }
 
-.icon img {
+mat-card.card-link-item .icon img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 6px;
-  margin-bottom: 6px;
-  
+  margin-bottom: 6px;  
 }
 
-.anchor {
+mat-card.card-link-item .anchor {
   margin: 0 12px 0 85px
 }
 
-.flat {
+mat-card.card-link-item.raised .anchor div {
+  padding-top: 8px;
+}
+
+mat-card.card-link-item .anchor a {
+  font-family: uhc_sansbold;
+  color: #003da1;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+mat-card.card-link-item.flat .anchor a {
+  font-family: uhc_sansmedium;
+  color: #003da1;
+  font-size: 16px;
+}
+
+mat-card.card-link-item .anchor a:hover {    
+  text-decoration: underline;
+}
+
+mat-card.card-link-item.flat {
   box-shadow: none;
+}
+
+mat-card.card-link-item.animate:hover img {
+  transform: scale(1.1);
+}
+
+mat-card.card-link-item .mat-mdc-card-title {
+  font-family: uhc_sansregular;
+  font-size: 14px;  
+  font-weight: 400;
+  letter-spacing: .010em;
+  color: #000;
 }

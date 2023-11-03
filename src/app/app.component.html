@@ -429,52 +429,43 @@
       <card-link-list-content>
         <div style="display: flex; flex-direction: column; align-content: center; justify-content: center; align-items: center;">
           <card-link 
-          [flat]="true"
-          titleText="This is a test"    
-          subTitle="Please click here"
+          [flat]="true" [animate]="true"
+          titleText="Claims Summary"    
+          subTitle="Summary of pending & completed claims"
           iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
           (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
           <card-link 
-          [flat]="true"
-          titleText="This is a test"    
-          subTitle="Please click here"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+          [flat]="true" [animate]="true"
+          titleText="Member Balances"    
+          subTitle="Deductible and Out-of-Pocket Balances"
+          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-completed-claims.png"
           (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
           <card-link 
-          [flat]="true"
-          titleText="This is a test"    
-          subTitle="Please click here"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+          [flat]="true" [animate]="true"
+          titleText="Submit Claim"    
+          subTitle="Request Reimbursement for your claims"
+          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-pra.png"
           (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
           <card-link 
-          [flat]="true"
-          titleText="This is a test"    
-          subTitle="Please click here"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
-          (onClick)="cardLinkOnClick($event)" />
-
-          <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
-
-          <card-link 
-          [flat]="true"
-          titleText="This is a test"    
-          subTitle="Please click here"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+          [flat]="true" [animate]="true"
+          titleText="Coverage Information"    
+          subTitle="Policy Info for your claims and coverages"
+          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-id.png"
           (onClick)="cardLinkOnClick($event)" />
 
         </div>
       </card-link-list-content>
       <card-link-list-footer style="display:block;margin:auto;width:50%;text-align: center;;">
-        Emplore More
+        <a href="#">Explore More</a>
       </card-link-list-footer>
     </card-link-list2>
   </div>
@@ -484,10 +475,10 @@
   </div> -->
 
   
-  <div style="margin: 40px; width: 300px">
+  <div style="margin: 40px; width: 350px">
     <card-link 
-      titleText="This is a test"    
-      subTitle="Please click here"
+      titleText="Coverage Information"    
+      subTitle="Policy Info., Tax Documents, Get Additional Coverage, View Coverage Letter (COC)"
       iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
       (onClick)="cardLinkOnClick($event)" />
   </div>    

@@ -13,7 +13,8 @@ import {Input, Output, EventEmitter} from '@angular/core'
 export class CardLinkComponent {
   
   @Input() flat: boolean = false;
-  
+  @Input() animate: boolean = false;
+
   @Output() onClick = new EventEmitter<Event>();
 
   @Input() titleText: string = 'Ahkjhkjh jhjhjhkhj BC';  

@@ -1,7 +1,7 @@
 mat-card.container {
     font-family: uhc_sansmedium;
     font-size: 16px;
-    color: #003da1;
+    color: rgba(0,0,0,.87);
     border-radius: 2px;
     box-shadow: 0 2px 2px #d7d7d7;
     border-top: 3px solid #003da1;
@@ -18,7 +18,7 @@ mat-card-title.title {
     padding-top: 0;
 }
 
-.title  mat-card-title {
+mat-card.container .title  mat-card-title {
     font-family: uhc_sansbold;
     font-size: 18px;
     color: #000;
@@ -26,12 +26,12 @@ mat-card-title.title {
     padding-bottom: 25px;
 }
 
-mat-card-footer {
+mat-card.container mat-card-footer {
     margin: auto;
 
 }
 
-mat-card.link-button  {
+mat-card.container mat-card.link-button  {
     box-shadow: none;
     border-bottom: 1px solid #e6eaeb;
     line-height: 20px; 
@@ -39,28 +39,28 @@ mat-card.link-button  {
     line-height: 23px; 
 }
 
-.no-bottom-border {
+mat-card.container .no-bottom-border {
     border-bottom: none !important; 
 }
   
-mat-card.link-button mat-card-title {
+mat-card.container mat-card.link-button mat-card-title {
     display: flex;    
     position:relative;
 }
 
-mat-card-footer {
+mat-card.container mat-card-footer {
     padding: 18px;
     margin: 0;
     background: #e9f7f9;
 }
 
-mat-card-footer .content {
+mat-card.container mat-card-footer .content {
     margin: auto;
     width: 50%;
     text-align: center;    
 }
   
-  .icon {
+mat-card.container .icon {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -68,7 +68,7 @@ mat-card-footer .content {
     float: left;
   }
   
-  .icon img {
+  mat-card.container .icon img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -77,33 +77,34 @@ mat-card-footer .content {
     
   }
   
-.anchor {
+  mat-card.container .anchor {
     margin: 0 12px 0 85px
 }
 
-.anchor .header {
+mat-card.container .anchor .header {
     font-family: "uhc_sansmedium";
     font-size: 16px;
     color: #003da1;    
 }
 
-.anchor .header a, 
-.footer .content a {
+mat-card.container .anchor .header a, 
+mat-card.container .footer .content a {
     text-decoration: none;
 }
 
-.anchor .header a:hover, 
-.footer .content a:hover {
+mat-card.container .anchor .header a:hover, 
+mat-card.container .footer .content a:hover {
     text-decoration: underline;
 }
 
-.anchor .text {
+mat-card.container .anchor .text {
     font-family: "uhc_sansmedium";
     font-size: 14px;
     color: rgba(0,0,0,.87);
     line-height: 16px;
     padding-top: 3px;
 }
+
 
   
   

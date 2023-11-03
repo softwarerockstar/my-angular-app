@@ -20,18 +20,9 @@ export class CardLinkListComponent {
     title: string;
     subTitle: string;
     iconPath: string;
-  }[] = [{
-    title: "I am link one",
-    subTitle: "Please click link one",
-    iconPath: "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
-  },
-  {
-    title: "I am link two",
-    subTitle: "Or you may click link two",
-    iconPath: "https://myaccount.uhcsr.com/assets/images/ico-completed-claims.png"
-  }];
+  }[];
 
-  @Input() footerLinkTitle: string | undefined;
+  @Input() footerLinkTitle?: string;
 
   raiseClickEvent(args: Event) {
     this.onClick.emit(args);    
