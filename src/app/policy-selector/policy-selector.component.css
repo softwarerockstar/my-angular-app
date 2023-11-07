@@ -1,0 +1,11 @@
+div.policy-selector-container,
+.option,
+div.policy-selector-container button.btn {
+    font-family: uhc_sansregular;
+    color: #003da1;
+    font-size: 14px;  
+}
+div.policy-selector-container button.btn img {
+    vertical-align: middle;
+}
+

@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoSharedComponentsComponent } from './demo-shared-components/demo-shared-components.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from './modules/material/material.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,9 @@ import { DemoSharedComponentsComponent } from './demo-shared-components/demo-sha
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    DemoSharedComponentsComponent
+    DemoSharedComponentsComponent,
+    FlexLayoutModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

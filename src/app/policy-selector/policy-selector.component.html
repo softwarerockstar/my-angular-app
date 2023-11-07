@@ -1,0 +1,37 @@
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <mat-form-field>
+            <mat-label>Select Policy</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let policy of policies" [value]="policy.value">
+                    {{policy.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-button>
+            <mat-icon>mic</mat-icon>
+            Start Recording
+        </button>
+    </mat-grid-tile>
+</mat-grid-list> -->
+
+<div class="policy-selector-container" fxLayout="row wrap">
+    <div fxFlex="75%" fxFlex.sm="100%">
+        <mat-form-field>
+            <mat-label>Select Policy</mat-label>
+            <mat-select>
+                <mat-option class="option" *ngFor="let policy of policies" [value]="policy.value">
+                    {{policy.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxFlex="25%" fxFlex.sm="100%" fxFlexAlign="end">
+        <button class="btn" mat-button>
+            <img src="https://myaccount.uhcsr.com/assets/images/purchase-additional-coverage.png">
+            Purchase
+        </button>
+    </div>
+</div>
