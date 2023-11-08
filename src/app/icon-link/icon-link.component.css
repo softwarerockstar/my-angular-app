@@ -1,0 +1,15 @@
+button.btn {
+    font-family: uhc_sansregular;
+    color: #003da1;
+    font-size: 14px;  
+    border: none;
+    background: inherit;
+}
+
+button.btn span {
+    margin-left: 12px;
+    cursor: pointer;
+}
+button.btn img {
+    vertical-align: middle;
+}

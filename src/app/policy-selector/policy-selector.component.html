@@ -17,8 +17,8 @@
     </mat-grid-tile>
 </mat-grid-list> -->
 
-<div class="policy-selector-container" fxLayout="row wrap">
-    <div fxFlex="75%" fxFlex.sm="100%">
+<div class="policy-selector-container" fxLayout="row wrap" fxLayoutGap="12px grid">
+    <div fxFlex="65%" fxFlex.sm="100%">
         <mat-form-field class="custom">
             <mat-label class="custom">Select Policy</mat-label>
             <mat-select disableRipple="true" panelClass="custom" ngClass="custom" appearance="outline">
@@ -28,10 +28,7 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <div fxFlex="25%" fxFlex.sm="100%" fxFlexAlign="end">
-        <button class="btn" mat-button>
-            <img src="https://myaccount.uhcsr.com/assets/images/purchase-additional-coverage.png">
-            Purchase
-        </button>
+    <div fxFlex="35%" fxFlex.sm="100%" fxFlexAlign="end">
+      <ng-content select="policy-selector-buttons"></ng-content>
     </div>
 </div>

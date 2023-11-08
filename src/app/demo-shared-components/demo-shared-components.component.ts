@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardLinkComponent } from '../card-link/card-link.component';
 import { CardLinkListComponent, CardLinkContentDirective, CardLinkFooterDirective } from '../card-link-list/card-link-list.component';
-import { PolicySelectorComponent } from '../policy-selector/policy-selector.component';
+import { IconLinkComponent } from '../icon-link/icon-link.component';
+import { PolicySelectorComponent, PolicySelectotButtonsDirective } from '../policy-selector/policy-selector.component';
+
+ 
 
 @Component({
   selector: 'app-demo-shared-components',
@@ -13,7 +16,9 @@ import { PolicySelectorComponent } from '../policy-selector/policy-selector.comp
     CardLinkListComponent,   
     CardLinkContentDirective,
     CardLinkFooterDirective,
-    PolicySelectorComponent
+    IconLinkComponent,
+    PolicySelectorComponent,
+    PolicySelectotButtonsDirective
   ],
   templateUrl: './demo-shared-components.component.html',
   styleUrls: ['./demo-shared-components.component.css']

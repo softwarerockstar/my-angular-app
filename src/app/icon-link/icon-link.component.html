@@ -1,0 +1,4 @@
+<button class="btn" mat-button>
+    <img *ngIf="iconPath" [src]="iconPath">
+    <span (click)="raiseClickEvent($event)" *ngIf="titleText">{{ titleText }}</span>
+</button>

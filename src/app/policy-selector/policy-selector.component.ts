@@ -1,9 +1,15 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Directive, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Input, Output, EventEmitter} from '@angular/core'
 import {FormsModule} from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+@Directive({
+  selector: 'policy-selector-buttons',
+  standalone: true
+})
+export class PolicySelectotButtonsDirective{}
 
 @Component({
   selector: 'policy-selector',
