@@ -1,13 +1,13 @@
 div.policy-selector-container,
 .option {
-    font-family: uhc_sansregular;
+    font-family: UHCSans-Regular;
     /* color: #003da1; */
     font-size: 14px;  
 }
 
 .custom
 {
-    font-family: uhc_sansregular !important;
+    font-family: UHCSans-Regular !important;
     color: black  !important;
     font-size: 16px  !important;  
     font-weight: 400  !important;
@@ -19,7 +19,7 @@ div.policy-selector-container,
 }
 
 .mat-mdc-select {
-    font-family: uhc_sansregular !important;
+    font-family: UHCSans-Regular !important;
     color: black  !important;
     font-size: 14px  !important;  
     font-weight: 400  !important;
@@ -27,7 +27,7 @@ div.policy-selector-container,
 }
 
 .mat-mdc-option .mdc-list-item__primary-text {
-    font-family: uhc_sansregular !important;
+    font-family: UHCSans-Regular !important;
     color: black  !important;
     font-size: 16px  !important;  
     font-weight: 400  !important;    

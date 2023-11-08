@@ -69,14 +69,14 @@ mat-card.card-link-item.raised .anchor div {
 }
 
 mat-card.card-link-item .anchor a {
-  font-family: uhc_sansbold;
+  font-family: UHCSans-Bold;
   color: #003da1;
   font-size: 18px;
   text-decoration: none;
 }
 
 mat-card.card-link-item.flat .anchor a {
-  font-family: uhc_sansmedium;
+  font-family: UHCSans-Medium;
   color: #003da1;
   font-size: 16px;
 }
@@ -94,7 +94,7 @@ mat-card.card-link-item.animate:hover img {
 }
 
 mat-card.card-link-item .mat-mdc-card-title {
-  font-family: uhc_sansregular;
+  font-family: UHCSans-Regular;
   font-size: 14px;  
   font-weight: 400;
   letter-spacing: .010em;

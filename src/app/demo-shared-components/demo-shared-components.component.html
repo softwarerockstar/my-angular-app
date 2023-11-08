@@ -1,12 +1,12 @@
-<policy-selector>
-  <policy-selector-buttons>
-    <icon-link titleText="Purchase Additional Coverage" iconPath="https://myaccount.uhcsr.com/assets/images/purchase-additional-coverage.png" (onClick)="cardLinkOnClick($event)"/>
-  </policy-selector-buttons>
-</policy-selector>
+
 
 <h1 style="margin:40px">Shared Components Demo</h1>
 <div style="margin: 40px; width: 550px">
-  
+  <policy-selector>
+    <policy-selector-buttons>
+      <icon-link titleText="Purchase Additional Coverage" iconPath="https://myaccount.uhcsr.com/assets/images/purchase-additional-coverage.png" (onClick)="cardLinkOnClick($event)"/>
+    </policy-selector-buttons>
+  </policy-selector>  
 </div>
 <div  style="margin: 40px; width: 350px">
     <card-link-list heading="My Claims/Balances">

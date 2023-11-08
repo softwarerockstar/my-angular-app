@@ -24,5 +24,35 @@ html, body { height: 100%; }
     font-style:normal
 }
 
+
+@font-face{
+    font-family:UHCSans-Black;
+    src:url(/assets/fonts/UHCSans-Black.woff);
+    font-weight:400;font-style:normal
+}
+@font-face{
+    font-family:UHCSans-Bold;
+    src:url(/assets/fonts/UHCSans-Bold.woff);
+    font-weight:400;font-style:normal
+}
+@font-face{
+    font-family:UHCSans-Italic;
+    src:url(/assets/fonts/UHCSans-Italic.woff);
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:UHCSans-Regular;
+    src:url(/assets/fonts/UHCSans-Regular.woff);
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:UHCSans-Medium;
+    src:url(/assets/fonts/UHCSans-Medium.woff);
+    font-weight:400;
+    font-style:normal
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

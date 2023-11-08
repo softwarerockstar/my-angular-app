@@ -1,34 +1,24 @@
-<!-- <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>
-        <mat-form-field>
-            <mat-label>Select Policy</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let policy of policies" [value]="policy.value">
-                    {{policy.name}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <button mat-button>
-            <mat-icon>mic</mat-icon>
-            Start Recording
-        </button>
-    </mat-grid-tile>
-</mat-grid-list> -->
 
-<div class="policy-selector-container" fxLayout="row wrap" fxLayoutGap="12px grid">
-    <div fxFlex="65%" fxFlex.sm="100%">
-        <mat-form-field class="custom">
-            <mat-label class="custom">Select Policy</mat-label>
-            <mat-select disableRipple="true" panelClass="custom" ngClass="custom" appearance="outline">
-                <mat-option class="option" *ngFor="let policy of policies" [value]="policy.value">
-                    <span class="custom">{{policy.name}}</span> 
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-    <div fxFlex="35%" fxFlex.sm="100%" fxFlexAlign="end">
-      <ng-content select="policy-selector-buttons"></ng-content>
-    </div>
-</div>
+
+
+<mat-card class="card-link-item">
+  <mat-card-content>
+    <div class="policy-selector-container" fxLayout="row wrap" fxLayoutGap="25px grid" fxLayoutGap.xs="0 grid">
+      <div fxFlex fxFlex.xs="100%">
+          <mat-form-field class="custom">
+              <mat-label class="custom">Select Policy</mat-label>
+              <mat-select disableRipple="true" panelClass="custom" ngClass="custom" appearance="outline">
+                  <mat-option class="option" *ngFor="let policy of policies" [value]="policy.value">
+                      <span class="custom">{{policy.name}}</span> 
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+      </div>    
+      <div fxFlex.xs="100%" fxFlexAlign="end">
+        <ng-content select="policy-selector-buttons"></ng-content>
+      </div>
+  </div>  
+  </mat-card-content>
+</mat-card>
+
+
