@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Input, Output, EventEmitter} from '@angular/core'
 import {FormsModule} from '@angular/forms';
@@ -15,7 +15,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule
   ],
   templateUrl: './policy-selector.component.html',
-  styleUrls: ['./policy-selector.component.css']
+  styleUrls: ['./policy-selector.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PolicySelectorComponent {
   @Input() policies?: {

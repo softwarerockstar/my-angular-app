@@ -19,11 +19,11 @@
 
 <div class="policy-selector-container" fxLayout="row wrap">
     <div fxFlex="75%" fxFlex.sm="100%">
-        <mat-form-field>
-            <mat-label>Select Policy</mat-label>
-            <mat-select>
+        <mat-form-field class="custom">
+            <mat-label class="custom">Select Policy</mat-label>
+            <mat-select disableRipple="true" panelClass="custom" ngClass="custom" appearance="outline">
                 <mat-option class="option" *ngFor="let policy of policies" [value]="policy.value">
-                    {{policy.name}}
+                    <span class="custom">{{policy.name}}</span> 
                 </mat-option>
             </mat-select>
         </mat-form-field>
