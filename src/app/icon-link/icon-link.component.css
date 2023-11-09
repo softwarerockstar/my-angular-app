@@ -1,15 +1,20 @@
 button.btn {
-    font-family: UHCSans-Regular;
-    color: #003da1;
-    font-size: 14px;  
     border: none;
     background: inherit;
 }
 
-button.btn span {
-    margin-left: 12px;
-    cursor: pointer;
+button.btn a {
+    color: #003da1;
+    font-family: UHCSans-Medium;
+    font-size: 14px;
+    margin-left: 12px !important;  
+    text-decoration: none;  
 }
+
+button.btn a:hover {
+    text-decoration: underline;
+}
+
 button.btn img {
     vertical-align: middle;
 }

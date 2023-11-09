@@ -1,39 +1,22 @@
-div.policy-selector-container,
-.option {
-    font-family: UHCSans-Regular;
-    /* color: #003da1; */
-    font-size: 14px;  
-}
-
-.custom
-{
-    font-family: UHCSans-Regular !important;
-    color: black  !important;
-    font-size: 16px  !important;  
-    font-weight: 400  !important;
-    /* background: white  !important; */
-}
-
-.mat-mdc-form-field.custom {
+.mat-mdc-form-field {
     width: -webkit-fill-available;
 }
 
-.mat-mdc-select {
-    font-family: UHCSans-Regular !important;
-    color: black  !important;
-    font-size: 14px  !important;  
-    font-weight: 400  !important;
-    background: white  !important;
-}
-
+.uhcsr-font,
+.mat-mdc-select,
 .mat-mdc-option .mdc-list-item__primary-text {
     font-family: UHCSans-Regular !important;
     color: black  !important;
-    font-size: 16px  !important;  
+    font-size: 14px  !important;  
     font-weight: 400  !important;    
+}
+
+.mat-mdc-select {
+    background: white  !important;
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled),
 .mat-mdc-form-field-focus-overlay {
     background: white !important;
 }
+

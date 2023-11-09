@@ -43,9 +43,7 @@
     margin: 0;
     padding-bottom: 25px;
   }
-  
-  
- 
+
   @media (max-width: 767px) {
     mat-card.widget {
       overflow: hidden;
@@ -61,18 +59,6 @@
     }
   }  
   
-  /* @media only screen and (min-width: 769px) and (max-width: 1136px) {
-    .widget.myclaims {
-      min-height: 266px;
-    }
-  }
-  
-  @media only screen and (min-width: 601px) and (max-width: 766px) {
-    .widget.myclaims {
-      min-height: 266px;
-    }
-  } */
-  
   @media only screen and (min-width: 601px) and (max-width: 766px) and (orientation:landscape) {
     mat-card.widget {
       padding-bottom: 13px;
@@ -85,27 +71,3 @@
     }
   }
   
-  /* .widget.myclaims {
-    max-height: none !important;
-  }
-  
-  @media only screen and (min-width: 769px) and (max-width: 1136px) {
-    .widget.myclaims {
-      max-height: none !important;
-    }
-  }
-  
-  @media only screen and (min-width: 601px) and (max-width: 766px) {
-    .widget.myclaims {
-      max-height: none !important;
-    }
-  } */
-  
-  /* @media only screen and (min-width: 601px) and (max-width: 766px) and (orientation:landscape) {
-    .widget.myclaims {
-      height: 281px !important;
-      max-height: 282px !important;
-      min-height: 281px !important;
-    }
-  }
-   */
