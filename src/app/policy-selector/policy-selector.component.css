@@ -1,3 +1,22 @@
+.policy-selector-container {
+    display: flex;
+    flex-flow: row wrap;    
+    min-width: 250px;;
+}
+
+.policy-selector-select {    
+    flex-grow: 1;
+}
+
+.policy-selector-buttons {
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+}
+
 .mat-mdc-form-field {
     width: -webkit-fill-available;
 }

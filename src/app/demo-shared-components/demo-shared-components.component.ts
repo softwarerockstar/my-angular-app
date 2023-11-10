@@ -8,7 +8,7 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective } from '../poli
  
 
 @Component({
-  selector: 'app-demo-shared-components',
+  selector: 'demo-shared-components',
   standalone: true,
   imports: [
     CommonModule,

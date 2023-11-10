@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {Input, Output, EventEmitter} from '@angular/core'
 import {FormsModule} from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Directive({
   selector: 'policy-selector-buttons',
@@ -18,7 +17,6 @@ export class PolicySelectotButtonsDirective{}
     CommonModule, 
     FormsModule, 
     MaterialModule,
-    FlexLayoutModule
   ],
   templateUrl: './policy-selector.component.html',
   styleUrls: ['./policy-selector.component.css'],
