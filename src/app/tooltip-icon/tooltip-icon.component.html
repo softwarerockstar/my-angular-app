@@ -1,2 +1,5 @@
 
-<img [src]="iconPath" [matTooltip]="tooltipeText" matTooltipClass="uhcsr-tool-tip" />
+<img *ngIf="iconPath"
+    [src]="iconPath" 
+    [matTooltip]="tooltipeText" 
+    matTooltipClass="uhcsr-tooltip" />

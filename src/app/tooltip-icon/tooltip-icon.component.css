@@ -1,4 +1,4 @@
-.uhcsr-tool-tip .mdc-tooltip__surface 
+.uhcsr-tooltip .mdc-tooltip__surface 
    {
     font-family: UHCSans-Regular !important;
     font-size: 14px !important;
@@ -6,5 +6,7 @@
     padding: 15px !important;    
     color: rgb(0,0,0, .87) !important;
     background: #e8f6fa !important;
+    border: 1px solid #cdd5d7 !important;
+    border-radius: 6px !important;
   }
   
