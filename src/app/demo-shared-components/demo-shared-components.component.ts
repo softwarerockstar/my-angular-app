@@ -4,7 +4,7 @@ import { CardLinkComponent } from '../card-link/card-link.component';
 import { CardLinkListComponent, CardLinkContentDirective, CardLinkFooterDirective } from '../card-link-list/card-link-list.component';
 import { IconLinkComponent } from '../icon-link/icon-link.component';
 import { PolicySelectorComponent, PolicySelectotButtonsDirective } from '../policy-selector/policy-selector.component';
-
+import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
  
 
 @Component({
@@ -18,7 +18,8 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective } from '../poli
     CardLinkFooterDirective,
     IconLinkComponent,
     PolicySelectorComponent,
-    PolicySelectotButtonsDirective
+    PolicySelectotButtonsDirective,
+    TooltipIconComponent
   ],
   templateUrl: './demo-shared-components.component.html',
   styleUrls: ['./demo-shared-components.component.css']
