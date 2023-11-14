@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import {Input } from '@angular/core'
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../modules/material/material.module';
+import { MaterialModule } from '../../modules/material/material.module';
 
 
 @Component({

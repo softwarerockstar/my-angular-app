@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Directive, Input, Output, EventEmitter} from '@angular/core'
-import { MaterialModule } from '../modules/material/material.module';
+import { MaterialModule } from '../../modules/material/material.module';
 
 @Directive({
   selector: 'card-link-list-footer',

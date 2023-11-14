@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Input, Output, EventEmitter} from '@angular/core'
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../modules/material/material.module';
+import { MaterialModule } from '../../modules/material/material.module';
 
 @Component({
   selector: 'card-link',

@@ -2,7 +2,7 @@ import { Component, Directive, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Input, Output, EventEmitter} from '@angular/core'
 import {FormsModule} from '@angular/forms';
-import { MaterialModule } from '../modules/material/material.module';
+import { MaterialModule } from '../../modules/material/material.module';
 
 @Directive({
   selector: 'policy-selector-buttons',
