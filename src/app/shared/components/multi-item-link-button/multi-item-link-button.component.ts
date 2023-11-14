@@ -12,6 +12,9 @@ import {Input, Output, EventEmitter} from '@angular/core'
 })
 export class MultiItemLinkButtonComponent {
 
+  @Input() onClick?: (event: Event) => boolean;
+
+  //@Output() onClick = new EventEmitter<Event>() => boolean;
   
   public get isSingle() : boolean {
     return this.links != undefined && this.links.length < 2;
@@ -19,8 +22,14 @@ export class MultiItemLinkButtonComponent {
 
   @Input() links?: {
     text: string,
-    url: string,
+    href?: string,
     target?: string;
   } [];
+  
+  raiseClickEvent(args: Event):boolean {
+    //return this.onClick.emit(args);
+    return false;
+  }
+
 
 }

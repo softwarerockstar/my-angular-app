@@ -38,17 +38,19 @@ export class DemoSharedComponentsComponent {
 
   multiItemlinks: {
     text: string,
-    url: string,
+    href?: string,
     target?: string;
   } [] = [
-    {text: "Google", url: "https://www.google.com"},
-    {text: "Bing", url: "https://www.bing.com"},
-    {text: "Yahoo!", url: "https://www.yahoo.com"}
+    {text: "Click Me"},
+    {text: "Google (New Tab)", href: "https://www.google.com", target: "_blank"},
+    {text: "Bing (New Tab)", href: "https://www.bing.com", target: "_blank"},
+    {text: "Yahoo! (Same Tab)", href: "https://www.yahoo.com"}
   ]
 
 
   cardLinkOnClick(args: any){
     console.log(args.srcElement.innerText);
+    return false;
   }
 
 }

@@ -1,11 +1,22 @@
 <div *ngIf="links">
+
+    <!-- Single item -->
     <div *ngIf="isSingle">
-        Single!!
-        <div *ngFor="let link of links">{{ link.text }}</div>
+        <a [href]="links[0].href ?? '#'" [target]="links[0].target ?? '_self'" (click)="return raiseClickEvent($event)">
+            {{ links[0].text }}
+        </a>
     </div>
 
-    <div *ngIf="!isSingle">
-        Multiple!!
-        <div *ngFor="let link of links">{{ link.text }}</div>
+    <!-- Multiple items - display a menu  -->
+    <div *ngIf="!isSingle">        
+        <a href="#" [matMenuTriggerFor]="appMenu">
+            {{ links[0].text }}
+        </a>
+
+        <mat-menu #appMenu="matMenu">
+            <!-- All links except for the first one -->
+            <a *ngFor="let link of links | slice:1" mat-menu-item [href]="link.href ?? '#'" [target]="link.target ?? '_self'">{{ link.text }}</a>
+        </mat-menu>
+
     </div>
 </div>
