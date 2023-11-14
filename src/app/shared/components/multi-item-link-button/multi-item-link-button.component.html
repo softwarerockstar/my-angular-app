@@ -1,25 +1,27 @@
-<div *ngIf="links">
+<ng-container *ngIf="links">
+
+    <img class="icon" *ngIf="iconPath" [src]="iconPath" />&nbsp;
 
     <!-- Single item -->
-    <div *ngIf="isSingle">
-        <a [href]="links[0].href ?? '#'" [target]="links[0].target ?? '_self'">
+    <ng-container *ngIf="isSingle">
+        <a class="main" [href]="links[0].href ?? '#'" [target]="links[0].target ?? '_self'">
             {{ links[0].text }}
         </a>
-    </div>
+    </ng-container>
 
     <!-- Multiple items - display a menu  -->
-    <div *ngIf="!isSingle">     
+    <ng-container *ngIf="!isSingle">     
         
         <!-- First item acts as the menu trigger -->
-        <a href="#" [matMenuTriggerFor]="appMenu">
+        <a class="main" href="#" [matMenuTriggerFor]="appMenu">
             {{ links[0].text }}
         </a>
 
         <!-- rest of the items are displayed in a dropdown menu -->
-        <mat-menu #appMenu="matMenu">
+        <mat-menu #appMenu="matMenu" class="uhcsr-multi-item-link-button-menu">
             <!-- All links except for the first one -->
-            <a *ngFor="let link of links | slice:1" mat-menu-item [href]="link.href ?? '#'" [target]="link.target ?? '_self'">{{ link.text }}</a>
+            <a class="uhcsr-multi-item-link-button-menu-item" *ngFor="let link of links | slice:1" mat-menu-item [href]="link.href ?? '#'" [target]="link.target ?? '_self'">{{ link.text }}</a>
         </mat-menu>
 
-    </div>
-</div>
+    </ng-container>
+</ng-container>

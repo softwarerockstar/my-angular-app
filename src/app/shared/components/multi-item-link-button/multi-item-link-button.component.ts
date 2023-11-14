@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MaterialModule } from '../../modules/material/material.module';
 import { Input } from '@angular/core'
 
@@ -8,17 +8,21 @@ import { Input } from '@angular/core'
   templateUrl: './multi-item-link-button.component.html',
   styleUrls: ['./multi-item-link-button.component.css'],
   standalone: true,
-  imports: [CommonModule, MaterialModule]
+  imports: [CommonModule, MaterialModule],
+  encapsulation: ViewEncapsulation.None
 })
 export class MultiItemLinkButtonComponent {
 
-  public get isSingle() : boolean {
-    return this.links != undefined && this.links.length < 2;
-  }
+  @Input() iconPath? : string;
 
   @Input() links?: {
     text: string,
     href?: string,
     target?: string;
   } [];
+
+  public get isSingle() : boolean {
+    return this.links != undefined && this.links.length < 2;
+  }
+
 }
