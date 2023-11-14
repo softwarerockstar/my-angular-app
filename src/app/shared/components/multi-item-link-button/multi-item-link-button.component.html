@@ -2,17 +2,20 @@
 
     <!-- Single item -->
     <div *ngIf="isSingle">
-        <a [href]="links[0].href ?? '#'" [target]="links[0].target ?? '_self'" (click)="return raiseClickEvent($event)">
+        <a [href]="links[0].href ?? '#'" [target]="links[0].target ?? '_self'">
             {{ links[0].text }}
         </a>
     </div>
 
     <!-- Multiple items - display a menu  -->
-    <div *ngIf="!isSingle">        
+    <div *ngIf="!isSingle">     
+        
+        <!-- First item acts as the menu trigger -->
         <a href="#" [matMenuTriggerFor]="appMenu">
             {{ links[0].text }}
         </a>
 
+        <!-- rest of the items are displayed in a dropdown menu -->
         <mat-menu #appMenu="matMenu">
             <!-- All links except for the first one -->
             <a *ngFor="let link of links | slice:1" mat-menu-item [href]="link.href ?? '#'" [target]="link.target ?? '_self'">{{ link.text }}</a>

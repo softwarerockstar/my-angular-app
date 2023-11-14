@@ -22,6 +22,6 @@ export class CardLinkComponent {
   @Input() iconPath?: string;
 
   raiseClickEvent(args: Event) {
-    this.onClick.emit(args);
+    if (this.onClick) this.onClick.emit(args);
   }
 }

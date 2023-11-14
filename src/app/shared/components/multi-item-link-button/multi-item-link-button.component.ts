@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../modules/material/material.module';
-import {Input, Output, EventEmitter} from '@angular/core'
+import { Input } from '@angular/core'
 
 @Component({
   selector: 'multi-item-link-button',
@@ -12,10 +12,6 @@ import {Input, Output, EventEmitter} from '@angular/core'
 })
 export class MultiItemLinkButtonComponent {
 
-  @Input() onClick?: (event: Event) => boolean;
-
-  //@Output() onClick = new EventEmitter<Event>() => boolean;
-  
   public get isSingle() : boolean {
     return this.links != undefined && this.links.length < 2;
   }
@@ -25,11 +21,4 @@ export class MultiItemLinkButtonComponent {
     href?: string,
     target?: string;
   } [];
-  
-  raiseClickEvent(args: Event):boolean {
-    //return this.onClick.emit(args);
-    return false;
-  }
-
-
 }
