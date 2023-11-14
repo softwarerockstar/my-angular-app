@@ -1,0 +1,11 @@
+<div *ngIf="links">
+    <div *ngIf="isSingle">
+        Single!!
+        <div *ngFor="let link of links">{{ link.text }}</div>
+    </div>
+
+    <div *ngIf="!isSingle">
+        Multiple!!
+        <div *ngFor="let link of links">{{ link.text }}</div>
+    </div>
+</div>

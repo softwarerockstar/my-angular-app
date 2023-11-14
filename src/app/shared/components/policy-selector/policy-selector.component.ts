@@ -26,8 +26,5 @@ export class PolicySelectorComponent {
   @Input() policies?: {
     name: string,
     value: string
-  }[] = [
-    {name: 'Policy 1', value: 'policy-1'},
-    {name: 'Policy 2', value: 'policy-2'}
-  ]
+  } [];
 }

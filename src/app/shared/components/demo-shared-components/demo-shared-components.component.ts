@@ -5,6 +5,7 @@ import { CardLinkListComponent, CardLinkContentDirective, CardLinkFooterDirectiv
 import { IconLinkComponent } from '../icon-link/icon-link.component';
 import { PolicySelectorComponent, PolicySelectotButtonsDirective } from '../policy-selector/policy-selector.component';
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
+import { MultiItemLinkButtonComponent } from '../multi-item-link-button/multi-item-link-button.component';
  
 
 @Component({
@@ -19,7 +20,8 @@ import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
     IconLinkComponent,
     PolicySelectorComponent,
     PolicySelectotButtonsDirective,
-    TooltipIconComponent
+    TooltipIconComponent,
+    MultiItemLinkButtonComponent,
   ],
   templateUrl: './demo-shared-components.component.html',
   styleUrls: ['./demo-shared-components.component.css']
@@ -27,12 +29,22 @@ import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 export class DemoSharedComponentsComponent {
   
   policies: {
-    name: string,
+    name: string;
     value: string
   }[] = [
-    {name: 'Policy 1', value: 'policy-1'},
-    {name: 'Policy 2', value: 'policy-2'}
+    {name: 'Policy 1a', value: 'policy-1'},
+    {name: 'Policy 2b', value: 'policy-2'}
   ];
+
+  multiItemlinks: {
+    text: string,
+    url: string,
+    target?: string;
+  } [] = [
+    {text: "Google", url: "https://www.google.com"},
+    {text: "Bing", url: "https://www.bing.com"},
+    {text: "Yahoo!", url: "https://www.yahoo.com"}
+  ]
 
 
   cardLinkOnClick(args: any){
