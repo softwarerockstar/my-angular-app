@@ -24,7 +24,7 @@ import { MultiItemLinkButtonComponent } from '../multi-item-link-button/multi-it
     MultiItemLinkButtonComponent,
   ],
   templateUrl: './demo-shared-components.component.html',
-  styleUrls: ['./demo-shared-components.component.css']
+  styleUrls: ['./demo-shared-components.component.scss']
 })
 export class DemoSharedComponentsComponent {
   

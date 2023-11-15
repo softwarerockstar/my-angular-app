@@ -9,7 +9,7 @@ import { MaterialModule } from '../../modules/material/material.module';
   standalone: true,
   imports: [CommonModule, MaterialModule],
   templateUrl: './tooltip-icon.component.html',
-  styleUrls: ['./tooltip-icon.component.css'],
+  styleUrls: ['./tooltip-icon.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class TooltipIconComponent {

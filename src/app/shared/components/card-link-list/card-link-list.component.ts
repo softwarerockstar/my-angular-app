@@ -21,7 +21,7 @@ export class CardLinkContentDirective{}
   standalone: true,
   imports: [CommonModule, MaterialModule],
   templateUrl: './card-link-list.component.html',
-  styleUrls: ['./card-link-list.component.css']
+  styleUrls: ['./card-link-list.component.scss']
 })
 export class CardLinkListComponent {
   @Output() onClick = new EventEmitter<Event>();

@@ -6,7 +6,7 @@ import { MaterialModule } from '../../modules/material/material.module';
 @Component({
   selector: 'card-link',
   templateUrl: './card-link.component.html',
-  styleUrls: ['./card-link.component.css'],
+  styleUrls: ['./card-link.component.scss'],
   standalone: true,
   imports: [CommonModule, MaterialModule],
 })

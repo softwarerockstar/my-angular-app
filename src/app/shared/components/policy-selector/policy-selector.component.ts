@@ -19,7 +19,7 @@ export class PolicySelectotButtonsDirective{}
     MaterialModule,
   ],
   templateUrl: './policy-selector.component.html',
-  styleUrls: ['./policy-selector.component.css'],
+  styleUrls: ['./policy-selector.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class PolicySelectorComponent {

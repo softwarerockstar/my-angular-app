@@ -5,7 +5,7 @@ import {Input, Output, EventEmitter} from '@angular/core'
 @Component({
   selector: 'icon-link',
   templateUrl: './icon-link.component.html',
-  styleUrls: ['./icon-link.component.css'],
+  styleUrls: ['./icon-link.component.scss'],
   standalone: true,
   imports: [CommonModule]
 })

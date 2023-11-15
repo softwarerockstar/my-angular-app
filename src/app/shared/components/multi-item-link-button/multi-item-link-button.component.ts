@@ -6,7 +6,7 @@ import { Input } from '@angular/core'
 @Component({
   selector: 'multi-item-link-button',
   templateUrl: './multi-item-link-button.component.html',
-  styleUrls: ['./multi-item-link-button.component.css'],
+  styleUrls: ['./multi-item-link-button.component.scss'],
   standalone: true,
   imports: [CommonModule, MaterialModule],
   encapsulation: ViewEncapsulation.None
