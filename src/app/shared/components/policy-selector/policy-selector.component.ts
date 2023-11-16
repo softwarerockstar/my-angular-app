@@ -4,6 +4,11 @@ import {Input, Output, EventEmitter} from '@angular/core'
 import {FormsModule} from '@angular/forms';
 import { MaterialModule } from '../../modules/material/material.module';
 
+export interface PolicySelectorModel {
+  name: string,
+  value: string
+}
+
 @Directive({
   selector: 'policy-selector-buttons',
   standalone: true
@@ -23,8 +28,5 @@ export class PolicySelectotButtonsDirective{}
   encapsulation: ViewEncapsulation.None
 })
 export class PolicySelectorComponent {
-  @Input() policies?: {
-    name: string,
-    value: string
-  } [];
+  @Input() policies?: PolicySelectorModel[];
 }
