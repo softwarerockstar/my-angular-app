@@ -1,34 +1,23 @@
-<p> 
-    Implementation of mat-tab-group for 
-    center style and for default theme 
-    </p> 
-    
-    <mat-tab-group mat-align-tabs="center"> 
-    <mat-tab label="Home">Home Content</mat-tab> 
-    <mat-tab label="Overview">Overview Content</mat-tab> 
+<mat-card style="text-align: center; margin: 20px">
+    {{ currentBreakpoint }}
+  </mat-card>
+  
+  <div class="container" [ngSwitch]="currentBreakpoint">
+    <span class="large" *ngSwitchCase="Breakpoints.Large"> Large </span>
+    <span class="medium" *ngSwitchCase="Breakpoints.Medium"> Medium </span>
+    <span class="small" *ngSwitchCase="Breakpoints.Small"> Small </span>
+    <span class="custom" *ngSwitchCase="'(min-width: 500px)'"> Custom </span>
+  </div>
+  
+    <mat-tab-group mat-align-tabs="center" dynamicHeight="true"> 
+        <mat-tab label="First">
+            <ng-template matTabContent>
+              The First Content
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Second">
+            <ng-template matTabContent>
+              The Second Content
+            </ng-template>
+          </mat-tab>
     </mat-tab-group> 
-    <br> 
-    
-    
-    <p> 
-    Implementation of mat-tab-group for center 
-    style and for primary theme 
-    </p> 
-    
-    <mat-tab-group mat-align-tabs="center" backgroundColor="primary"> 
-    <mat-tab label="Home">Home Content</mat-tab> 
-    <mat-tab label="Overview">Overview Content</mat-tab> 
-    </mat-tab-group> 
-    <br> 
-    
-    
-    <p> 
-    Implementation of mat-tab-group for center 
-    style and for accent theme 
-    </p> 
-    
-    <mat-tab-group mat-align-tabs="center" backgroundColor="accent"> 
-    <mat-tab label="Home">Home Content</mat-tab> 
-    <mat-tab label="Overview">Overview Content</mat-tab> 
-    </mat-tab-group>
-    
