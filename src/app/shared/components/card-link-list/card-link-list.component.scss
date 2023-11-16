@@ -4,70 +4,50 @@
     border-radius: 2px;
     border-top: 3px solid #003da1;
     box-shadow: #d7d7d7 0 2px 2px;
-    margin-bottom: 30px;    
-  }
+    margin-bottom: 30px;
 
-  mat-card.widget mat-card-header {
-    padding: 20px 20px 0 20px;
-  }
-
-  mat-card.widget mat-card-content {
-    padding: 0 20px 20px 20px;
-  }
-
-  mat-card.widget mat-card-content {
-    min-height: 85px;
-  }
-
-  mat-card.widget mat-card-footer {
-    background: #e9f7f9;    
-    padding: 18px;
-  }
-  
-  @media (max-width: 959px) and (min-width: 600px) {
-    mat-card.widget {
-      margin-bottom: 14px;
+    mat-card-header {
+      padding: 20px 20px 0 20px;
     }
-  }
-  
-  @media (max-width: 767px) {
-    mat-card.widget {
-      margin-bottom: 14px;
-    }
-  } 
- 
-  mat-card.widget .header {
-    color: #000;
-    font-family: UHCSans-Bold;
-    font-size: 18px;
-    margin: 0;
-    padding-bottom: 25px;
-  }
 
-  @media (max-width: 767px) {
-    mat-card.widget {
+    mat-card-content {
+      padding: 0 20px 20px 20px;
+    }
+
+    mat-card-content {
+      min-height: 85px;
+    }
+
+    mat-card-footer {
+      background: #e9f7f9;
+      padding: 18px;
+    }
+
+    .header {
+      color: #000;
+      font-family: UHCSans-Bold;
+      font-size: 18px;
+      margin: 0;
+      padding-bottom: 25px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 14px;
       overflow: hidden;
       padding-bottom: 13px;
     }
-  }
-  
-  @media (max-width: 375px) and (min-width: 320px) {
-    mat-card.widget {
+
+    @media (max-width: 959px) and (min-width: 600px) {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 375px) and (min-width: 320px) {
       margin-bottom: 14px;
       overflow: hidden;
       padding-bottom: 0;
     }
-  }  
-  
-  @media only screen and (min-width: 601px) and (max-width: 766px) and (orientation:landscape) {
-    mat-card.widget {
+
+    @media only screen and (min-width: 601px) and (max-width: 766px) and (orientation:landscape) {
       padding-bottom: 13px;
     }
   }
- 
-  @media (max-width: 767px) {
-    mat-card.widget {
-      padding-bottom: 13px !important;
-    }
-  }
-  

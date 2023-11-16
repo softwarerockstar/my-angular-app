@@ -2,20 +2,20 @@ button.btn {
     border: none;
     background: inherit;
     box-shadow: none;
-}
 
-button.btn a {
-    color: #003da1;
-    font-family: UHCSans-Medium;
-    font-size: 14px;
-    margin-left: 12px !important;  
-    text-decoration: none;  
-}
+    a {
+        color: #003da1;
+        font-family: UHCSans-Medium;
+        font-size: 14px;
+        margin-left: 12px !important;
+        text-decoration: none;
 
-button.btn a:hover {
-    text-decoration: underline;
-}
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
-button.btn img {
-    vertical-align: middle;
+    img {
+        vertical-align: middle;
+    }
 }
