@@ -2,14 +2,12 @@
   <mat-card-header>
     <mat-card-title-group>
       <mat-card-title>        
-          <div *ngIf="iconPath" class="icon"><img mat-card-xs-image [src]="iconPath" /></div>
+          @if (iconPath) { <div class="icon"><img mat-card-xs-image [src]="iconPath" /></div> }
           <div class="anchor">
             <div>
-              <a *ngIf="titleText" href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ titleText }}</a>
+              @if (titleText) { <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ titleText }}</a> }
             </div>
-            <div *ngIf="subTitle">
-              {{ subTitle }}
-            </div>
+            @if (subTitle) { <div>{{ subTitle }}</div> }
           </div>        
       </mat-card-title>          
     </mat-card-title-group>

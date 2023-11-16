@@ -1,4 +1,4 @@
 <button class="btn" mat-button>
-    <img *ngIf="iconPath" [src]="iconPath">
-    <a href="javascript:void(null);" *ngIf="titleText" (click)="raiseClickEvent($event)">{{ titleText }}</a>
+    @if (iconPath) { <img [src]="iconPath"> }
+    @if (titleText) { <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ titleText }}</a> }
 </button>

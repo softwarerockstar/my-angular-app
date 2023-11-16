@@ -5,9 +5,11 @@
           <mat-form-field class="uhcsr-font">
               <mat-label class="uhcsr-font">Select Policy</mat-label>
               <mat-select disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
-                  <mat-option *ngFor="let policy of policies" [value]="policy.value">
-                    {{policy.name}}
-                  </mat-option>
+                  @for (policy of policies; track idx; let idx = $index) {
+                    <mat-option [value]="policy.value">
+                      {{policy.name}}
+                    </mat-option>  
+                  }
               </mat-select>
           </mat-form-field>
       </div>    
