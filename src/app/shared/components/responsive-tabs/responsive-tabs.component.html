@@ -23,7 +23,9 @@
   <mat-menu #appMenu="matMenu" class="uhcsr-multi-item-link-button-menu">
       <!-- All links except for the first one -->
       @for (tab of tabs; track idx; let idx = $index) {
-          <a class="uhcsr-multi-item-link-button-menu-item" mat-menu-item href="#" (click)="menuItemClick($event)">{{ tab.label }}</a>
+        <div >
+          <a class="uhcsr-multi-item-link-button-menu-item" #myInput mat-menu-item href="#" [attr.data-x]="tab.value" (click)="menuItemClick($event, myInput)">{{ tab.label }}</a>
+        </div>
       }
   </mat-menu>
 

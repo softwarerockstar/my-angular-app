@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../modules/material/material.module';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { distinctUntilChanged, tap } from 'rxjs/operators';
-import { MatTabChangeEvent } from '@angular/material/tabs';
+import { MatTab, MatTabChangeEvent } from '@angular/material/tabs';
+import { MatMenuItem } from '@angular/material/menu';
 
 export interface ResponsiveTabsModel {
   label: string;
@@ -69,8 +70,10 @@ export class ResponsiveTabsComponent implements OnInit {
 
   }
 
-  menuItemClick(args: Event) {
-    console.log(args.target);
+  menuItemClick(args: MouseEvent, tab: MatMenuItem) {
+    console.log(args);
+    console.log((tab as any)._elementRef.nativeElement.dataset.x);
+    // console.log(dataset._elementRef.nativeElement.dataset.x);
   }
 
   
