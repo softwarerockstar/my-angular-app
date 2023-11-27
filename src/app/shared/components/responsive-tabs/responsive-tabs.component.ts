@@ -60,14 +60,15 @@ export class ResponsiveTabsComponent implements OnInit {
   onTabChange (event: MatTabChangeEvent): void {
     //const me = this;
 
-    console.log(event.tab.textLabel)
-    //There I should get tab component reference
+    //console.log(event.tab.textLabel)
+    
+    console.log(this.tabs[event.index].value)
 
   }
 
   menuItemClick(args: MouseEvent, tab: MatMenuItem) {
     //console.log(args);
-    console.log((tab as any)._elementRef.nativeElement.dataset.x);
+    console.log((tab as any)._elementRef.nativeElement.dataset.index);
     // console.log(dataset._elementRef.nativeElement.dataset.x);
   }
   
