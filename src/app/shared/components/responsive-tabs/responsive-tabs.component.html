@@ -1,31 +1,34 @@
-<mat-card style="text-align: center; margin: 20px">
-    {{ currentBreakpoint }}
-  </mat-card>
   
-  <div class="container" [ngSwitch]="currentBreakpoint">
-    <span class="large" *ngSwitchCase="Breakpoints.Large"> Large </span>
-    <span class="medium" *ngSwitchCase="Breakpoints.Medium"> Medium </span>
-    <span class="small" *ngSwitchCase="Breakpoints.Small"> Small </span>
-    <span class="custom" *ngSwitchCase="'(min-width: 500px)'"> Custom </span>
-  </div>
-  
+  @if (dispayStyle == ResponsiveTabsDisplayStyle.Menu) {
+    <!-- screen size is small then display a link which when clicked displays a dropdown menu -->
+    <a class="main" href="#" [matMenuTriggerFor]="appMenu">
+      {{ responsiveText }}
+    </a>
+
+  <mat-menu #appMenu="matMenu" class="uhcsr-multi-item-link-button-menu">
+      <!-- All links except for the first one -->
+      @for (tab of tabs; track idx; let idx = $index) {
+        <div >
+          <a 
+            class="uhcsr-multi-item-link-button-menu-item" 
+            #myInput mat-menu-item href="#" 
+            [attr.data-x]="tab.value" 
+            (click)="menuItemClick($event, myInput)">
+            {{ tab.label }}
+          </a>
+        </div>
+      }
+  </mat-menu>
+  }
+  @else {
+    <!-- screen size is normal so display tabs interface -->
     <mat-tab-group mat-align-tabs="center" dynamicHeight="true" (selectedTabChange)="onTabChange($event)" > 
       @for (tab of tabs; track idx; let idx = $index) {
         <mat-tab [label]="tab.label"></mat-tab>
       }
     </mat-tab-group> 
+  }
+  
 
-    <a class="main" href="#" [matMenuTriggerFor]="appMenu">
-      {{ responsiveText }}
-  </a>
 
-  <!-- rest of the items are displayed in a dropdown menu -->
-  <mat-menu #appMenu="matMenu" class="uhcsr-multi-item-link-button-menu">
-      <!-- All links except for the first one -->
-      @for (tab of tabs; track idx; let idx = $index) {
-        <div >
-          <a class="uhcsr-multi-item-link-button-menu-item" #myInput mat-menu-item href="#" [attr.data-x]="tab.value" (click)="menuItemClick($event, myInput)">{{ tab.label }}</a>
-        </div>
-      }
-  </mat-menu>
 
