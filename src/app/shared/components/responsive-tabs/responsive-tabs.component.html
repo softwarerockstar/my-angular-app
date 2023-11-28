@@ -1,34 +1,42 @@
-  
-  @if (dispayStyle == ResponsiveTabsDisplayStyle.Menu) {
-    <!-- screen size is small then display a link which when clicked displays a dropdown menu -->
-    <a class="main" href="#" [matMenuTriggerFor]="appMenu">
-      {{ responsiveText }}
-    </a>
+@if (tabs) {
 
-  <mat-menu #appMenu="matMenu" class="uhcsr-multi-item-link-button-menu">
-      <!-- All links except for the first one -->
-      @for (tab of tabs; track idx; let idx = $index) {
-        <div >
-          <a 
-            class="uhcsr-multi-item-link-button-menu-item" 
-            #myInput mat-menu-item href="#" 
-            [attr.data-index]="tab.value" 
-            (click)="menuItemClick($event, myInput)">
-            {{ tab.label }}
-          </a>
-        </div>
+    @switch(dispayStyle) {
+      
+      <!-- screen size is small so display a link which when clicked displays a dropdown menu -->
+      @case (ResponsiveTabsDisplayStyle.Menu) {        
+        
+        <a class="main" href="#" [matMenuTriggerFor]="appMenu">
+          {{ responsiveLinkText ?? "Dropdown menu" }}
+        </a>
+
+        <mat-menu #appMenu="matMenu" class="uhcsr-multi-item-link-button-menu">
+            <!-- All links except for the first one -->
+            @for (tab of tabs; track idx; let idx = $index) {
+              <div >
+                <a 
+                  class="uhcsr-multi-item-link-button-menu-item" [class.current]="idx == currentTabIndex"
+                  #myInput mat-menu-item href="#" 
+                  [attr.data-index]="tab.value" 
+                  (click)="menuItemClick($event, myInput)">
+                  {{ tab.label }}
+                </a>
+              </div>
+            }
+        </mat-menu>
+      } 
+
+      <!-- screen size is normal so display tabs interface -->
+      @default {
+        
+        <mat-tab-group mat-align-tabs="center" dynamicHeight="true" (selectedTabChange)="onTabChange($event)" [selectedIndex]="currentTabIndex"> 
+          @for (tab of tabs; track idx; let idx = $index) {
+            <mat-tab [label]="tab.label"></mat-tab>
+          }
+        </mat-tab-group>
       }
-  </mat-menu>
-  }
-  @else {
-    <!-- screen size is normal so display tabs interface -->
-    <mat-tab-group mat-align-tabs="center" dynamicHeight="true" (selectedTabChange)="onTabChange($event)" > 
-      @for (tab of tabs; track idx; let idx = $index) {
-        <mat-tab [label]="tab.label"></mat-tab>
-      }
-    </mat-tab-group> 
-  }
-  
+      
+    }
+  }  
 
 
 

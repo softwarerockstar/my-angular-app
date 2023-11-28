@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../modules/material/material.module';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
@@ -28,16 +28,13 @@ export class ResponsiveTabsComponent implements OnInit {
   public ResponsiveTabsDisplayStyle = ResponsiveTabsDisplayStyle;
 
   dispayStyle = ResponsiveTabsDisplayStyle.Tabs;
+  currentTabIndex = 0;
 
-  @Input() tabs: ResponsiveTabsModel[] = [
-    { label: 'First', value: '0' },
-    { label: 'Second', value: '1' },
-    { label: 'Third', value: '2' },
-    { label: 'Fourth', value: '3' },
-    { label: 'Fifth', value: '4' }
-  ];
+  @Input() tabs?: ResponsiveTabsModel[];
 
-  @Input() responsiveText: string = "Please click to see options";
+  @Input() responsiveLinkText?: string;
+
+  @Output() onClick = new EventEmitter<ResponsiveTabsModel>();
   
     
   constructor(private breakpointObserver: BreakpointObserver) { }
@@ -55,21 +52,25 @@ export class ResponsiveTabsComponent implements OnInit {
     });    
   }
 
-
-
   onTabChange (event: MatTabChangeEvent): void {
-    //const me = this;
-
-    //console.log(event.tab.textLabel)
-    
-    console.log(this.tabs[event.index].value)
+    if (this.tabs) {
+      let index = event.index;
+      this.raiseClickEvent(index);
+    }
 
   }
 
-  menuItemClick(args: MouseEvent, tab: MatMenuItem) {
-    //console.log(args);
-    console.log((tab as any)._elementRef.nativeElement.dataset.index);
-    // console.log(dataset._elementRef.nativeElement.dataset.x);
-  }
-  
+  menuItemClick(args: MouseEvent, item: MatMenuItem) {
+    if (this.tabs) {
+      let index = (item as any)._elementRef.nativeElement.dataset.index;
+      this.raiseClickEvent(index);
+    }
+  }  
+
+  raiseClickEvent(index: number) {    
+    if (this.tabs && this.onClick && index != this.currentTabIndex) {
+      this.currentTabIndex = index;
+      this.onClick.emit(this.tabs[index]);
+    }
+  }  
 }

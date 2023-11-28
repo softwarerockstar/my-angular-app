@@ -1,6 +1,6 @@
 <h1 style="margin:40px">Shared Components Demo</h1>
 
-<responsive-tabs />
+<responsive-tabs [tabs]="tabs" responsiveLinkText="Please click to see options" (onClick)="responsiveTabsOnClick($event)"/>
 
 <div style="margin: 40px; max-width: 800px">
   <multi-item-link-button 
