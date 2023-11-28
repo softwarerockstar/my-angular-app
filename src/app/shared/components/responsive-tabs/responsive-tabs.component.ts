@@ -28,36 +28,30 @@ export class ResponsiveTabsComponent implements OnInit {
   public ResponsiveTabsDisplayStyle = ResponsiveTabsDisplayStyle;
 
   dispayStyle = ResponsiveTabsDisplayStyle.Tabs;
-  currentTabIndex = 0;
-
+  
   @Input() tabs?: ResponsiveTabsModel[];
-
   @Input() responsiveLinkText?: string;
+  @Input() selectedIndex = 0;
 
   @Output() onClick = new EventEmitter<ResponsiveTabsModel>();
-  
-    
+      
   constructor(private breakpointObserver: BreakpointObserver) { }
 
-  ngOnInit(): void {    
-
-    this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
-    
-    .subscribe((state: BreakpointState) => {
-      if (state.matches) {
-        this.dispayStyle = ResponsiveTabsDisplayStyle.Menu;
-      } else {
-        this.dispayStyle = ResponsiveTabsDisplayStyle.Tabs;
-      }
-    });    
+  ngOnInit(): void {
+    this.breakpointObserver.observe(Breakpoints.HandsetPortrait)    
+      .subscribe((state: BreakpointState) => {
+        if (state.matches)
+          this.dispayStyle = ResponsiveTabsDisplayStyle.Menu;
+        else
+          this.dispayStyle = ResponsiveTabsDisplayStyle.Tabs;    
+      });  
   }
 
-  onTabChange (event: MatTabChangeEvent): void {
+  onTabChange (event: MatTabChangeEvent): void {    
     if (this.tabs) {
       let index = event.index;
       this.raiseClickEvent(index);
     }
-
   }
 
   menuItemClick(args: MouseEvent, item: MatMenuItem) {
@@ -68,8 +62,8 @@ export class ResponsiveTabsComponent implements OnInit {
   }  
 
   raiseClickEvent(index: number) {    
-    if (this.tabs && this.onClick && index != this.currentTabIndex) {
-      this.currentTabIndex = index;
+    if (this.tabs && this.onClick && index != this.selectedIndex) {
+      this.selectedIndex = index;
       this.onClick.emit(this.tabs[index]);
     }
   }  
