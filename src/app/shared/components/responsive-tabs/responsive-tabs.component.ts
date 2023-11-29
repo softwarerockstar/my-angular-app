@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../modules/material/material.module';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
@@ -20,7 +20,8 @@ export enum ResponsiveTabsDisplayStyle {
   standalone: true,
   imports: [CommonModule, MaterialModule],
   templateUrl: './responsive-tabs.component.html',
-  styleUrl: './responsive-tabs.component.scss'
+  styleUrl: './responsive-tabs.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ResponsiveTabsComponent implements OnInit {
 
