@@ -1,15 +1,13 @@
 <h1 style="margin:40px">Shared Components Demo</h1>
 
-<hyper-tabs-tab-group>
-  <hyper-tabs-tab-item heading="One">This is one!</hyper-tabs-tab-item>
-  <hyper-tabs-tab-item heading="Two">This is two!</hyper-tabs-tab-item>
-  <hyper-tabs-tab-item heading="Three">This is three!</hyper-tabs-tab-item>
-</hyper-tabs-tab-group>
-
-
 <div style="margin: 40px; max-width: 1024px; background-color: white;">
-  <responsive-tabs [tabs]="tabs" responsiveLinkText="What are my options?" (onClick)="responsiveTabsOnClick($event)"/>
+  <hyper-tabs-tab-group responsiveLinkText="What are my options?">
+    <hyper-tabs-tab-item heading="One">This is one!</hyper-tabs-tab-item>
+    <hyper-tabs-tab-item heading="Two">This is two!</hyper-tabs-tab-item>
+    <hyper-tabs-tab-item heading="Three">This is three!</hyper-tabs-tab-item>
+  </hyper-tabs-tab-group>
 </div>
+
 
 <div style="margin: 40px; max-width: 800px">
   <multi-item-link-button 

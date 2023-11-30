@@ -6,7 +6,6 @@ import { IconLinkComponent } from '../icon-link/icon-link.component';
 import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelectorModel } from '../policy-selector/policy-selector.component';
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
-import { ResponsiveTabsComponent, ResponsiveTabsModel } from '../responsive-tabs/responsive-tabs.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
  
 
@@ -24,7 +23,6 @@ import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
     PolicySelectotButtonsDirective,
     TooltipIconComponent,
     MultiItemLinkButtonComponent,
-    ResponsiveTabsComponent,
     HyperTabsModule
   ],
   templateUrl: './demo-shared-components.component.html',
@@ -44,22 +42,10 @@ export class DemoSharedComponentsComponent {
     {text: "Yahoo! (Same Tab)", href: "https://www.yahoo.com"}
   ]
 
-  tabs: ResponsiveTabsModel[] = [
-    { label: 'First', value: '0' },
-    { label: 'Second', value: '1' },
-    { label: 'Third', value: '2' },
-    { label: 'Fourth', value: '3' },
-    { label: 'Fifth', value: '4' }
-  ];
-
 
   cardLinkOnClick(args: any){
     console.log(args.srcElement.innerText);
     return false;
-  }
-
-  responsiveTabsOnClick(args: ResponsiveTabsModel) {
-    console.log(`You clicked ${args.label} (${args.value || ''})`);
   }
 
 }
