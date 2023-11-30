@@ -1,3 +1,5 @@
+@import '../hyper-tabs.scss';
+
 .uhcsr-hyper-tabs-dropdown {
 
     a.responsive-trigger {
@@ -17,36 +19,6 @@
         }
     }
 
-    .tab-group {
-        &.small-screen mat-tab-header {
-            display: none !important;
-        }
-
-        .mat-mdc-tab-body-wrapper {
-            border-top: 1px solid #003da1;
-            padding-top: 12px;
-        }
-
-        .mat-mdc-tab {
-            border: 0.8px solid #bdcacd !important;
-
-            &.mdc-tab--active {
-                background-color: #003da1 !important;
-
-                .mdc-tab__text-label {
-                    font-family: UHCSans-Regular !important;
-                    font-size: 15px !important;
-                    color: white !important;
-                }
-            }
-
-            .mdc-tab__text-label {
-                font-family: UHCSans-Regular !important;
-                font-size: 15px !important;
-                color: #003da1 !important;
-            }
-        }
-    }
 }
 
 a.hyper-tabs-dropdown-menu-item {

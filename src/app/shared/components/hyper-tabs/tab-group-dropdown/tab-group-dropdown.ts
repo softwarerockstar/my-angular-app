@@ -10,8 +10,8 @@ import { MatMenuItem } from '@angular/material/menu';
   selector: 'hyper-tabs-tab-group-dropdown',
   standalone: true,
   imports: [CommonModule, MaterialModule],
-  templateUrl: './tab-group.component.html',
-  styleUrl: './tab-group.component.scss',
+  templateUrl: './tab-group-dropdown.component.html',
+  styleUrl: './tab-group-dropdown.component.scss',
   encapsulation: ViewEncapsulation.None
 })
 export class HyperTabGroupDropDownComponent implements OnInit {
@@ -44,7 +44,5 @@ export class HyperTabGroupDropDownComponent implements OnInit {
         
     }
   }  
-
-
 
 }
