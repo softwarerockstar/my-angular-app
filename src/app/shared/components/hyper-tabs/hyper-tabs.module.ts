@@ -1,16 +1,16 @@
 import {TabItemComponent} from './tab-item/tab-item.component';
-import {TabGroupComponent} from './tab-group/tab-group.component';
 import { NgModule } from '@angular/core';
+import { HyperTabGroupDropDownComponent } from './tab-group-dropdown/tab-group.component';
 
 
 @NgModule({
   imports: [
     TabItemComponent,
-    TabGroupComponent
+    HyperTabGroupDropDownComponent
   ],
   exports: [
     TabItemComponent,
-    TabGroupComponent
+    HyperTabGroupDropDownComponent
   ]
 })
 export class HyperTabsModule {}

@@ -7,14 +7,14 @@ import { MatMenuItem } from '@angular/material/menu';
 
 
 @Component({
-  selector: 'hyper-tabs-tab-group',
+  selector: 'hyper-tabs-tab-group-dropdown',
   standalone: true,
   imports: [CommonModule, MaterialModule],
   templateUrl: './tab-group.component.html',
   styleUrl: './tab-group.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class TabGroupComponent implements OnInit {
+export class HyperTabGroupDropDownComponent implements OnInit {
   @ContentChildren(TabItemComponent) tabs?: QueryList<TabItemComponent>;
 
   @Input() responsiveLinkText?: string;

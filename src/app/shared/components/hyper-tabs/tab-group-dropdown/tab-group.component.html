@@ -1,6 +1,6 @@
 @if (tabs) {
 
-<div class="uhcsr-hyper-tabs" [class.small-screen]="isSmallScreen">
+<div class="uhcsr-hyper-tabs-dropdown" [class.small-screen]="isSmallScreen">
 
   @if(isSmallScreen) {
 
@@ -8,18 +8,17 @@
       {{ responsiveLinkText ?? "Dropdown menu" }}
     </a>
 
-    <mat-menu #appMenu="matMenu" class="hyper-tabs-link-button-menu">
+    <mat-menu #appMenu="matMenu" class="hyper-tabs-dropdown-menu">
       <!-- All links except for the first one -->
       @for (tabItem of tabs; track idx; let idx = $index) {
       <div>
-        <a class="hyper-tabs-link-button-menu-item" [class.current]="idx == selectedIndex" #myInput mat-menu-item href="#"
+        <a class="hyper-tabs-dropdown-menu-item" [class.current]="idx == selectedIndex" #myInput mat-menu-item href="#"
           [attr.data-index]="idx" (click)="menuItemClick($event, myInput)">
           {{ tabItem.heading ?? '' }}
         </a>
       </div>
       }
     </mat-menu>
-
   }
 
   <mat-tab-group animationDuration="0ms" class="tab-group" [class.small-screen]="isSmallScreen" mat-align-tabs="center"
