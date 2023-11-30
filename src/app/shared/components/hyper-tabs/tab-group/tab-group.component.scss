@@ -54,7 +54,12 @@ a.hyper-tabs-link-button-menu-item {
     border-bottom: 0.8px solid #cdd5d7;
     
     &.current {
-        background-color: lightblue;
+        background-color: #00a8f7;
+
+        .mat-mdc-menu-item-text {
+            color: white;
+        }
+        
     }
 
     :hover {
@@ -64,7 +69,7 @@ a.hyper-tabs-link-button-menu-item {
     .mat-mdc-menu-item-text {
         font-family: UHCSans-Regular !important;
         font-size: 16px !important;
-        color: #003da1 !important;
+        color: #003da1;
         text-decoration: none !important;
         vertical-align: middle !important;
     }
