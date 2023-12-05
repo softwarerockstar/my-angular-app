@@ -11,9 +11,6 @@
             <mat-panel-title>
               @if (tabItem.altIconUrl) { <img [src]="tabItem.altIconUrl" /> }{{ tabItem.heading }}
             </mat-panel-title>
-            <!-- <mat-panel-description>
-              Test
-            </mat-panel-description> -->
           </mat-expansion-panel-header>
           <ng-container [ngTemplateOutlet]="tabItem.tabContent" />
         </mat-expansion-panel>
