@@ -34,6 +34,8 @@ export class HyperTabGroupDropDownComponent implements OnInit {
   }
 
   menuItemClick(args: MouseEvent, item: MatMenuItem) {
+    args.preventDefault();
+    
     if (this.tabs) {
       
       let index = (item as any)._elementRef.nativeElement.dataset.index;

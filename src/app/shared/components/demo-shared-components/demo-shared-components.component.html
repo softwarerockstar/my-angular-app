@@ -3,8 +3,8 @@
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->
   <hyper-tabs-tab-group-accordian>
     <hyper-tabs-tab-item 
-      heading="Medical Benifits" iconUrl="/assets/images/medical-benefits.png" altIconUrl="/assets/images/ico-medical-benefits.png">Here is the content for <u>Medical Benifits</u></hyper-tabs-tab-item>
-    <hyper-tabs-tab-item heading="Member Balances" iconUrl="/assets/images/member-balances.png" altIconUrl="/assets/images/ico-member-balances.png">Here is the content for <u>Member Balances</u></hyper-tabs-tab-item>
+      heading="Medical Benifits" iconUrl="/assets/img/medical-benefits.png" altIconUrl="/assets/img/ico-medical-benefits.png">Here is the content for <u>Medical Benifits</u></hyper-tabs-tab-item>
+    <hyper-tabs-tab-item heading="Member Balances" iconUrl="/assets/img/member-balances.png" altIconUrl="/assets/img/ico-member-balances.png">Here is the content for <u>Member Balances</u></hyper-tabs-tab-item>
   </hyper-tabs-tab-group-accordian>
 </div>
 
@@ -22,18 +22,18 @@
 <div style="margin: 40px; max-width: 800px">
   <multi-item-link-button 
     [links]="multiItemlinks"
-    iconPath="https://myaccount.uhcsr.com/assets/images/brochure-summary.png" />
+    iconPath="/assets/img/brochure-summary.png" />
   <br/>
   <multi-item-link-button 
     [links]="multiItemlinks | slice:1:2"
-    iconPath="https://myaccount.uhcsr.com/assets/images/brochure-certificate.png" />
+    iconPath="/assets/img/brochure-certificate.png" />
 </div>
 
 <div style="margin: 40px; max-width: 800px; display: flex; flex: row nowrap;">
   <div><h2>My Claims</h2></div>
   <div style="padding: 10px;">
     <tooltip-icon 
-      iconPath="https://myaccount.uhcsr.com/assets/images/question-icon.png"
+      iconPath="/assets/img/question-icon.png"
       tooltipeText="View/print your explanation of benifits (EOB) or claim details by selecting More Options then View Explanation of Benefits for claims with a status of Processed or Denied. If you have a question on any claim use the Ask Us a Question option to e-mail Customer Service." />
   </div>
 </div>
@@ -44,7 +44,7 @@
     <policy-selector-buttons>
       <icon-link 
         titleText="Purchase Additional Coverage" 
-        iconPath="https://myaccount.uhcsr.com/assets/images/purchase-additional-coverage.png" 
+        iconPath="/assets/img/purchase-additional-coverage.png" 
         (onClick)="cardLinkOnClick($event)"/>
     </policy-selector-buttons>
   </policy-selector>  
@@ -58,7 +58,7 @@
           [flat]="true" [animate]="true"
           titleText="Claims Summary"    
           subTitle="Summary of pending & completed claims"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+          iconPath = "/assets/img/ico-coverage-info.png"
           (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
@@ -67,7 +67,7 @@
           [flat]="true" [animate]="true"
           titleText="Member Balances"    
           subTitle="Deductible and Out-of-Pocket Balances"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-completed-claims.png"
+          iconPath = "/assets/img/ico-completed-claims.png"
           (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
@@ -76,7 +76,7 @@
           [flat]="true" [animate]="true"
           titleText="Submit Claim"    
           subTitle="Request Reimbursement for your claims"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-pra.png"
+          iconPath = "/assets/img/ico-pra.png"
           (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
@@ -85,7 +85,7 @@
           [flat]="true" [animate]="true"
           titleText="Coverage Information"    
           subTitle="Policy Info for your claims and coverages"
-          iconPath = "https://myaccount.uhcsr.com/assets/images/ico-id.png"
+          iconPath = "/assets/img/ico-id.png"
           (onClick)="cardLinkOnClick($event)" />
 
         </div>
@@ -100,6 +100,6 @@
     <card-link 
       titleText="Coverage Information"    
       subTitle="Policy Info., Tax Documents, Get Additional Coverage, View Coverage Letter (COC)"
-      iconPath = "https://myaccount.uhcsr.com/assets/images/ico-coverage-info.png"
+      iconPath = "/assets/img/ico-coverage-info.png"
       (onClick)="cardLinkOnClick($event)" />
   </div>    
