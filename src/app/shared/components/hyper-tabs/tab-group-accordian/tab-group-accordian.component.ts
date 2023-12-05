@@ -20,7 +20,7 @@ export class HyperTabGroupAccordianComponent implements OnInit {
   panelOpenState: boolean = false;
 
   @Input() responsiveLinkText?: string;
-  @Input() selectedIndex = 0;
+  @Input() selectedIndex = 0;  
   
   isSmallScreen = false;
   constructor(private breakpointObserver: BreakpointObserver) { }

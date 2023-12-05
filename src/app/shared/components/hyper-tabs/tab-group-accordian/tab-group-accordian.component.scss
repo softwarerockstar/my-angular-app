@@ -1,6 +1,50 @@
 @import '../hyper-tabs.scss';
 
-// .uhcsr-hyper-tabs-accordian {
 
-// }
+.uhcsr-hyper-tabs.uhcsr-hyper-tabs-accordian {
+
+    mat-panel-title {
+        img {
+            max-width: 32px;
+            margin-right: 12px;
+        }
+    }
+    
+    .tab-group {
+        &.small-screen mat-tab-header {
+            display: none !important;
+        }
+
+        .mat-mdc-tab-body-wrapper {
+            border-top: 1px solid #cdd5d7;
+            padding-top: 12px;
+        }
+
+        .mat-mdc-tab {
+            border: none !important;
+
+            &.mdc-tab--active {
+                background-color: transparent !important;
+
+                .mdc-tab__text-label {
+                    font-family: UHCSans-Regular !important;
+                    font-size: 15px !important;
+                    color: #00a8f7 !important;
+                }
+            }
+
+            .mdc-tab__text-label {
+                font-family: UHCSans-Regular !important;
+                font-size: 15px !important;
+                color: #003da1 !important;
+
+                img {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
+
+
 

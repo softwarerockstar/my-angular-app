@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 export class TabItemComponent {
 
   @Input() heading?: string;
+  @Input() iconUrl?: string;
+  @Input() altIconUrl?: string;
 
   @ViewChild('tabContent', { static: true }) tabContent!: TemplateRef<any>;
 

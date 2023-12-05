@@ -1,19 +1,19 @@
 @if (tabs) {
 
-<div class="uhcsr-hyper-tabs uhcsr-hyper-tabs-dropdown" [class.small-screen]="isSmallScreen">
+<div class="uhcsr-hyper-tabs uhcsr-hyper-tabs-accordian" [class.small-screen]="isSmallScreen">
 
   @if(isSmallScreen) {
 
     <mat-accordion>
       @for (tabItem of tabs; track idx; let idx = $index) {
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="idx == selectedIndex" (opened)="selectedIndex = idx">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{ tabItem.heading }}
+              @if (tabItem.altIconUrl) { <img [src]="tabItem.altIconUrl" /> }{{ tabItem.heading }}
             </mat-panel-title>
-            <mat-panel-description>
+            <!-- <mat-panel-description>
               Test
-            </mat-panel-description>
+            </mat-panel-description> -->
           </mat-expansion-panel-header>
           <ng-container [ngTemplateOutlet]="tabItem.tabContent" />
         </mat-expansion-panel>
@@ -22,13 +22,21 @@
   }
 
   @else {
-    <mat-tab-group animationDuration="0ms" class="tab-group" [class.small-screen]="isSmallScreen" mat-align-tabs="center"
-      dynamicHeight="true" [(selectedIndex)]="selectedIndex">
+    <mat-tab-group 
+      animationDuration="0ms" 
+      class="tab-group" 
+      [class.small-screen]="isSmallScreen" 
+      mat-align-tabs="center"
+      dynamicHeight="true" 
+      [(selectedIndex)]="selectedIndex">
 
-      @for(tabItem of tabs; track idx; let idx = $index) {
-        <mat-tab [label]="tabItem.heading ?? ''">
-          <ng-container [ngTemplateOutlet]="tabItem.tabContent" />
-        </mat-tab>
+      @for(tabItem of tabs; track idx; let idx = $index) {      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            @if (tabItem.iconUrl) { <img [src]="tabItem.iconUrl" /> }{{ tabItem.heading ?? '' }}
+          </ng-template> 
+          <ng-container [ngTemplateOutlet]="tabItem.tabContent" />       
+        </mat-tab>    
       }
 
     </mat-tab-group>
