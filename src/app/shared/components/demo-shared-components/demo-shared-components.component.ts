@@ -7,6 +7,7 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelector
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
+import { DeliveryPreferencesComponent } from '../delivery-preferences/delivery-preferences.component';
  
 
 @Component({
@@ -23,7 +24,8 @@ import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
     PolicySelectotButtonsDirective,
     TooltipIconComponent,
     MultiItemLinkButtonComponent,
-    HyperTabsModule
+    HyperTabsModule,
+    DeliveryPreferencesComponent
   ],
   templateUrl: './demo-shared-components.component.html',
   styleUrls: ['./demo-shared-components.component.scss']
