@@ -7,7 +7,7 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelector
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
-import { DeliveryPreferencesComponent } from '../delivery-preferences/delivery-preferences.component';
+import { DeliveryPreferencesComponent, DeliveryPreferencesModel } from '../delivery-preferences/delivery-preferences.component';
  
 
 @Component({
@@ -44,7 +44,12 @@ export class DemoSharedComponentsComponent {
     {text: "Yahoo! (Same Tab)", href: "https://www.yahoo.com"}
   ]
 
-
+  deliveryPreferenceOptions: DeliveryPreferencesModel[] = [
+    {heading: 'By Email', subHeading: 'stsppm-premiumba@uhcsr.com', iconPath: '/assets/img/ico-email.png', value: '0'},
+    {heading: 'By U.S. Mail', subHeading: '65 East Rocky Oak Blvd.<br/>DECATUR, GA<br/>30033', iconPath: '/assets/img/usmaill-ico.png', value: '1'},
+  ]
+  
+  
   cardLinkOnClick(args: any){
     console.log(args.srcElement.innerText);
     return false;

@@ -1,7 +1,7 @@
 <h1 style="margin:40px">Shared Components Demo</h1>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> 
-  <delivery-preferences />
+  <delivery-preferences [deliveryPreferenceOptions]="deliveryPreferenceOptions" />
 </div>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->
@@ -69,38 +69,38 @@
       <card-link-list-content>
         <div style="display: flex; flex-direction: column; align-content: center; justify-content: center; align-items: center;">
           <card-link 
-          [flat]="true" [animate]="true"
-          titleText="Claims Summary"    
-          subTitle="Summary of pending & completed claims"
-          iconPath = "/assets/img/ico-coverage-info.png"
-          (onClick)="cardLinkOnClick($event)" />
+            [flat]="true" [animate]="true"
+            titleText="Claims Summary"    
+            subTitle="Summary of pending & completed claims"
+            iconPath = "/assets/img/ico-coverage-info.png"
+            (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
           <card-link 
-          [flat]="true" [animate]="true"
-          titleText="Member Balances"    
-          subTitle="Deductible and Out-of-Pocket Balances"
-          iconPath = "/assets/img/ico-completed-claims.png"
-          (onClick)="cardLinkOnClick($event)" />
+            [flat]="true" [animate]="true"
+            titleText="Member Balances"    
+            subTitle="Deductible and Out-of-Pocket Balances"
+            iconPath = "/assets/img/ico-completed-claims.png"
+            (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
           <card-link 
-          [flat]="true" [animate]="true"
-          titleText="Submit Claim"    
-          subTitle="Request Reimbursement for your claims"
-          iconPath = "/assets/img/ico-pra.png"
-          (onClick)="cardLinkOnClick($event)" />
+            [flat]="true" [animate]="true"
+            titleText="Submit Claim"    
+            subTitle="Request Reimbursement for your claims"
+            iconPath = "/assets/img/ico-pra.png"
+            (onClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
           <card-link 
-          [flat]="true" [animate]="true"
-          titleText="Coverage Information"    
-          subTitle="Policy Info for your claims and coverages"
-          iconPath = "/assets/img/ico-id.png"
-          (onClick)="cardLinkOnClick($event)" />
+            [flat]="true" [animate]="true"
+            titleText="Coverage Information"    
+            subTitle="Policy Info for your claims and coverages"
+            iconPath = "/assets/img/ico-id.png"
+            (onClick)="cardLinkOnClick($event)" />
 
         </div>
       </card-link-list-content>

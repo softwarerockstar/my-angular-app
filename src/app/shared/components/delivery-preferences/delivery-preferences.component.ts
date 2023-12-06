@@ -4,6 +4,12 @@ import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 import { MatRadioChange } from '@angular/material/radio';
 
+export interface DeliveryPreferencesModel {
+  heading?: string,
+  subHeading?: string,
+  iconPath?: string,
+  value?: string;
+}
 
 @Component({
   selector: 'delivery-preferences',
@@ -16,7 +22,8 @@ import { MatRadioChange } from '@angular/material/radio';
 export class DeliveryPreferencesComponent implements OnInit {    
   isSmallScreen = false;
 
-  @Input() rowHeight = '150px';
+  @Input() rowHeight = '250px';
+  @Input() deliveryPreferenceOptions?: DeliveryPreferencesModel[];
 
   constructor(private breakpointObserver: BreakpointObserver) { }
   
