@@ -1,7 +1,10 @@
 <h1 style="margin:40px">Shared Components Demo</h1>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> 
-  <delivery-preferences [deliveryPreferenceOptions]="deliveryPreferenceOptions" />
+  <delivery-preferences 
+    [selectedIndex]="0"
+    [deliveryPreferenceOptions]="deliveryPreferenceOptions" 
+    (onChange)="deliveryPreferenceOnChange($event)"/>
 </div>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->

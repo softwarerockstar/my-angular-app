@@ -2,10 +2,10 @@
 
     mat-grid-tile {
         &.odd {
-            border-right: 1px dashed silver;
+            border-right: 1px dashed #bdcacd;
 
             &.small {
-                border-bottom: 1px dashed silver;
+                border-bottom: 1px dashed #bdcacd;
             }
         }
     }

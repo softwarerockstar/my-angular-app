@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
@@ -8,7 +8,7 @@ export interface DeliveryPreferencesModel {
   heading?: string,
   subHeading?: string,
   iconPath?: string,
-  value?: string;
+  value?: number;
 }
 
 @Component({
@@ -22,11 +22,13 @@ export class DeliveryPreferencesComponent implements OnInit {
   isSmallScreen = false;
 
   @Input() deliveryPreferenceOptions?: DeliveryPreferencesModel[];
-
+  @Input() selectedIndex: number = 0;
+  @Output() onChange = new EventEmitter<number>();
+  
   constructor(private breakpointObserver: BreakpointObserver) { }
   
   ngOnInit(): void {
-    this.breakpointObserver.observe(Breakpoints.Small)    
+    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.Handset])    
       .subscribe((state: BreakpointState) => {
         if (state.matches)
           this.isSmallScreen = true;
@@ -34,21 +36,9 @@ export class DeliveryPreferencesComponent implements OnInit {
           this.isSmallScreen = false;    
       });  
   }
-
-  onChange(args: MouseEvent, item: MatRadioChange) {
-    console.log(item.value);
+  
+  raiseChangeEvent(args: MatRadioChange) {
+    if (this.onChange) this.onChange.emit(args.value);
   }
-
-  // menuItemClick(args: MouseEvent, item: MatMenuItem) {
-  //   if (this.tabs) {
-      
-  //     let index = (item as any)._elementRef.nativeElement.dataset.index;
-      
-  //     if (index != this.selectedIndex) {
-  //       this.selectedIndex = index;
-  //     }
-        
-  //   }
-  // }  
 
 }
