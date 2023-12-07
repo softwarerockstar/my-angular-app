@@ -17,18 +17,16 @@ export interface DeliveryPreferencesModel {
   imports: [CommonModule, MaterialModule],
   templateUrl: './delivery-preferences.component.html',
   styleUrl: './delivery-preferences.component.scss',
-  // encapsulation: ViewEncapsulation.None
 })
 export class DeliveryPreferencesComponent implements OnInit {    
   isSmallScreen = false;
 
-  @Input() rowHeight = '250px';
   @Input() deliveryPreferenceOptions?: DeliveryPreferencesModel[];
 
   constructor(private breakpointObserver: BreakpointObserver) { }
   
   ngOnInit(): void {
-    this.breakpointObserver.observe(Breakpoints.HandsetPortrait)    
+    this.breakpointObserver.observe(Breakpoints.Small)    
       .subscribe((state: BreakpointState) => {
         if (state.matches)
           this.isSmallScreen = true;

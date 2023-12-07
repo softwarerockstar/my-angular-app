@@ -1,3 +1,38 @@
 .uhcsr-delivery-preferences {
-    max-width: 1800px;
+
+    mat-grid-tile {
+        &.odd {
+            border-right: 1px dashed silver;
+
+            &.small {
+                border-bottom: 1px dashed silver;
+            }
+        }
+    }
+   
+    .option-item {
+        display: flex;
+        align-items: center;   
+    
+        font-family: UHCSans-Regular;
+        font-size: 16px;
+        line-height: 18px;        
+
+        .heading {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .icon, 
+        .radio-button {
+            margin-right: 9px;
+            margin-left: 9px;
+        }
+    
+        
+    }
+
 }
+

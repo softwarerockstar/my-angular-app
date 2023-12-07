@@ -2,21 +2,21 @@
 
     @if (deliveryPreferenceOptions) {
         
-        <mat-grid-list [cols]="isSmallScreen ? 1 : 2"  gutterSize="12px" [rowHeight]="rowHeight">
+        <mat-grid-list [cols]="isSmallScreen ? 1 : 2"  gutterSize="12px" rowHeight="200px">
             <mat-radio-group aria-label="Select an option" color="primary" (change)="onChange" >
                 
                 @for (option of deliveryPreferenceOptions; track idx; let idx = $index) { 
-
-                    <mat-grid-list cols="1" rowHeight="128px">
-                        <mat-grid-tile><img [src]="option.iconPath" /></mat-grid-tile>
-                        <mat-grid-tile><mat-radio-button [value]="option.value ? option.heading : idx" /></mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="heading">{{ option.heading }}</div>
-                            <div class="subHeading" [innerHTML]="option.subHeading ?? ''" ></div>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-
-                }
+                    <mat-grid-tile [class.odd]="idx % 2 == 0" [class.small]="isSmallScreen">
+                        <div class="option-item">
+                            <div class="icon"><img [src]="option.iconPath" /></div>
+                            <div class="radio-button"><mat-radio-button [value]="option.value ? option.heading : idx" /></div>
+                            <div class="text">
+                                <div class="heading">{{ option.heading }}</div>
+                                <div class="subHeading" [innerHTML]="option.subHeading ?? ''" ></div>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                }                
             </mat-radio-group>
         </mat-grid-list>
 
