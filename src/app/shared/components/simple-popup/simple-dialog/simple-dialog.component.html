@@ -1,10 +1,15 @@
-<div class="header">
-    {{title}}
-</div>
-<div class="content">
-    {{content}}
-</div>
-<div class="footer">
-    <button mat-raised-button>No</button>&nbsp;
-    <button mat-raised-button>Yes</button>    
+<div class="simple-dialog">
+    <div class="header">
+        <div class="title">{{title}}</div>
+        @if (allowCloseWithoutAction) {
+            <div class="icon"><img src="/assets/img/close-icon.png" (click)="raiseCloseClickEvent($event)"/></div>
+        }
+    </div>
+    <div class="content">
+        {{content}}
+    </div>
+    <div class="footer">
+        <button mat-raised-button>No</button>
+        <button mat-raised-button>Yes</button>    
+    </div>
 </div>

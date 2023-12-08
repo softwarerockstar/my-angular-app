@@ -1,8 +1,10 @@
 <h1 style="margin:40px">Shared Components Demo</h1>
 
 <simple-popup #simplePopup
-  title="Test Title"
-  content="This is test content."/>
+  dialogWidth="40vw"
+  [allowCloseWithoutAction]="true"
+  title="Your Dashboard Encountered An Issue"
+  content="It's not you, it's us. There was an issue building your dashboard. Please try again later. While we could not retreive your dashboard data, you may be able to continue to use the other features available in your My Account."/>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->
   <hyper-tabs-tab-group-button-grid>
