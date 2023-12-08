@@ -15,6 +15,7 @@ export class SimplePopupComponent {
 
   @Input() title: string = 'Simple Popup';
   @Input() content? : string;
+  @Input() showCancelButton: boolean = false;
 
   constructor(private dialog: MatDialog) {}
 
@@ -27,7 +28,8 @@ export class SimplePopupComponent {
     dialogConfig.panelClass = 'simple-popup-panel';
     dialogConfig.data = {
       title: this.title,
-      content: this.content
+      content: this.content,
+      showCancelButton: this.showCancelButton
     };    
 
     this.dialog.open(SimpleDialogComponent, dialogConfig);

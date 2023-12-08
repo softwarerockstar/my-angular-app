@@ -1,0 +1,32 @@
+.header {
+    background-color: #eff7fc;
+    color: #003da1;
+    padding: 12px;
+    min-height: 24px;
+}
+
+.footer {    
+    background-color: #eff7fc;
+    color: #003da1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    button {
+        color: white;
+        background-color: #003da1;
+        min-width: 96px !important;
+    }
+}
+
+.content {
+    min-height: 72px;
+    min-width: 250px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
