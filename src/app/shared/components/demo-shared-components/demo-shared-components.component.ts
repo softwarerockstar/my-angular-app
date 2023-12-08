@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardLinkComponent } from '../card-link/card-link.component';
 import { CardLinkListComponent, CardLinkContentDirective, CardLinkFooterDirective } from '../card-link-list/card-link-list.component';
@@ -7,6 +7,7 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelector
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
+import { SimplePopupComponent } from '../simple-popup/simple-popup.component';
  
 
 @Component({
@@ -23,12 +24,14 @@ import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
     PolicySelectotButtonsDirective,
     TooltipIconComponent,
     MultiItemLinkButtonComponent,
-    HyperTabsModule
+    HyperTabsModule,
+    SimplePopupComponent
   ],
   templateUrl: './demo-shared-components.component.html',
   styleUrls: ['./demo-shared-components.component.scss']
 })
 export class DemoSharedComponentsComponent {
+  @ViewChild('simplePopup', { static: true }) simplePopup!: SimplePopupComponent;
   
   policies: PolicySelectorModel[] = [
     {name: 'Policy 1a', value: 'policy-1'},
@@ -44,7 +47,8 @@ export class DemoSharedComponentsComponent {
 
 
   cardLinkOnClick(args: any){
-    console.log(args.srcElement.innerText);
+    console.log(`cardLinkOnClick: ${args.srcElement.innerText}`);
+    this.simplePopup.openDialog();
     return false;
   }
 
