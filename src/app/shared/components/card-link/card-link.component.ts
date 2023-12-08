@@ -20,6 +20,7 @@ export class CardLinkComponent {
   @Input() titleText?: string;  
   @Input() subTitle?: string;
   @Input() iconPath?: string;
+  @Input() showExternalLinkIcon = false;
 
   raiseClickEvent(args: Event) {
     if (this.onClick) this.onClick.emit(args);

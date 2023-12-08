@@ -5,7 +5,7 @@
           @if (iconPath) { <div class="icon"><img mat-card-xs-image [src]="iconPath" /></div> }
           <div class="anchor">
             <div>
-              @if (titleText) { <a href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ titleText }}</a> }
+              @if (titleText) { <a [class.external]="showExternalLinkIcon" href="javascript:void(null);" (click)="raiseClickEvent($event)">{{ titleText }}</a> }
             </div>
             @if (subTitle) { <div>{{ subTitle }}</div> }
           </div>        
