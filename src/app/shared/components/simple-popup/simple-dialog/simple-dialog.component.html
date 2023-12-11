@@ -1,15 +1,16 @@
 <div class="simple-dialog">
-    <div class="header">
+    <div mat-dialog-title class="header">
         <div class="title">{{title}}</div>
         @if (allowCloseWithoutAction) {
-            <div class="icon"><img src="/assets/img/close-icon.png" (click)="raiseCloseClickEvent($event)"/></div>
+            <div class="icon"><img src="/assets/img/close-icon.png" mat-dialog-close/></div>
         }
-    </div>
-    <div class="content">
+    </div>    
+
+    <mat-dialog-content class="content">
         {{content}}
-    </div>
-    <div class="footer">
-        <button mat-raised-button>No</button>
-        <button mat-raised-button>Yes</button>    
-    </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="footer">
+        <button mat-raised-button mat-dialog-close="No">No</button>
+        <button mat-raised-button mat-dialog-close="Yes">Yes</button>    
+    </mat-dialog-actions>
 </div>

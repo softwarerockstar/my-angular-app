@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
@@ -14,8 +14,8 @@ export class SimpleDialogComponent {
   @Input() title: string = 'Simple Popup';
   @Input() content? : string;
   @Input() allowCloseWithoutAction: boolean = false;
+  
 
-  @Output() onCancelClick = new EventEmitter<Event>();
 
   constructor(
     private dialogRef: MatDialogRef<SimpleDialogComponent>,    
@@ -25,9 +25,4 @@ export class SimpleDialogComponent {
       this.allowCloseWithoutAction = data.allowCloseWithoutAction;
     }
 
-    raiseCloseClickEvent(args: Event) {
-      //if (this.onCancelClick) this.onCancelClick.emit(args);      
-      this.dialogRef.close();
-    } 
-  
 }
