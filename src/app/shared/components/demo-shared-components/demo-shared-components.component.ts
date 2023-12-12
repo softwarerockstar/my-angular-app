@@ -7,7 +7,9 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelector
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
-import { SimplePopupComponent } from '../simple-popup/simple-popup.component';
+import { SimplePopupComponent, SimplePopupButtonModel } from '../simple-popup/simple-popup.component';
+
+
  
 
 @Component({
@@ -45,11 +47,23 @@ export class DemoSharedComponentsComponent {
     {text: "Yahoo! (Same Tab)", href: "https://www.yahoo.com"}
   ]
 
+  popupButtons: SimplePopupButtonModel[] = [
+    {text: "Yes", value: "0"},
+    {text: "No", value: "1"}
+  ]
+
 
   cardLinkOnClick(args: any){
-    console.log(`cardLinkOnClick: ${args.srcElement.innerText}`);
-    this.simplePopup.openDialog();
+    console.log(`cardLinkOnClick: ${args.srcElement.innerText}`);    
     return false;
+  }
+
+  popupOpen() {
+    this.simplePopup.openDialog();
+  }
+
+  popupButtonOnClick(args: any) {
+    console.log(`popupButtonOnClick ${args}`);
   }
 
 }
