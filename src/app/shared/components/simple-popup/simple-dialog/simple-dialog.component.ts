@@ -2,7 +2,11 @@ import { Component, Inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import { SimplePopupButtonModel } from '../simple-popup-button.model';
+
+export interface SimplePopupButtonModel {
+  text?: string,
+  value?: string
+}
 
 @Component({
   selector: 'simple-dialog',

@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../modules/material/material.module';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { SimpleDialogComponent } from './simple-dialog/simple-dialog.component';
-import { SimplePopupButtonModel } from './simple-popup-button.model';
+import { SimpleDialogComponent, SimplePopupButtonModel } from './simple-dialog/simple-dialog.component';
+import { SimplePopupActionButtonComponent } from './simple-popup-action-button/simple-popup-action-button.component';
+
 
 @Component({
   selector: 'simple-popup',
@@ -14,18 +15,27 @@ import { SimplePopupButtonModel } from './simple-popup-button.model';
 })
 export class SimplePopupComponent {
 
+  @ContentChildren(SimplePopupActionButtonComponent) actionButtons?: QueryList<SimplePopupActionButtonComponent>;
+
   @Input() title: string = 'Simple Popup';
   @Input() content? : string;
   @Input() showCancelButton: boolean = false;
   @Input() dialogWidth: string = '40vw';
   @Input() allowCloseWithoutAction: boolean = true;
-  @Input() buttons?: SimplePopupButtonModel[];
   @Output() buttonClick = new EventEmitter<Event>();
-
 
   constructor(private dialog: MatDialog) {}
 
   openDialog() {
+
+    const buttons: SimplePopupButtonModel[] = [];
+
+    if (this.actionButtons) {
+      let btnArray = this.actionButtons?.toArray();
+      for (let i=0; i<btnArray.length; i++){
+        buttons.push({text: btnArray[i].text, value: btnArray[i].value});
+      }
+    }
 
     const dialogConfig = new MatDialogConfig();
 
@@ -38,7 +48,7 @@ export class SimplePopupComponent {
       content: this.content,
       showCancelButton: this.showCancelButton,
       allowCloseWithoutAction: this.allowCloseWithoutAction,
-      buttons: this.buttons
+      buttons: buttons
     };    
 
     let dialogRef = this.dialog.open(SimpleDialogComponent, dialogConfig);
@@ -52,4 +62,4 @@ export class SimplePopupComponent {
   }
 }
 
-export { SimplePopupButtonModel } from "./simple-popup-button.model"
+export { SimplePopupActionButtonComponent } from './simple-popup-action-button/simple-popup-action-button.component';

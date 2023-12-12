@@ -6,9 +6,11 @@
     dialogWidth="40vw"
     [allowCloseWithoutAction]="true"
     title="Your Dashboard Encountered An Issue"
-    content="It's not you, it's us. There was an issue building your dashboard. Please try again later. While we could not retreive your dashboard data, you may be able to continue to use the other features available in your My Account."
-    [buttons]="popupButtons"
-    (buttonClick)="popupButtonOnClick($event)"/>
+    content="It's not you, <u>it's us</u>. There was an issue building your dashboard. Please try again later. While we could not retreive your dashboard data, you may be able to continue to use the other features available in your My Account."    
+    (buttonClick)="popupButtonOnClick($event)">    
+      <simple-popup-action-button text="No" value="0" />
+      <simple-popup-action-button text="Yes" value="1" />
+  </simple-popup>
 </div>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->

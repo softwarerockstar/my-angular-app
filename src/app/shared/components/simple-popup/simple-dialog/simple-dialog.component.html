@@ -7,8 +7,9 @@
     </div>    
 
     <mat-dialog-content class="content">
-        {{content}}
+        <div [innerHTML]="content"></div>
     </mat-dialog-content>
+    
     <mat-dialog-actions class="footer">
         @for (button of buttons; track idx; let idx = $index) { 
             <button mat-raised-button [mat-dialog-close]="button.value ?? idx">{{ button.text || ' ' }}</button>

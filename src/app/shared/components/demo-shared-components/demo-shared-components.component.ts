@@ -7,30 +7,32 @@ import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelector
 import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
-import { SimplePopupComponent, SimplePopupButtonModel } from '../simple-popup/simple-popup.component';
+import { SimplePopupComponent, SimplePopupActionButtonComponent } from '../simple-popup/simple-popup.component';
+
 
 
  
 
 @Component({
-  selector: 'demo-shared-components',
-  standalone: true,
-  imports: [
-    CommonModule,
-    CardLinkComponent,
-    CardLinkListComponent,   
-    CardLinkContentDirective,
-    CardLinkFooterDirective,
-    IconLinkComponent,
-    PolicySelectorComponent,
-    PolicySelectotButtonsDirective,
-    TooltipIconComponent,
-    MultiItemLinkButtonComponent,
-    HyperTabsModule,
-    SimplePopupComponent
-  ],
-  templateUrl: './demo-shared-components.component.html',
-  styleUrls: ['./demo-shared-components.component.scss']
+    selector: 'demo-shared-components',
+    standalone: true,
+    templateUrl: './demo-shared-components.component.html',
+    styleUrls: ['./demo-shared-components.component.scss'],
+    imports: [
+        CommonModule,
+        CardLinkComponent,
+        CardLinkListComponent,
+        CardLinkContentDirective,
+        CardLinkFooterDirective,
+        IconLinkComponent,
+        PolicySelectorComponent,
+        PolicySelectotButtonsDirective,
+        TooltipIconComponent,
+        MultiItemLinkButtonComponent,
+        HyperTabsModule,
+        SimplePopupComponent,
+        SimplePopupActionButtonComponent
+    ]
 })
 export class DemoSharedComponentsComponent {
   @ViewChild('simplePopup', { static: true }) simplePopup!: SimplePopupComponent;
@@ -46,12 +48,6 @@ export class DemoSharedComponentsComponent {
     {text: "Bing (New Tab)", href: "https://www.bing.com", target: "_blank"},
     {text: "Yahoo! (Same Tab)", href: "https://www.yahoo.com"}
   ]
-
-  popupButtons: SimplePopupButtonModel[] = [
-    {text: "Yes", value: "0"},
-    {text: "No", value: "1"}
-  ]
-
 
   cardLinkOnClick(args: any){
     console.log(`cardLinkOnClick: ${args.srcElement.innerText}`);    
