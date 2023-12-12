@@ -58,10 +58,6 @@ export class DemoSharedComponentsComponent {
     return false;
   }
 
-  popupOpen() {
-    this.simplePopup.openDialog();
-  }
-
   popupButtonOnClick(args: any) {
     console.log(`popupButtonOnClick ${args}`);
   }
