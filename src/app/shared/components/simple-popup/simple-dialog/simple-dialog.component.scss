@@ -1,0 +1,56 @@
+.simple-dialog {
+    
+    border-top: solid 3px #003da1;
+
+    .header {    
+        color: #003da1;
+        padding: 24px;
+        min-height: 24px;
+        border-bottom: 1px dashed silver;
+        font-family: UHCSans-Medium;
+        font-size: 18px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        
+        .title {
+            flex: auto;
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+    }
+
+    .footer {    
+        background-color: #eff7fc;
+        color: #003da1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;    
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        button {
+            color: white;
+            background-color: #003da1;
+            min-width: 96px !important;
+            margin-left: 24px;
+            font-family: UHCSans-Medium;
+            font-size: 16px;    
+        }
+    }
+
+    .content {
+        min-height: 72px;
+        min-width: 250px;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+        margin: 24px; 
+        font-family: UHCSans-Regular;
+        font-size: 16px;
+    }
+}

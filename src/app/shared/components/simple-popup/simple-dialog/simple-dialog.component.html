@@ -1,0 +1,18 @@
+<div class="simple-dialog">
+    <div mat-dialog-title class="header">
+        <div class="title">{{title}}</div>
+        @if (allowCloseWithoutAction) {
+            <div class="icon"><img src="/assets/img/close-icon.png" mat-dialog-close/></div>
+        }
+    </div>    
+
+    <mat-dialog-content class="content">
+        <div [innerHTML]="content"></div>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions class="footer">
+        @for (button of buttons; track idx; let idx = $index) { 
+            <button mat-raised-button [mat-dialog-close]="button.value ?? idx">{{ button.text || ' ' }}</button>
+        }  
+    </mat-dialog-actions>
+</div>

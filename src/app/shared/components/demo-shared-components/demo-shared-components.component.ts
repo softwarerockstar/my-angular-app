@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardLinkComponent } from '../card-link/card-link.component';
 import { CardLinkListComponent, CardLinkContentDirective, CardLinkFooterDirective } from '../card-link-list/card-link-list.component';
@@ -8,29 +8,36 @@ import { TooltipIconComponent } from '../tooltip-icon/tooltip-icon.component';
 import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi-item-link-button/multi-item-link-button.component';
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
 import { DeliveryPreferencesComponent, DeliveryPreferencesModel } from '../delivery-preferences/delivery-preferences.component';
+import { SimplePopupComponent, SimplePopupActionButtonComponent } from '../simple-popup/simple-popup.component';
+
+
+
  
 
 @Component({
-  selector: 'demo-shared-components',
-  standalone: true,
-  imports: [
-    CommonModule,
-    CardLinkComponent,
-    CardLinkListComponent,   
-    CardLinkContentDirective,
-    CardLinkFooterDirective,
-    IconLinkComponent,
-    PolicySelectorComponent,
-    PolicySelectotButtonsDirective,
-    TooltipIconComponent,
-    MultiItemLinkButtonComponent,
-    HyperTabsModule,
-    DeliveryPreferencesComponent
-  ],
-  templateUrl: './demo-shared-components.component.html',
-  styleUrls: ['./demo-shared-components.component.scss']
+    selector: 'demo-shared-components',
+    standalone: true,
+    templateUrl: './demo-shared-components.component.html',
+    styleUrls: ['./demo-shared-components.component.scss'],
+    imports: [
+        CommonModule,
+        CardLinkComponent,
+        CardLinkListComponent,
+        CardLinkContentDirective,
+        CardLinkFooterDirective,
+        IconLinkComponent,
+        PolicySelectorComponent,
+        PolicySelectotButtonsDirective,
+        TooltipIconComponent,
+        MultiItemLinkButtonComponent,
+        HyperTabsModule,
+    DeliveryPreferencesComponent,
+        SimplePopupComponent,
+        SimplePopupActionButtonComponent
+    ]
 })
 export class DemoSharedComponentsComponent {
+  @ViewChild('simplePopup', { static: true }) simplePopup!: SimplePopupComponent;
   
   policies: PolicySelectorModel[] = [
     {name: 'Policy 1a', value: 'policy-1'},
@@ -48,15 +55,18 @@ export class DemoSharedComponentsComponent {
     {heading: 'By Email', subHeading: 'stsppm-premiumba@uhcsr.com', iconPath: '/assets/img/ico-email.png', value: 0},
     {heading: 'By U.S. Mail', subHeading: '65 East Rocky Oak Blvd.<br/>DECATUR, GA<br/>30033', iconPath: '/assets/img/usmaill-ico.png', value: 1},
   ]
-  
-  
+    
   cardLinkOnClick(args: any){
-    console.log(args.srcElement.innerText);
+    console.log(`cardLinkOnClick: ${args.srcElement.innerText}`);    
     return false;
   }
 
   deliveryPreferenceOnChange(value: number) {
     console.log(`Delivery preference changed to: ${value}`);
+  }
+
+  popupButtonOnClick(args: any) {
+    console.log(`popupButtonOnClick ${args}`);
   }
 
 }
