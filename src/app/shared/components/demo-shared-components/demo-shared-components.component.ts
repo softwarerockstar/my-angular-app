@@ -31,7 +31,7 @@ import { SimplePopupComponent, SimplePopupActionButtonComponent } from '../simpl
         TooltipIconComponent,
         MultiItemLinkButtonComponent,
         HyperTabsModule,
-    DeliveryPreferencesComponent,
+        DeliveryPreferencesComponent,
         SimplePopupComponent,
         SimplePopupActionButtonComponent
     ]

@@ -1,12 +1,5 @@
 <h1 style="margin:40px">Shared Components Demo</h1>
 
-<div style="margin: 40px;  max-width: 1024px; background-color: white;"> 
-  <delivery-preferences 
-    [selectedIndex]="0"
-    [deliveryPreferenceOptions]="deliveryPreferenceOptions" 
-    (onChange)="deliveryPreferenceOnChange($event)"/>
-</div>
-
 <div style="margin: 40px;  max-width: 1024px;">
   <button (click)="simplePopup.openDialog()">Open Pop-up</button>
   <simple-popup #simplePopup
@@ -18,6 +11,13 @@
       <simple-popup-action-button text="No" value="0" />
       <simple-popup-action-button text="Yes" value="1" />
   </simple-popup>
+</div>
+
+<div style="margin: 40px;  max-width: 1024px; background-color: white;"> 
+  <delivery-preferences 
+    [selectedIndex]="0"
+    [deliveryPreferenceOptions]="deliveryPreferenceOptions" 
+    (onChange)="deliveryPreferenceOnChange($event)"/>
 </div>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->
