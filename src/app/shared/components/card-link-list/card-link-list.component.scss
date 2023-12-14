@@ -1,9 +1,9 @@
   mat-card.widget {
-    background-color: #fff;
-    border: 1px solid #bdcacd;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-border-1);
     border-radius: 2px;
-    border-top: 3px solid #003da1;
-    box-shadow: #d7d7d7 0 2px 2px;
+    border-top: 3px solid var(--color-primary);
+    box-shadow: var(--color-shadow-2) 0 2px 2px;
     margin-bottom: 30px;
 
     mat-card-header {
@@ -19,12 +19,12 @@
     }
 
     mat-card-footer {
-      background: #e9f7f9;
+      background: var(--color-shadow-1);
       padding: 18px;
     }
 
     .header {
-      color: #000;
+      color: var(--color-dark);
       font-family: UHCSans-Bold;
       font-size: 18px;
       margin: 0;

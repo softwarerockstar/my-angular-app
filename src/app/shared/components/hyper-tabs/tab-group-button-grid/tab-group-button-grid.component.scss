@@ -1,13 +1,13 @@
 .uhcsr-hyper-tabs.uhcsr-hyper-tabs-button-grid {
     button {
         width: -webkit-fill-available;
-        font-family: UHCSans-Medium !important;
+        font-family: var(--font-medium) !important;
         font-size: 13px !important;
-        color: #003da1 !important;
+        color: var(--color-primary) !important;
 
         &.current {
-            color: white !important;
-            background-color: #003da1 !important;
+            color: var(--color-light) !important;
+            background-color: var(--color-primary) !important;
         }
     
     }

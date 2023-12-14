@@ -5,27 +5,27 @@
         }
 
         .mat-mdc-tab-body-wrapper {
-            border-top: 1px solid #003da1;
+            border-top: 1px solid var(--color-primary);
             padding-top: 12px;
         }
 
         .mat-mdc-tab {
-            border: 0.8px solid #bdcacd !important;
+            border: 0.8px solid var(--color-border-1) !important;
 
             &.mdc-tab--active {
-                background-color: #003da1 !important;
+                background-color: var(--color-primary) !important;
 
                 .mdc-tab__text-label {
-                    font-family: UHCSans-Regular !important;
+                    font-family: var(--font-regular) !important;
                     font-size: 15px !important;
-                    color: white !important;
+                    color: var(--color-light) !important;
                 }
             }
 
             .mdc-tab__text-label {
-                font-family: UHCSans-Regular !important;
+                font-family: var(--font-regular) !important;
                 font-size: 15px !important;
-                color: #003da1 !important;
+                color: var(--color-primary) !important;
             }
         }
     }

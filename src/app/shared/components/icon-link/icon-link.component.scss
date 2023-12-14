@@ -4,8 +4,8 @@ button.btn {
     box-shadow: none;
 
     a {
-        color: #003da1;
-        font-family: UHCSans-Medium;
+        color: var(--color-primary);
+        font-family: var(--font-medium);
         font-size: 14px;
         margin-left: 12px !important;
         text-decoration: none;

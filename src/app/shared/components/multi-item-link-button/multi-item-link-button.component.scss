@@ -1,6 +1,6 @@
 a.main {
-    font-family: UHCSans-Medium;
-    color: #003da1;
+    font-family: var(--font-medium);
+    color: var(--color-primary);
     font-size: 14px;
     text-decoration: none;
     vertical-align: middle;
@@ -29,7 +29,7 @@ a.uhcsr-multi-item-link-button-menu-item:after {
 }
 
 .uhcsr-multi-item-link-button-menu .mat-mdc-menu-item-text {
-    font-family: UHCSans-Medium !important;
+    font-family: var(--font-medium) !important;
     font-size: 14px !important;
     text-decoration: none !important;
     vertical-align: middle !important;    

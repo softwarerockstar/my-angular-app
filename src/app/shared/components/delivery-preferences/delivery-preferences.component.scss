@@ -2,10 +2,10 @@
 
     mat-grid-tile {
         &.odd {
-            border-right: 1px dashed #bdcacd;
+            border-right: 1px dashed var(--color-border-1);
 
             &.small {
-                border-bottom: 1px dashed #bdcacd;
+                border-bottom: 1px dashed var(--color-border-1);
             }
         }
     }
@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;   
     
-        font-family: UHCSans-Regular;
+        font-family: var(--font-regular);
         font-size: 16px;
         line-height: 18px;        
 

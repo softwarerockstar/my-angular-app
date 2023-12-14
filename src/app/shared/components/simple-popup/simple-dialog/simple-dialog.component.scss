@@ -3,11 +3,11 @@
     border-top: solid 3px var(--color-primary);
 
     .header {    
-        color: #003da1;
+        color: var(--color-primary);
         padding: 24px;
         min-height: 24px;
         border-bottom: 1px dashed silver;
-        font-family: UHCSans-Medium;
+        font-family: var(--font-medium);
         font-size: 18px;
         display: flex;
         flex-direction: row;
@@ -23,8 +23,8 @@
     }
 
     .footer {    
-        background-color: #eff7fc;
-        color: #003da1;
+        background-color: var(--color-sky-blue);
+        color: var(--color-primary);
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -33,11 +33,11 @@
         padding-bottom: 18px;
 
         button {
-            color: white;
-            background-color: #003da1;
+            color: var(--color-light);
+            background-color: var(--color-primary);
             min-width: 96px !important;
             margin-left: 24px;
-            font-family: UHCSans-Medium;
+            font-family: var(--font-medium);
             font-size: 16px;    
         }
     }
@@ -50,7 +50,7 @@
         justify-content: center;
         align-items: center;   
         margin: 24px; 
-        font-family: UHCSans-Regular;
+        font-family: var(--font-regular);
         font-size: 16px;
     }
 }

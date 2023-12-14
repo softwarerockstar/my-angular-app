@@ -1,9 +1,9 @@
 .uhcsr-hyper-tabs.uhcsr-hyper-tabs-accordian {
 
     mat-panel-title {
-        font-family: UHCSans-Medium !important;
+        font-family: var(--font-medium) !important;
         font-size: 14px !important;
-        color: #003da1 !important;
+        color: var(--color-primary) !important;
 
         img {
             max-width: 32px;
@@ -14,7 +14,7 @@
     .tab-group {
 
         .mat-mdc-tab-body-wrapper {
-            border-top: 1px solid #cdd5d7;            
+            border-top: 1px solid var(--color-border-2);        
         }
 
         .mat-mdc-tab {
@@ -24,7 +24,7 @@
                 background-color: transparent !important;
 
                 .mdc-tab__text-label {
-                    color: #00a8f7 !important;
+                    color: var(--color-accent) !important;
                 }
             }
 
