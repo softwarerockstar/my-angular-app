@@ -1,3 +1,24 @@
+@use "@angular/material" as mat;
+@import '/src/lib/core/theming/uhcsr.scss';
+
+@include mat.core();
+
+$uhcsr-app-primary: mat.define-palette($md-uhcsr-primary);
+$uhcsr-app-accent: mat.define-palette($md-uhcsr-accent, A200, A100, A400);
+$uhcsr-app-warn: mat.define-palette(mat.$red-palette);
+
+$uhcsr-app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $uhcsr-app-primary,
+      accent: $uhcsr-app-accent,
+      warn: $uhcsr-app-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($uhcsr-app-theme);
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }

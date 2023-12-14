@@ -9,6 +9,7 @@ import { MultiItemLinkButtonComponent, MultiItemLinkButtonModel } from '../multi
 import { HyperTabsModule } from '../hyper-tabs/hyper-tabs.module';
 import { DeliveryPreferencesComponent, DeliveryPreferencesModel } from '../delivery-preferences/delivery-preferences.component';
 import { SimplePopupComponent, SimplePopupActionButtonComponent } from '../simple-popup/simple-popup.component';
+import { MaterialModule } from '../../modules/material/material.module';
 
 
 
@@ -21,6 +22,7 @@ import { SimplePopupComponent, SimplePopupActionButtonComponent } from '../simpl
     styleUrls: ['./demo-shared-components.component.scss'],
     imports: [
         CommonModule,
+        MaterialModule,
         CardLinkComponent,
         CardLinkListComponent,
         CardLinkContentDirective,
