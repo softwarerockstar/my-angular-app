@@ -8,7 +8,7 @@
     }    
     @else { <!-- Multiple items - display a menu  -->
         <!-- First item acts as the menu trigger -->
-        <a class="main" href="#" [matMenuTriggerFor]="appMenu">
+        <a class="main" [matMenuTriggerFor]="appMenu">
             {{ links[0].text }}
         </a>
 

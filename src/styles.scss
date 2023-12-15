@@ -22,20 +22,17 @@ $uhcsr-app-theme: mat.define-light-theme(
   
     --color-primary: #{mat.get-color-from-palette($uhcsr-app-primary, 500)};
     --color-accent: #{mat.get-color-from-palette($uhcsr-app-accent, 500)};
+    --color-info: #{mat.get-color-from-palette($uhcsr-app-accent, 50)};
     --color-warn: #{mat.get-color-from-palette($uhcsr-app-warn, 500)};  
     
     --color-light: #fff;
-    --color-dark: #000;
-    --color-sky-blue: #eff7fc;
+    --color-dark: #000;    
     
     --color-border-1: #bdcacd;
     --color-border-2: #cdd5d7;
     
     --color-shadow-1: #e9f7f9;
     --color-shadow-2: #d7d7d7;
-    
-    --color-tooltip: #e8f6fa;
-    
   
     --font-regular: 'UHCSans-Regular';
     --font-medium: 'UHCSans-Medium';

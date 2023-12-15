@@ -8,6 +8,7 @@
         color: var(--color-primary) !important;
         text-decoration: none !important;
         vertical-align: middle !important;
+        cursor: pointer;
 
         &:after {
             display: inline-block;

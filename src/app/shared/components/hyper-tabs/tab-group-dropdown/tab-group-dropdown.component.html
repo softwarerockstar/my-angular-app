@@ -4,7 +4,7 @@
 
   @if(isSmallScreen) {
 
-    <a class="responsive-trigger" href="javascript:void(null)" [matMenuTriggerFor]="appMenu">
+    <a class="responsive-trigger" [matMenuTriggerFor]="appMenu">
       {{ responsiveLinkText ?? "Dropdown menu" }}
     </a>
 
