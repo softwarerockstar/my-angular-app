@@ -23,7 +23,7 @@ export class DeliveryPreferencesComponent implements OnInit {
 
   @Input() deliveryPreferenceOptions?: DeliveryPreferencesModel[];
   @Input() selectedIndex: number = 0;
-  @Output() onChange = new EventEmitter<number>();
+  @Output() deliveryPreferencesChange = new EventEmitter<number>();
   
   constructor(private breakpointObserver: BreakpointObserver) { }
   
@@ -38,7 +38,7 @@ export class DeliveryPreferencesComponent implements OnInit {
   }
   
   raiseChangeEvent(args: MatRadioChange) {
-    if (this.onChange) this.onChange.emit(args.value);
+    if (this.deliveryPreferencesChange) this.deliveryPreferencesChange.emit(args.value);
   }
 
 }

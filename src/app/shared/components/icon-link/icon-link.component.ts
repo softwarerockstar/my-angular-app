@@ -12,10 +12,10 @@ import {Input, Output, EventEmitter} from '@angular/core'
 export class IconLinkComponent {
   @Input({ required: true }) titleText: string = '';
   @Input() iconPath?: string;
-  @Output() onClick = new EventEmitter<Event>();
+  @Output() iconLinkClick = new EventEmitter<Event>();
   
   raiseClickEvent(args: Event) {
-    this.onClick.emit(args);
+    this.iconLinkClick.emit(args);
   }
 
 }

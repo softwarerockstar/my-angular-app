@@ -15,7 +15,7 @@ export class CardLinkComponent {
   @Input() flat: boolean = false;
   @Input() animate: boolean = false;
 
-  @Output() onClick = new EventEmitter<Event>();
+  @Output() cardLinkClick = new EventEmitter<Event>();
 
   @Input({ required: true }) titleText: string = '';  
   @Input() subTitle?: string;
@@ -23,6 +23,6 @@ export class CardLinkComponent {
   @Input() showExternalLinkIcon = false;
 
   raiseClickEvent(args: Event) {
-    if (this.onClick) this.onClick.emit(args);
+    if (this.cardLinkClick) this.cardLinkClick.emit(args);
   }
 }

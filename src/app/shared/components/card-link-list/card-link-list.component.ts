@@ -24,12 +24,12 @@ export class CardLinkContentDirective{}
   styleUrls: ['./card-link-list.component.scss']
 })
 export class CardLinkListComponent {
-  @Output() onClick = new EventEmitter<Event>();
+  @Output() cardLinkListClick = new EventEmitter<Event>();
 
   @Input({ required: true }) heading: string = '';  
   
   raiseClickEvent(args: Event) {
-    this.onClick.emit(args);    
+    this.cardLinkListClick.emit(args);    
   }
 
 }

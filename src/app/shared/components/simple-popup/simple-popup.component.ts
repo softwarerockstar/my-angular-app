@@ -22,7 +22,7 @@ export class SimplePopupComponent {
   @Input() showCancelButton: boolean = false;
   @Input() dialogWidth: string = '40vw';
   @Input() allowCloseWithoutAction: boolean = true;
-  @Output() buttonClick = new EventEmitter<Event>();
+  @Output() simplePopupButtonClick = new EventEmitter<Event>();
 
   constructor(private dialog: MatDialog) {}
 
@@ -57,8 +57,8 @@ export class SimplePopupComponent {
   } 
   
   raiseClickEvent(args: Event) {    
-    if (this.buttonClick)
-      this.buttonClick.emit(args);
+    if (this.simplePopupButtonClick)
+      this.simplePopupButtonClick.emit(args);
   }
 }
 

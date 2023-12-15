@@ -7,7 +7,7 @@
     [allowCloseWithoutAction]="true"
     title="Your Dashboard Encountered An Issue"
     content="It's not you, it's us. There was an issue building your dashboard. Please try again later. While we could not retreive your dashboard data, you may be able to continue to use the other features available in your My Account."    
-    (buttonClick)="popupButtonOnClick($event)">    
+    (simplePopupButtonClick)="popupButtonOnClick($event)">    
       <simple-popup-action-button text="No" value="0" />
       <simple-popup-action-button text="Yes" value="1" />
   </simple-popup>
@@ -17,7 +17,7 @@
   <delivery-preferences 
     [selectedIndex]="0"
     [deliveryPreferenceOptions]="deliveryPreferenceOptions" 
-    (onChange)="deliveryPreferenceOnChange($event)"/>
+    (deliveryPreferencesChange)="deliveryPreferenceOnChange($event)"/>
 </div>
 
 <div style="margin: 40px;  max-width: 1024px; background-color: white;"> <!-- min-width: 910px; -->
@@ -75,7 +75,7 @@
       <icon-link 
         titleText="Purchase Additional Coverage" 
         iconPath="/assets/img/purchase-additional-coverage.png" 
-        (onClick)="cardLinkOnClick($event)"/>
+        (iconLinkClick)="cardLinkOnClick($event)"/>
     </policy-selector-buttons>
   </policy-selector>  
 </div>
@@ -90,7 +90,7 @@
             titleText="Claims Summary"    
             subTitle="Summary of pending & completed claims"
             iconPath = "/assets/img/ico-coverage-info.png"
-            (onClick)="cardLinkOnClick($event)" />
+            (cardLinkClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
@@ -100,7 +100,7 @@
             titleText="Member Balances"    
             subTitle="Deductible and Out-of-Pocket Balances"
             iconPath = "/assets/img/ico-completed-claims.png"
-            (onClick)="cardLinkOnClick($event)" />
+            (cardLinkClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
@@ -110,7 +110,7 @@
             titleText="Submit Claim"    
             subTitle="Request Reimbursement for your claims"
             iconPath = "/assets/img/ico-pra.png"
-            (onClick)="cardLinkOnClick($event)" />
+            (cardLinkClick)="cardLinkOnClick($event)" />
 
           <hr style="margin: 18px; border: 1px solid #e6eaeb; width: 100%;"/>
 
@@ -121,7 +121,7 @@
             titleText="Coverage Information"    
             subTitle="Policy Info for your claims and coverages"
             iconPath = "/assets/img/ico-id.png"
-            (onClick)="cardLinkOnClick($event)" />
+            (cardLinkClick)="cardLinkOnClick($event)" />
 
         </div>
       </card-link-list-content>
@@ -137,5 +137,5 @@
       subTitle="Policy Info., Tax Documents, Get Additional Coverage, View Coverage Letter (COC)"
       iconPath = "/assets/img/ico-coverage-info.png"
       [showExternalLinkIcon]="true"
-      (onClick)="cardLinkOnClick($event)" />
+      (cardLinkClick)="cardLinkOnClick($event)" />
   </div>    

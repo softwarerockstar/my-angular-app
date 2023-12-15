@@ -27,6 +27,6 @@ export class PolicySelectotButtonsDirective{}
   styleUrls: ['./policy-selector.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class PolicySelectorComponent {
+export class PolicySelectorComponent {  
   @Input() policies?: PolicySelectorModel[];
 }
