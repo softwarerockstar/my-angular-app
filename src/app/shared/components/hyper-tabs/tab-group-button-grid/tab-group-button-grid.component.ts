@@ -18,8 +18,7 @@ export class HyperTabGroupButtonGridComponent implements OnInit {
   @ContentChildren(TabItemComponent) tabs?: QueryList<TabItemComponent>;
 
   panelOpenState: boolean = false;
-
-  @Input() responsiveLinkText?: string;
+  
   @Input() selectedIndex = 0;  
   
   isSmallScreen = false;

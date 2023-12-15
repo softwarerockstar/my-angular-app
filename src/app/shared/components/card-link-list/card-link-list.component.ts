@@ -26,7 +26,7 @@ export class CardLinkContentDirective{}
 export class CardLinkListComponent {
   @Output() onClick = new EventEmitter<Event>();
 
-  @Input() heading?: string;  
+  @Input({ required: true }) heading: string = '';  
   
   raiseClickEvent(args: Event) {
     this.onClick.emit(args);    

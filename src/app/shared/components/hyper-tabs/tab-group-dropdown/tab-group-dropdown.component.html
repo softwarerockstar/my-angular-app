@@ -5,7 +5,7 @@
   @if(isSmallScreen) {
 
     <a class="responsive-trigger" [matMenuTriggerFor]="appMenu">
-      {{ responsiveLinkText ?? "Dropdown menu" }}
+      {{ responsiveLinkText }}
     </a>
 
     <mat-menu #appMenu="matMenu" class="hyper-tabs-dropdown-menu">
@@ -14,7 +14,7 @@
       <div>
         <a class="hyper-tabs-dropdown-menu-item" [class.current]="idx == selectedIndex" #myInput mat-menu-item href="#"
           [attr.data-index]="idx" (click)="menuItemClick($event, myInput)">
-          {{ tabItem.heading ?? '' }}
+          {{ tabItem.heading }}
         </a>
       </div>
       }
@@ -25,7 +25,7 @@
     dynamicHeight="true" [(selectedIndex)]="selectedIndex">
 
     @for(tabItem of tabs; track idx; let idx = $index) {
-      <mat-tab [label]="tabItem.heading ?? ''">
+      <mat-tab [label]="tabItem.heading">
         <ng-container [ngTemplateOutlet]="tabItem.tabContent" />
       </mat-tab>
     }

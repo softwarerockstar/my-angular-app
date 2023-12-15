@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TabItemComponent {
 
-  @Input() heading?: string;
+  @Input({ required: true }) heading: string = '';
   @Input() iconUrl?: string;
   @Input() altIconUrl?: string;
 

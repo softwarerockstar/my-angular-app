@@ -17,7 +17,7 @@ import { MatMenuItem } from '@angular/material/menu';
 export class HyperTabGroupDropDownComponent implements OnInit {
   @ContentChildren(TabItemComponent) tabs?: QueryList<TabItemComponent>;
 
-  @Input() responsiveLinkText?: string;
+  @Input({ required: true }) responsiveLinkText: string = '';
   @Input() selectedIndex = 0;
   
   isSmallScreen = false;

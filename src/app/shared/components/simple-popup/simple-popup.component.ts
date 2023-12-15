@@ -17,7 +17,7 @@ export class SimplePopupComponent {
 
   @ContentChildren(SimplePopupActionButtonComponent) actionButtons?: QueryList<SimplePopupActionButtonComponent>;
 
-  @Input() title: string = 'Simple Popup';
+  @Input({ required: true }) title: string = '';
   @Input() content? : string;
   @Input() showCancelButton: boolean = false;
   @Input() dialogWidth: string = '40vw';

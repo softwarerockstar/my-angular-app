@@ -17,7 +17,7 @@ export class CardLinkComponent {
 
   @Output() onClick = new EventEmitter<Event>();
 
-  @Input() titleText?: string;  
+  @Input({ required: true }) titleText: string = '';  
   @Input() subTitle?: string;
   @Input() iconPath?: string;
   @Input() showExternalLinkIcon = false;

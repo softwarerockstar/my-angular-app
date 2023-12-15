@@ -10,7 +10,7 @@ import {Input, Output, EventEmitter} from '@angular/core'
   imports: [CommonModule]
 })
 export class IconLinkComponent {
-  @Input() titleText?: string
+  @Input({ required: true }) titleText: string = '';
   @Input() iconPath?: string;
   @Output() onClick = new EventEmitter<Event>();
   

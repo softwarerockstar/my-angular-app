@@ -1,4 +1,4 @@
 <button class="btn" mat-button>
     @if (iconPath) { <img [src]="iconPath"> }
-    @if (titleText) { <a (click)="raiseClickEvent($event)">{{ titleText }}</a> }
+    <a (click)="raiseClickEvent($event)">{{ titleText }}</a>
 </button>

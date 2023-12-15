@@ -30,7 +30,7 @@
       @for(tabItem of tabs; track idx; let idx = $index) {      
         <mat-tab>
           <ng-template mat-tab-label>
-            @if (tabItem.iconUrl) { <img [src]="tabItem.iconUrl" /> }{{ tabItem.heading ?? '' }}
+            @if (tabItem.iconUrl) { <img [src]="tabItem.iconUrl" /> }{{ tabItem.heading }}
           </ng-template> 
           <ng-container [ngTemplateOutlet]="tabItem.tabContent" />       
         </mat-tab>    

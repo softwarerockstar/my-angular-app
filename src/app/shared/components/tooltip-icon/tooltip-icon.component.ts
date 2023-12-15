@@ -15,6 +15,6 @@ import { MaterialModule } from '../../modules/material/material.module';
 export class TooltipIconComponent {
 
   @Input() iconPath?: string;
-  @Input() tooltipeText: string = "";    
+  @Input({ required: true }) tooltipeText: string = '';    
 
 }
