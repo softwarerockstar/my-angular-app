@@ -29,4 +29,6 @@ export class PolicySelectotButtonsDirective{}
 })
 export class PolicySelectorComponent {  
   @Input() policies?: PolicySelectorModel[];
+  @Input() selectedValue?: string;
+
 }

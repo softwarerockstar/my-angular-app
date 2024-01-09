@@ -1,1 +1,13 @@
-<p>my-coverage works!</p>
+<policy-selector [policies]="policies" [selectedValue]="policies[0].value">
+    <policy-selector-buttons>
+      <icon-link 
+        titleText="Enroll Dependent" 
+        iconPath="/assets/img/enroll-dependent-redone.png" 
+        (iconLinkClick)="cardLinkOnClick($event)"/>
+
+      <icon-link 
+        titleText="Purchase Additional Coverage" 
+        iconPath="/assets/img/purchase-additional-coverage.png" 
+        (iconLinkClick)="cardLinkOnClick($event)"/>
+    </policy-selector-buttons>
+  </policy-selector>  
