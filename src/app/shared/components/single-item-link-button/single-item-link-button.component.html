@@ -1,0 +1,5 @@
+@if (iconPath) { <img class="single-item-link-button" [src]="iconPath" />&nbsp; }
+    
+<a class="single-item-link-button" [class.is-external]="isExternal ?? false" [href]="href ?? '#'" [target]="target ?? '_self'">
+    {{ text }}
+</a>
