@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PolicySelectorComponent, PolicySelectotButtonsDirective, PolicySelectorModel } from 'src/app/shared/components/policy-selector/policy-selector.component';
 import { IconLinkComponent } from 'src/app/shared/components/icon-link/icon-link.component';
+import { SingleItemLinkButtonComponent } from 'src/app/shared/components/single-item-link-button/single-item-link-button.component';
+import { HyperTabsModule } from 'src/app/shared/components/hyper-tabs/hyper-tabs.module';
 
 @Component({
   selector: 'my-coverage',
@@ -11,6 +13,8 @@ import { IconLinkComponent } from 'src/app/shared/components/icon-link/icon-link
     IconLinkComponent,
     PolicySelectorComponent,
     PolicySelectotButtonsDirective,
+    SingleItemLinkButtonComponent,
+    HyperTabsModule
 ],
   templateUrl: './my-coverage.component.html',
   styleUrl: './my-coverage.component.scss'

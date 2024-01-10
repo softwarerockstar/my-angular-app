@@ -1,13 +1,50 @@
-<policy-selector [policies]="policies" [selectedValue]="policies[0].value">
-    <policy-selector-buttons>
-      <icon-link 
-        titleText="Enroll Dependent" 
-        iconPath="/assets/img/enroll-dependent-redone.png" 
-        (iconLinkClick)="cardLinkOnClick($event)"/>
+<div class="my-coverage">
 
-      <icon-link 
-        titleText="Purchase Additional Coverage" 
-        iconPath="/assets/img/purchase-additional-coverage.png" 
-        (iconLinkClick)="cardLinkOnClick($event)"/>
-    </policy-selector-buttons>
-  </policy-selector>  
+  <div class="area">
+    <policy-selector [policies]="policies" [selectedValue]="policies[0].value">
+      <policy-selector-buttons>
+        <icon-link titleText="Enroll Dependent" iconPath="/assets/img/enroll-dependent-redone.png"
+          (iconLinkClick)="cardLinkOnClick($event)" />
+
+        <icon-link titleText="Purchase Additional Coverage" iconPath="/assets/img/purchase-additional-coverage.png"
+          (iconLinkClick)="cardLinkOnClick($event)" />
+      </policy-selector-buttons>
+    </policy-selector>
+  </div>
+
+  <div class="area nav-link-buttons">
+    <div class="one">
+      <single-item-link-button 
+        class="nav-single-item-link-btn" 
+        text="Tax Documents"
+        iconPath="/assets/img/tax-document.png" />
+    </div>
+    <div class="two">
+      <single-item-link-button 
+        class="nav-single-item-link-btn" 
+        text="History"
+        iconPath="/assets/img/coverage-history.png" />
+    </div>
+    <div class="three">
+      <single-item-link-button 
+        class="nav-single-item-link-btn" 
+        text="View Receipt"
+        iconPath="/assets/img/view-receipt.png" />
+    </div>
+    <div class="four">
+      <single-item-link-button 
+        class="nav-single-item-link-btn" 
+        text="ID Card"
+        iconPath="/assets/img/id-card.png" />
+    </div>
+  </div>
+
+  <div class="area">
+    <hyper-tabs-tab-group-button-grid>
+      <hyper-tabs-tab-item heading="Medical">Here is the content for <u>Medical</u></hyper-tabs-tab-item>
+      <hyper-tabs-tab-item heading="Prescription">Here is the content for <u>Prescription</u></hyper-tabs-tab-item>
+      <hyper-tabs-tab-item heading="Additional Benifits">Here is the content for <u>Additional
+          Benifits</u></hyper-tabs-tab-item>
+    </hyper-tabs-tab-group-button-grid>
+  </div>
+</div>
