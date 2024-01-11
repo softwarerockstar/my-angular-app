@@ -37,6 +37,32 @@
 
         }
 
+        .tab-content {
+            background-color: white;
+            padding: 27px 30px 30px 30px;
+
+            .tab-content-header {
+                width: 100%;
+                .heading {
+                    text-transform: uppercase;
+                    font-family: var(--font-medium);
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: var(--color-primary);                
+                    padding-right: 25px;
+                    display: inline-block;
+                    padding-bottom: 25px;                
+                }
+
+                .links {
+                    display: inline-block;
+                    margin-left: auto;
+                }
+    
+            }
+
+        }
+
     }
 
 
