@@ -1,0 +1,49 @@
+<div class="header">
+    <div class="heading">
+        Current Medical Coverages
+    </div>
+    <div class="links">              
+        <single-item-link-button 
+            class="nav-single-item-link-btn" 
+            [isExternal]="true"
+            text="Summary Brochure"
+            iconPath="/assets/img/brochure-summary.png" />  
+        
+        <single-item-link-button 
+            class="nav-single-item-link-btn" 
+            [isExternal]="true"
+            text="Brochure Certificate"
+            iconPath="/assets/img/brochure-certificate.png" />  
+    </div>
+</div>
+<div class="content">
+    <div class="account-info">
+        <span class="account-type">{{ accountType }}</span> - <span class="account-name">{{ accountName }}</span>
+    </div>
+
+    <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header class="policy-info-header">
+            <mat-panel-title>
+                <div class="coverage-header">
+                    <div class="col-1">
+                        <span class="heading">SRID</span>
+                        <span class="content">9086024</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="heading">Policy</span>
+                        <span class="content">2023-284-1</span>
+                    </div>
+                    <div class="col-3">
+                        <span class="heading">Client Name</span>
+                        <span class="content">Old Dominion University</span>
+                    </div>
+                </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      
+</div>

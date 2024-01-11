@@ -1,0 +1,80 @@
+.header {
+    width: 100%;
+    border-bottom: dashed 1px var(--color-border-1);
+    .heading {
+        text-transform: uppercase;
+        font-family: var(--font-medium);
+        font-weight: bold;
+        font-size: 16px;
+        color: var(--color-primary);                
+        padding-right: 25px;
+        display: inline-block;
+        padding-bottom: 25px;                
+    }
+
+    .links {                    
+        float: right;
+    }
+}
+
+.content {
+    margin-top: 15px;
+
+    .account-info {
+        margin-bottom: 16px;
+
+        .account-type {
+            font-family: var(--font-medium);
+            font-size: 16px;    
+        }
+        
+        // TODO: change to --font-bold
+        .account-name {
+            font-family: var(--font-medium);
+            font-size: 16px;
+            font-weight: bold;    
+        }
+        
+    }
+
+    mat-expansion-panel-header.policy-info-header {
+        border: solid 1px var(--color-border-2);    
+        background: var(--color-info);
+
+        .coverage-header {
+            width: 100%;    
+            .col-1 { 
+                display: inline-block;
+                width: 30%;
+            }
+        
+            .col-2 { 
+                display: inline-block;
+                width: 21%;
+            }
+            .col-3 { 
+                display: inline-block;
+                width: 40%;
+            }
+        
+            .heading {
+                font-family: var(--font-regular);
+                font-size: 16px;
+                font-weight: normal; 
+                margin-right: 10px;   
+            }
+        
+            .content {
+                font-family: var(--font-medium);
+                font-size: 16px;
+                font-weight: normal;    
+            }
+        
+        }        
+    }
+    
+}
+
+
+
+

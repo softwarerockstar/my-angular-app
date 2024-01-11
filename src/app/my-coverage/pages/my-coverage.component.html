@@ -12,6 +12,7 @@
     </policy-selector>
   </div>
 
+  <!-- TODO: Hide on small screens -->
   <div class="area nav-link-buttons">
     <div class="one">
       <single-item-link-button 
@@ -43,25 +44,7 @@
     <hyper-tabs-tab-group-button-grid>
       <hyper-tabs-tab-item heading="Medical">
         <div class="tab-content">
-          <div class="tab-content-header">
-            <div class="heading">
-              Current Medical Coverages
-            </div>
-            <div class="links">              
-              <single-item-link-button 
-                class="nav-single-item-link-btn" 
-                [isExternal]="true"
-                text="Summary Brochure"
-                iconPath="/assets/img/brochure-summary.png" />  
-              
-            <single-item-link-button 
-              class="nav-single-item-link-btn" 
-              [isExternal]="true"
-              text="Brochure Certificate"
-              iconPath="/assets/img/brochure-certificate.png" />  
-            </div>
-          </div>
-          <div class="tab-content-body">Here is the content for <u>Medical</u></div>
+          <medical-coverage />
         </div>
       </hyper-tabs-tab-item>
       <hyper-tabs-tab-item heading="Vision">
