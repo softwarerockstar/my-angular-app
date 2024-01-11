@@ -3,6 +3,7 @@
   <div class="area">
     <policy-selector [policies]="policies" [selectedValue]="policies[0].value">
       <policy-selector-buttons>
+        <!-- TODO: On certain data consitions buttons might be hidden -->
         <icon-link titleText="Enroll Dependent" iconPath="/assets/img/enroll-dependent-redone.png"
           (iconLinkClick)="cardLinkOnClick($event)" />
 
@@ -51,7 +52,8 @@
             policyNumber="2023-284-1"
             clientName="Old Dominion University"
             summaryBrochureLink="#"
-            brochureCertificateLink="#"/>
+            brochureCertificateLink="#"
+            confirmationOfCoverageLink="#"/>
         </div>
       </hyper-tabs-tab-item>
       <hyper-tabs-tab-item heading="Vision">

@@ -25,5 +25,6 @@ export class MedicalCoverageComponent {
 
   @Input() summaryBrochureLink?: string;
   @Input() brochureCertificateLink?: string;
+  @Input() confirmationOfCoverageLink?: string;
   
 }

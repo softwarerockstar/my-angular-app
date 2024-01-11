@@ -27,10 +27,14 @@
         <span class="account-type">{{ accountType }}</span> - <span class="account-name">{{ accountName }}</span>
     </div>
 
-    <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
-          <mat-expansion-panel-header class="policy-info-header">
+    <mat-accordion multi>
+        <mat-expansion-panel 
+            class="policy-info-header" 
+            [expanded]="true"            
+            (opened)="panelOpenState == true"
+            (closed)="panelOpenState == false">
+
+          <mat-expansion-panel-header>
             <mat-panel-title>
                 <!-- TODO: small screens transpose rows/cols -->
                 <div class="coverage-header">
@@ -49,7 +53,22 @@
                 </div>
             </mat-panel-title>
           </mat-expansion-panel-header>
-          <p>I'm visible because I am open</p>
+            @if (confirmationOfCoverageLink) {
+                <div class="coverage-confirmation-link">
+                    <single-item-link-button 
+                        class="nav-single-item-link-btn" 
+                        [isExternal]="true"
+                        [href]="confirmationOfCoverageLink"
+                        text="Confirmation of Coverage" />  
+                </div>
+            }
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [hideToggle]="true">
+            <mat-expansion-panel-header>
+                Hi
+            </mat-expansion-panel-header>
+            
         </mat-expansion-panel>
       </mat-accordion>
       

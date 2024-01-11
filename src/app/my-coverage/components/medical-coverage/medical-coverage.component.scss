@@ -37,40 +37,50 @@
         
     }
 
-    mat-expansion-panel-header.policy-info-header {
-        border: solid 1px var(--color-border-2);    
-        background: var(--color-info);
+    mat-expansion-panel.policy-info-header { 
+         
+        mat-expansion-panel-header {
+            border: solid 1px var(--color-border-2);    
+            background: var(--color-info);
 
-        .coverage-header {
-            width: 100%;    
-            .col-1 { 
-                display: inline-block;
-                width: 30%;
-            }
-        
-            .col-2 { 
-                display: inline-block;
-                width: 21%;
-            }
-            .col-3 { 
-                display: inline-block;
-                width: 40%;
-            }
-        
-            .heading {
-                font-family: var(--font-regular);
-                font-size: 16px;
-                font-weight: normal; 
-                margin-right: 10px;   
-            }
-        
-            .content {
-                font-family: var(--font-medium);
-                font-size: 16px;
-                font-weight: normal;    
-            }
-        
-        }        
+            .coverage-header {
+                width: 100%;    
+                .col-1 { 
+                    display: inline-block;
+                    width: 30%;
+                }
+            
+                .col-2 { 
+                    display: inline-block;
+                    width: 21%;
+                }
+                .col-3 { 
+                    display: inline-block;
+                    width: 40%;
+                }
+            
+                .heading {
+                    font-family: var(--font-regular);
+                    font-size: 16px;
+                    font-weight: normal; 
+                    margin-right: 10px;   
+                }
+            
+                .content {
+                    font-family: var(--font-medium);
+                    font-size: 16px;
+                    font-weight: normal;    
+                }
+            
+            }        
+        }
+
+        .coverage-confirmation-link {
+            float: right;
+            padding: 15px 0 15px 0;
+            font-family: var(--font-medium);
+            font-size: 14px;
+        }
     }
     
 }
