@@ -2,18 +2,24 @@
     <div class="heading">
         Current Medical Coverages
     </div>
-    <div class="links">              
-        <single-item-link-button 
-            class="nav-single-item-link-btn" 
-            [isExternal]="true"
-            text="Summary Brochure"
-            iconPath="/assets/img/brochure-summary.png" />  
+    <div class="links"> 
+        @if (summaryBrochureLink) {
+            <single-item-link-button 
+                class="nav-single-item-link-btn" 
+                [isExternal]="true"
+                [href]="summaryBrochureLink"
+                text="Summary Brochure"
+                iconPath="/assets/img/brochure-summary.png" />  
+        }
         
-        <single-item-link-button 
-            class="nav-single-item-link-btn" 
-            [isExternal]="true"
-            text="Brochure Certificate"
-            iconPath="/assets/img/brochure-certificate.png" />  
+        @if (brochureCertificateLink) {
+            <single-item-link-button 
+                class="nav-single-item-link-btn" 
+                [isExternal]="true"
+                [href]="brochureCertificateLink"
+                text="Brochure Certificate"
+                iconPath="/assets/img/brochure-certificate.png" />  
+        }
     </div>
 </div>
 <div class="content">
@@ -26,18 +32,19 @@
                              (closed)="panelOpenState = false">
           <mat-expansion-panel-header class="policy-info-header">
             <mat-panel-title>
+                <!-- TODO: small screens transpose rows/cols -->
                 <div class="coverage-header">
                     <div class="col-1">
                         <span class="heading">SRID</span>
-                        <span class="content">9086024</span>
+                        <span class="content">{{ srId }}</span>
                     </div>
                     <div class="col-2">
                         <span class="heading">Policy</span>
-                        <span class="content">2023-284-1</span>
+                        <span class="content">{{ policyNumber }}</span>
                     </div>
                     <div class="col-3">
                         <span class="heading">Client Name</span>
-                        <span class="content">Old Dominion University</span>
+                        <span class="content">{{ clientName }}</span>
                     </div>
                 </div>
             </mat-panel-title>
