@@ -1,0 +1,16 @@
+<div class="info-card" [class.elevated]="elevated">
+    <div class="header hline">
+        <div class="title">{{ title }}</div>
+        <div class="icon" (click)="closeInfoCard()">
+            <img src="/assets/img/{{ closeButtonIconFileName }}" />
+        </div>
+    </div>    
+
+    <ng-content select="[content]" />
+
+    @if (hasFooter) {
+        <div class="footer">
+            <ng-content select="[footer]" />
+        </div>
+    }
+</div>

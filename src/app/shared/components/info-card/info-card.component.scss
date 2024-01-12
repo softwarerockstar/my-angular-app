@@ -1,0 +1,37 @@
+@import '/src/lib/core/theming/breakpoints.scss';
+
+.info-card {
+    background-color: var(--color-light);
+    border-top: solid 3px var(--color-primary);
+    padding: 15px 30px;
+
+    & .header {    
+        color: var(--color-primary);
+        padding-bottom: 10px;
+        font-weight: bold;
+        font-family: var(--font-bold);
+        font-size: 18px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        
+        & .title {
+            flex: auto;
+        }
+
+        & .icon {
+            cursor: pointer;
+        }
+    }
+}
+
+.info-card.elevated {
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .info-card {
+        margin: 20px 10px
+    }
+}
