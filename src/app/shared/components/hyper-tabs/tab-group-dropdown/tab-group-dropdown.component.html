@@ -4,9 +4,11 @@
 
   @if(isSmallScreen) {
 
-    <a class="responsive-trigger" [matMenuTriggerFor]="appMenu">
-      {{ responsiveLinkText }}
-    </a>
+    <div class="menu-button">
+      <a class="responsive-trigger" [matMenuTriggerFor]="appMenu">
+        {{ responsiveLinkText }}
+      </a>
+    </div>
 
     <mat-menu #appMenu="matMenu" class="hyper-tabs-dropdown-menu">
       <!-- All links except for the first one -->
