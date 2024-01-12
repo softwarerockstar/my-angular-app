@@ -30,9 +30,9 @@
     <mat-accordion multi>
         <mat-expansion-panel 
             class="policy-info-header" 
-            [expanded]="true"            
-            (opened)="panelOpenState == true"
-            (closed)="panelOpenState == false">
+            [expanded]="true"   
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false">
 
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -53,6 +53,8 @@
                 </div>
             </mat-panel-title>
           </mat-expansion-panel-header>
+
+          <div class="policy-details">
             @if (confirmationOfCoverageLink) {
                 <div class="coverage-confirmation-link">
                     <single-item-link-button 
@@ -62,14 +64,28 @@
                         text="Confirmation of Coverage" />  
                 </div>
             }
-        </mat-expansion-panel>
 
-        <mat-expansion-panel [hideToggle]="true">
-            <mat-expansion-panel-header>
-                Hi
-            </mat-expansion-panel-header>
-            
-        </mat-expansion-panel>
-      </mat-accordion>
+            <div class="coverage-details">
+                <div class="col-1">
+                    <span class="heading">Coverage</span>
+                    <span class="content">{{ coverageDate }}</span>
+                </div>
+                <div class="col-2">
+                    <span class="heading">Coverage Type</span>
+                    <span class="content">{{ coverageType }}</span>
+                </div>
+                <div class="col-3">
+                    <span class="heading">Plan Info</span>
+                    <span class="content">{{ planInfo }}</span>
+                </div>
+            </div>
+        </div>
+        </mat-expansion-panel>        
+        
+        @if (panelOpenState) { <mat-divider></mat-divider> }
+      
+    </mat-accordion>
+
+      
       
 </div>
