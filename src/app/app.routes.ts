@@ -10,10 +10,13 @@ type PathMatch = "full" | "prefix" | undefined;
 
 export const routes = [
     {path: '', redirectTo: '/demo', pathMatch:'full' as PathMatch },
-    {path: 'demo', component: DemoSharedComponentsComponent},
-    {path: 'mycoverage', component: MyCoverageComponent},
-    {path: 'tax', component: MyCoverageTaxDocumentsComponent},
-    {path: 'history', component: MyCoverageHistoryComponent},
-    {path: 'receipt', component: MyCoverageViewReceiptComponent},
-    {path: 'id', component: MyCoverageIdCardComponent},
+    {path: 'demo', component: DemoSharedComponentsComponent},    
+    {path: 'mycoverage', children: [  
+        {path: '', component: MyCoverageComponent },     
+        {path: 'tax', component: MyCoverageTaxDocumentsComponent, pathMatch:'full' as PathMatch},
+        {path: 'history', component: MyCoverageHistoryComponent},
+        {path: 'receipt', component: MyCoverageViewReceiptComponent},
+        {path: 'idcard', component: MyCoverageIdCardComponent}
+    
+    ]},
 ];

@@ -8,11 +8,11 @@
     .container {
         margin-left: 15px;
         margin-right: 15px;
+        min-width: 400px;
 
         .content {
             min-height: 27vh;
         }
-
 
         mat-divider {
             border: dashed 1px var(--color-border-1);
@@ -23,37 +23,51 @@
         .table-hover {
             width: 100%;
             margin-bottom: 20px;
+            border-collapse: collapse;
+            border: 1px solid var(--color-border-1);
+            width: 100%;
+            background-color: var(--color-light);
+            
+            
 
-            .col-1 {
-                width: 65px;
-                padding-top: 20px;
-                padding-bottom: 20px;
+            th, td {
                 text-align: left;
+                padding: 20px 10px;
+                border-top: 1px solid var(--color-border-1);
+                border-bottom: 1px solid var(--color-border-1);
+                font-size: 14px;
+                
+            }
+
+            th {
+                font-family: var(--font-medium);                
+            }
+
+            td {
+                font-family: var(--font-regular);                
+            }
+
+            tbody > tr:hover {
+                background-color: var(--color-shadow-3);
+            }            
+
+            .table-header-1 {
+                width: 112px;
             }
     
-            .col-2 {
-                min-width: 120px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                text-align: left;
+            .table-header-2 {
+                min-width: 112px;
             }
     
-            .col-3 {
-                width: 128px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                text-align: left;
+            .table-header-3 {
+                width: 170px;
             }
     
-            .col-4 {
-                width: 80px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                text-align: left;
+            .table-header-4 {
+                width: 100px;
             }
         }
-
-
-
     }
 }
+
+
