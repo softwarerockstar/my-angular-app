@@ -2,6 +2,12 @@
 
 .uhcsr-hyper-tabs-dropdown {
 
+    & div.menu-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
     a.responsive-trigger {
         font-family: var(--font-regular) !important;
         font-size: 16px !important;

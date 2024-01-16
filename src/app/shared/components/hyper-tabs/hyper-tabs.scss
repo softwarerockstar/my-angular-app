@@ -5,12 +5,12 @@
         }
 
         .mat-mdc-tab-body-wrapper {
-            border-top: 1px solid var(--color-primary);
-            padding-top: 12px;
+            border-top: 3px solid var(--color-primary);
         }
 
         .mat-mdc-tab {
             border: 0.8px solid var(--color-border-1) !important;
+            background-color: var(--color-light) !important;
 
             &.mdc-tab--active {
                 background-color: var(--color-primary) !important;
