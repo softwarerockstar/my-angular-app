@@ -13,34 +13,34 @@
     </policy-selector>
   </div>
 
-  <!-- TODO: Hide on small screens -->
-  <div class="area nav-link-buttons">
-    <div class="one">
-      <single-item-link-button 
-        class="nav-single-item-link-btn" 
-        text="Tax Documents"
-        iconPath="/assets/img/tax-document.png" />
+  @if (!isSmallScreen) {
+    <div class="area nav-link-buttons">
+      <div class="one">
+        <single-item-link-button 
+          class="nav-single-item-link-btn" 
+          text="Tax Documents"
+          iconPath="/assets/img/tax-document.png" />
+      </div>
+      <div class="two">
+        <single-item-link-button 
+          class="nav-single-item-link-btn" 
+          text="History"
+          iconPath="/assets/img/coverage-history.png" />
+      </div>
+      <div class="three">
+        <single-item-link-button 
+          class="nav-single-item-link-btn" 
+          text="View Receipt"
+          iconPath="/assets/img/view-receipt.png" />
+      </div>
+      <div class="four">
+        <single-item-link-button 
+          class="nav-single-item-link-btn" 
+          text="ID Card"
+          iconPath="/assets/img/id-card.png" />
+      </div>
     </div>
-    <div class="two">
-      <single-item-link-button 
-        class="nav-single-item-link-btn" 
-        text="History"
-        iconPath="/assets/img/coverage-history.png" />
-    </div>
-    <div class="three">
-      <single-item-link-button 
-        class="nav-single-item-link-btn" 
-        text="View Receipt"
-        iconPath="/assets/img/view-receipt.png" />
-    </div>
-    <div class="four">
-      <single-item-link-button 
-        class="nav-single-item-link-btn" 
-        text="ID Card"
-        iconPath="/assets/img/id-card.png" />
-    </div>
-  </div>
-
+  }
   <div class="area">
     <!-- TODO: active tab color is not correct -->
     <hyper-tabs-tab-group-button-grid>

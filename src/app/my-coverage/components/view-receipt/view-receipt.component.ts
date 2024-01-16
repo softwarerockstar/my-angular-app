@@ -4,16 +4,16 @@ import { InfoCardComponent } from 'src/app/shared/components/info-card/info-card
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 
 @Component({
-  selector: 'my-coverage-tax-documents',
+  selector: 'view-receipt',
   standalone: true,
   imports: [
     CommonModule,
     InfoCardComponent,
     MaterialModule,
   ],
-  templateUrl: './tax-documents.component.html',
-  styleUrl: './tax-documents.component.scss'
+  templateUrl: './view-receipt.component.html',
+  styleUrl: './view-receipt.component.scss'
 })
-export class MyCoverageTaxDocumentsComponent {
+export class MyCoverageViewReceiptComponent {
 
 }
