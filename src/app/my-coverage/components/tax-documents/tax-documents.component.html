@@ -4,7 +4,6 @@
             <div class="content" content>
                 <mat-divider />                
                 
-                <!-- TODO: replace button with Terry's component -->
                 @if(documents) {
                     <table class="table-hover">
                         <thead>
@@ -23,7 +22,7 @@
                                     <td>{{ doc.taxType }}</td>
                                     <td>
                                         <div class="buttons">
-                                            <button aria-label="View IRS Form 1095-B  (opens in a new window)">View Form {{ doc.documentHref }}</button>
+                                            <file-action-button buttonText="View Form" iconFileName="ico_my_coverage_normal.png" (onClick)="showDocument(doc.documentHref)"></file-action-button>
                                         </div>
                                     </td>
                                 </tr>
