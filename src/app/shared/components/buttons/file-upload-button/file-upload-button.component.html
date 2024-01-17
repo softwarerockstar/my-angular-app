@@ -1,0 +1,6 @@
+<div class="button-container" (click)="openDialog()">
+    <img src="/assets/img/browse.png" alt="browse file">
+    <p>{{ buttonText }}</p>
+    <legend-text [removeDefaultMargin]="true" />
+    <input #fileInput type="file" (change)="handleFileChange($event)" [multiple]="multiple" />
+</div>
