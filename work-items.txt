@@ -1,0 +1,22 @@
+- ID Card main page
+	- Medical
+		- View ID Card screen
+		- ID Card PDF
+		- Mail ID Card screen
+			- Card Request History screen
+	- Travel assistance
+		- View ID Card screen
+		- ID Card PDF
+		- Mail ID Card screen
+			- Card Request History screen	
+	- Vision
+		- View ID Card screen
+		- ID Card PDF
+		- Mail ID Card screen
+			- Card Request History screen	
+	- Dental
+		- View ID Card screen
+		- ID Card PDF
+		- Mail ID Card screen
+			- Card Request History screen	
+	
