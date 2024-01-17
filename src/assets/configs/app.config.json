@@ -1,0 +1,10 @@
+{
+    "uhcsrCmsUrl" : "https://apitest.uhcsr.com/api/v1",
+    "uhcsrMediaUrl" : "https://wwwdev.uhcsr.com/media/",
+    "myaccountApiUrlV5" : "https://apidev.uhcsr.com/myaccount/v5",
+    "uhcsrClientUrl" : "https://wwwdev.uhcsr.com",
+    "myaccountApiUrl" : "https://apidev.uhcsr.com/myaccount/v4",
+    "needAssistanceChatApiUrl" : "https://apitest.uhcsr.com/myaccount/v4/chat/availability",
+    "needAssistanceChatLink" : "https://home-c37.nice-incontact.com/inContact/ChatClient/index.html",
+    "needAssistanceVideoLink" : "https://uhcsr.com/video"
+}
