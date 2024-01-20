@@ -10,7 +10,7 @@
         margin-right: 15px;
         min-width: 400px;
 
-        .content {
+        .content.large {
             min-height: 27vh;
         }
 
@@ -68,6 +68,46 @@
                 width: 150px;
             }
         }
+
+        .small-container {
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #f5f5f5;
+          border: 1px solid #bdcacd;
+        
+          .cell-11 {
+            display: inline-block;
+            width: 53%;
+            vertical-align: top;
+            margin-right: 16px;
+          }
+          .cell-12 {
+            display: inline-block;
+            vertical-align: top;
+          }
+        
+          .heading {
+            font-family: var(--font-regular);
+            color: #555;
+            font-size: 14px;
+          }
+          .content {
+            font-family: var(--font-medium);
+            color: #000;
+            font-size: 16px;
+          }
+        
+          .cell-21 {
+            margin-top: 20px;
+            border-top: 1px dashed #cdd5d7;
+            file-action-button {
+              width: 120px;
+              margin: 14px auto 0;
+              display: block;
+            }
+          }
+        }
+        
     }
 }
 

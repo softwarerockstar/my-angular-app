@@ -1,36 +1,80 @@
+<!-- TODO: View details button icon needs to be updated -->
+
 <div class="my-coverage-view-receipt">    
     <div class="container">        
         <info-card title="Insurance Receipt" (closeButtonClicked)="closeButtonOnClick()">
-            <div class="content" content>
+            <div class="content" [class.large]="!isSmallScreen" content>
                 <mat-divider />                
                 
                 @if(documents) {
+
+                  @if (!isSmallScreen)
+                  {
                     <table class="table-hover">
-                        <thead>
-                            <tr>
-                                <th class="table-header-1" scope="col">Submitted</th>
-                                <th class="table-header-2" scope="col">Status</th>
-                                <th class="table-header-3" scope="col">Receipt</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @for (doc of documents; track idx; let idx = $index) { 
-                                <tr>
-                                    <td>{{ doc.submittedOn }}</td>
-                                    <td>{{ doc.status }}</td>
-                                    <td>
-                                        <div class="buttons">
-                                            <file-action-button buttonText="View Details" iconFileName="ico_my_coverage_normal.png" (onClick)="showDocument(doc.documentHref)"></file-action-button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
+                      <thead>
+                          <tr>
+                              <th class="table-header-1" scope="col">Submitted</th>
+                              <th class="table-header-2" scope="col">Status</th>
+                              <th class="table-header-3" scope="col">Receipt</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          @for (doc of documents; track idx; let idx = $index) { 
+                              <tr>
+                                  <td>{{ doc.submittedOn }}</td>
+                                  <td>{{ doc.status }}</td>
+                                  <td>
+                                      <div class="buttons">
+                                          <file-action-button buttonText="View Details" iconFileName="ico_my_coverage_normal.png" (onClick)="showDocument(doc.documentHref)"></file-action-button>
+                                      </div>
+                                  </td>
+                              </tr>
+                          }
+                      </tbody>
                     </table>
+                  }
+                  @else {
+
+                    @for (doc of documents; track idx; let idx = $index) { 
+                      <div class="small-container">
+                        <div class="row">
+                          <div class="col-6 cell-11">
+                            <div class="row">
+                              <div class="col-12 heading">
+                                Submitted
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12 content">
+                                {{ doc.submittedOn }}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 cell-12">
+                            <div class="row">
+                              <div class="col-12 heading">
+                                Status
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12 content">
+                                {{ doc.status }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 cell-21">
+                            <file-action-button buttonText="View Form" iconFileName="ico_my_coverage_normal.png" (onClick)="viewDetails()"></file-action-button>
+                          </div>
+                        </div>   
+                      </div>                     
+                    }
+                                      
+                  }
                 }
             </div>
         </info-card>
-        
     </div>
 </div>
 
