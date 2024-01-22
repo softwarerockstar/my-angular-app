@@ -1,67 +1,71 @@
 <div class="my-coverage-view-receipt-details">    
     <div class="container">        
         <info-card title="Insurance Receipt Details" (closeButtonClicked)="closeButtonOnClick()">
-            <div class="content" [class.large]="!isSmallScreen" content>
+            <div class="content" content>
                 <mat-divider />                
                 
                 <div class="wrapper">
-                    <div class="border-bottom">
+                    <div class="section-heading">
                       <h1 class="title">MEMBER INFORMATION</h1>
                     </div>
-                    <div class="grid py-4">
+                    <div class="grid member-info" [class.small]="isSmallScreen" [class.medium]="isMediumScreeen">
                       <div>
                         <p class="heading">SR ID</p>
-                        <p class="content">1234567</p>
+                        <p class="content">{{receiptDetails.srId}}</p>
                       </div>
                       <div>
                         <p class="heading">Name</p>
-                        <p class="content">Test User</p>
+                        <p class="content">{{receiptDetails.fullName}}</p>
                       </div>
                       <div>
                         <p class="heading">Date of Birth</p>
-                        <p class="content">02/07/1991</p>
+                        <p class="content">{{receiptDetails.dateOfBirth}}</p>
                       </div>
-                      <div class="col-span-3">
+                      <div>
+                        <p class="heading">Phone Number</p>
+                        <p class="content">{{receiptDetails.phoneNumber}}</p>
+                      </div>
+                      <div>
                         <p class="heading">Permanent Address</p>
-                        <p class="content">1011 Main Street, Dallas, TX 10110</p>
+                        <p class="content">{{receiptDetails.address}}</p>
+                        <p class="content">{{receiptDetails.zip}}</p>
                       </div>
                     </div>
 
                     <mat-divider />                
 
-                    <div class="border-bottom">
+                    <div class="section-heading">
                       <h2 class="title">COVERAGE INFORMATION</h2>
                     </div>
                     <div class="py-4">
                       <p class="heading">Covered Insured</p>
-                      <p class="content">Test User</p>
+                      <p class="content">{{receiptDetails.coveredInsured}}</p>
                     </div>
 
                     <mat-divider />                
-                    
-                    <div class="border-bottom">
+
+                    <div class="section-heading">
                       <h2 class="title">PAYMENT INFORMATION</h2>
                     </div>
-                    <div class="grid grid-cols-2 md-grid-cols-4 py-4">
+                    <div class="grid payment-details" [class.small]="isSmallScreen" [class.medium]="isMediumScreeen">
                       <div>
                         <p class="heading">Payment Amount</p>
-                        <p class="content">$248.42</p>
+                        <p class="content">${{receiptDetails.paymentAmount}}</p>
                       </div>
                       <div>
                         <p class="heading">Payment Type</p>
-                        <p class="content">Credit Card</p>
+                        <p class="content">{{receiptDetails.paymentType}}</p>
                       </div>
                       <div>
                         <p class="heading">Transaction ID</p>
-                        <p class="content">000-1111111111</p>
+                        <p class="content">{{receiptDetails.transactionId}}</p>
                       </div>
                       <div>
                         <p class="heading">Transaction Date</p>
-                        <p class="content">01/18/2024</p>
+                        <p class="content">{{receiptDetails.transactionDate}}</p>
                       </div>
                     </div>
                   </div>
-
             </div>
         </info-card>
     </div>

@@ -6,10 +6,17 @@ import {Router} from '@angular/router';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 
 export interface MyCoverageViewReceiptDetailsModel {
-  taxYear: number,
-  schoolName: string,
-  taxType: string,
-  documentHref: string
+  srId: number,
+  fullName: string,
+  dateOfBirth: string,
+  address: string,
+  zip: string,
+  phoneNumber: string,
+  coveredInsured: string,
+  paymentAmount: number,
+  paymentType: string,
+  transactionId: string
+  transactionDate: string
 }
 
 @Component({
@@ -26,22 +33,34 @@ export interface MyCoverageViewReceiptDetailsModel {
 export class MyCoverageViewReceiptDetailsComponent {
 
   isSmallScreen = false;
+  isMediumScreeen = false;
   constructor(private router: Router, private breakpointObserver: BreakpointObserver) { }
   
   ngOnInit(): void {
     this.breakpointObserver.observe(Breakpoints.HandsetPortrait)    
       .subscribe((state: BreakpointState) => {
-        if (state.matches)
-          this.isSmallScreen = true;
-        else
-          this.isSmallScreen = false;    
-      });  
+        this.isSmallScreen = state.matches;
+      }); 
+      
+      this.breakpointObserver.observe(Breakpoints.TabletPortrait)    
+      .subscribe((state: BreakpointState) => {
+        this.isMediumScreeen = state.matches;
+      });      
   }  
 
-  receiptDetails: MyCoverageViewReceiptDetailsModel[] = [
-    {taxYear: 2023, schoolName: 'Old Dominion University', taxType: '	IRS Form 1095-B', documentHref: '#'},
-    {taxYear: 2022, schoolName: 'Old Dominion University', taxType: '	IRS Form 1095-B', documentHref: '#'},
-  ];
+  // TODO: remove fake data and hook to API
+  receiptDetails: MyCoverageViewReceiptDetailsModel = {
+    srId: 1234567, 
+    fullName: 'Test User', 
+    dateOfBirth: '02/07/1991', 
+    address: '1011 Main Street, Dallas, TX',
+    zip: '10101',
+    phoneNumber: '214-555-1212',
+    coveredInsured: 'Test User',
+    paymentAmount: 250.48,
+    paymentType: 'Credit Card',
+    transactionId: '000-1111111111',
+    transactionDate: '01/18/2024' };
 
   closeButtonOnClick() {
     this.router.navigateByUrl('/mycoverage/receipt');
