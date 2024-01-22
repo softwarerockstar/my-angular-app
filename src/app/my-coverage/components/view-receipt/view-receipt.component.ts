@@ -58,6 +58,7 @@ export class MyCoverageViewReceiptComponent {
 
   viewDetails() {
     console.log('View Details clicked');
+    this.router.navigateByUrl('/mycoverage/receipt-details');
   }
 
 }

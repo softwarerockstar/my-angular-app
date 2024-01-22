@@ -1,0 +1,69 @@
+<div class="my-coverage-view-receipt-details">    
+    <div class="container">        
+        <info-card title="Insurance Receipt Details" (closeButtonClicked)="closeButtonOnClick()">
+            <div class="content" [class.large]="!isSmallScreen" content>
+                <mat-divider />                
+                
+                <div class="wrapper">
+                    <div class="border-bottom">
+                      <h1 class="title">MEMBER INFORMATION</h1>
+                    </div>
+                    <div class="grid py-4">
+                      <div>
+                        <p class="heading">SR ID</p>
+                        <p class="content">1234567</p>
+                      </div>
+                      <div>
+                        <p class="heading">Name</p>
+                        <p class="content">Test User</p>
+                      </div>
+                      <div>
+                        <p class="heading">Date of Birth</p>
+                        <p class="content">02/07/1991</p>
+                      </div>
+                      <div class="col-span-3">
+                        <p class="heading">Permanent Address</p>
+                        <p class="content">1011 Main Street, Dallas, TX 10110</p>
+                      </div>
+                    </div>
+
+                    <mat-divider />                
+
+                    <div class="border-bottom">
+                      <h2 class="title">COVERAGE INFORMATION</h2>
+                    </div>
+                    <div class="py-4">
+                      <p class="heading">Covered Insured</p>
+                      <p class="content">Test User</p>
+                    </div>
+
+                    <mat-divider />                
+                    
+                    <div class="border-bottom">
+                      <h2 class="title">PAYMENT INFORMATION</h2>
+                    </div>
+                    <div class="grid grid-cols-2 md-grid-cols-4 py-4">
+                      <div>
+                        <p class="heading">Payment Amount</p>
+                        <p class="content">$248.42</p>
+                      </div>
+                      <div>
+                        <p class="heading">Payment Type</p>
+                        <p class="content">Credit Card</p>
+                      </div>
+                      <div>
+                        <p class="heading">Transaction ID</p>
+                        <p class="content">000-1111111111</p>
+                      </div>
+                      <div>
+                        <p class="heading">Transaction Date</p>
+                        <p class="content">01/18/2024</p>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+        </info-card>
+    </div>
+</div>
+
