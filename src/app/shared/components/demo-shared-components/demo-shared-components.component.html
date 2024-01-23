@@ -13,11 +13,11 @@
   </simple-popup>
 </div>
 
-<div style="margin: 40px;  min-width: 450px; max-width: 1024px; background-color: white;"> 
+<div style="margin: 40px;  min-width: 450px; max-width: 1024px; padding-bottom: 24px; background-color: white;"> 
   <delivery-preferences 
     [selectedIndex]="0"
     [deliveryPreferenceOptions]="deliveryPreferenceOptions" 
-    footer="<b>It's not you</b>, it's us. There was an issue building your dashboard. Please try again later. While we could not retreive your dashboard data, you may be able to continue to use the other features"
+    footer="<b>This is an awesome footer.</b>, it's us. It can be any length and contain HTML tags. You can even style your HTML with style attributes on your tags."
     (deliveryPreferencesChange)="deliveryPreferenceOnChange($event)"/>
 </div>
 
