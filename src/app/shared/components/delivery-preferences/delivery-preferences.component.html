@@ -20,5 +20,9 @@
             </mat-radio-group>
         </mat-grid-list>
 
+        <div class="footer" [class.small]="isSmallScreen">
+            <div class="footer-content" [innerHTML]="footer"></div>
+        </div>
+
     }
 </div>

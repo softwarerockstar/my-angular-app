@@ -55,7 +55,7 @@ export class DemoSharedComponentsComponent {
 
   deliveryPreferenceOptions: DeliveryPreferencesModel[] = [
     {heading: 'By Email', subHeading: 'stsppm-premiumba@uhcsr.com', iconPath: '/assets/img/ico-email.png', value: 0},
-    {heading: 'By U.S. Mail', subHeading: '65 East Rocky Oak Blvd.<br/>DECATUR, GA<br/>30033', iconPath: '/assets/img/usmaill-ico.png', value: 1},
+    {heading: 'By U.S. Mail', subHeading: '<p>65 East Rocky Oak Blvd.<br/>DECATUR, GA<br/>30033</p>', iconPath: '/assets/img/usmaill-ico.png', value: 1},
   ]
     
   cardLinkOnClick(args: any){

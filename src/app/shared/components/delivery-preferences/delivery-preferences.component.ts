@@ -22,6 +22,7 @@ export class DeliveryPreferencesComponent implements OnInit {
   isSmallScreen = false;
 
   @Input() deliveryPreferenceOptions?: DeliveryPreferencesModel[];
+  @Input() footer?: string;  
   @Input() selectedIndex: number = 0;
   @Output() deliveryPreferencesChange = new EventEmitter<number>();
   

@@ -1,6 +1,9 @@
 .uhcsr-delivery-preferences {
-
+    min-width: 450px;
+    
+    
     mat-grid-tile {
+        min-width: 450px;
         &.odd {
             border-right: 1px dashed var(--color-border-1);
 
@@ -30,7 +33,31 @@
             margin-right: 9px;
             margin-left: 9px;
         }
-    
+    }
+
+    .footer {
+        width: 50%;
+        margin-left: auto;           
+
+        .footer-content {
+            //width: 60%;
+            width: fit-content;
+            margin: auto;
+            padding-left: 200px;
+            padding-right: 80px;
+            border-left: 1px dashed var(--color-border-1);
+            margin-left: -6px;        }
+
+        &.small {
+            width: 100%;
+            
+
+            .footer-content {
+                padding-left: 150px;
+                border-left: none;
+                
+            }    
+        }
         
     }
 
