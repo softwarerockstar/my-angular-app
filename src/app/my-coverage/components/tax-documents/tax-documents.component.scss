@@ -15,7 +15,8 @@
         }
 
         mat-divider {
-            border: dashed 1px var(--color-border-1);
+            border-top: none;
+            border-bottom: dashed 1px var(--color-border-1);
             margin-top: 10px;
             margin-bottom: 25px;
         }

@@ -1,9 +1,60 @@
 <div class="my-coverage-history">    
     <div class="container">
-        <info-card title="History">
+        <info-card title="Coverage History" (closeButtonClicked)="closeButtonOnClick()">
             <div class="content" content>
                 <mat-divider />
-                it works!
+
+                <!-- TODO: uhcsr-font css defined? -->
+                <mat-form-field class="uhcsr-font">
+                    <mat-label class="uhcsr-font">Member Name</mat-label>
+                    <mat-select 
+                        [(value)]="memberNameSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
+                        @for (item of memberNames; track idx; let idx = $index) {
+                          <mat-option [value]="item.value">
+                            {{item.name}}
+                          </mat-option>  
+                        }
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="uhcsr-font">
+                    <mat-label class="uhcsr-font">Policy Year</mat-label>
+                    <mat-select 
+                        [(value)]="policyYearsSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
+                        @for (item of policyYears; track idx; let idx = $index) {
+                          <mat-option [value]="item.value">
+                            {{item.name}}
+                          </mat-option>  
+                        }
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="uhcsr-font">
+                    <mat-label class="uhcsr-font">Plan Info</mat-label>
+                    <mat-select 
+                        [(value)]="planInfoSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
+                        @for (item of planInfos; track idx; let idx = $index) {
+                          <mat-option [value]="item.value">
+                            {{item.name}}
+                          </mat-option>  
+                        }
+                    </mat-select>
+                </mat-form-field>
+                
+                
+                <my-coverage-history-item 
+                    accountType="Primary"
+                    accountName="Acct Five Eis Test"
+                    srId="9086024"
+                    policyNumber="2023-284-1"
+                    clientName="Old Dominion University"
+                    summaryBrochureLink="#"
+                    brochureCertificateLink="#"
+                    confirmationOfCoverageLink="#"
+                    coverageDate="08/01/2023 - 07/31/2024"
+                    coverageType="Student"
+                    planInfo="Medical - Domestic Students" />
+    
             </div>
         </info-card>
         

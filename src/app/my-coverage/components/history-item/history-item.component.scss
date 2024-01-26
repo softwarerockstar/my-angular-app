@@ -1,0 +1,139 @@
+.my-coverage-history-item {
+    .header {
+        width: 100%;
+        border-bottom: dashed 1px var(--color-border-1);
+        .heading {
+            text-transform: uppercase;
+            font-family: var(--font-medium);
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--color-dark);                
+            padding-right: 25px;
+            display: inline-block;
+            padding-bottom: 25px;                
+        }
+    }
+
+    .content {
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        mat-divider {
+            border-top: none;
+            border-bottom: dashed 1px var(--color-border-1);
+        }    
+
+        .account-info {
+            margin-bottom: 16px;
+
+            .account-type {
+                font-family: var(--font-medium);
+                font-size: 16px;    
+            }
+            
+            // TODO: change to --font-bold
+            .account-name {
+                font-family: var(--font-medium);
+                font-size: 16px;
+                font-weight: bold;    
+            }
+            
+        }
+
+        mat-expansion-panel.policy-info-header { 
+            
+            mat-expansion-panel-header {
+                border: solid 1px var(--color-border-2);    
+                background: var(--color-info);
+
+                .coverage-header {
+                    width: 100%;    
+                    .col-1 { 
+                        display: inline-block;
+                        width: 30%;
+                    }
+                
+                    .col-2 { 
+                        display: inline-block;
+                        width: 21%;
+                    }
+                    .col-3 { 
+                        display: inline-block;
+                        width: 40%;
+                    }
+                
+                    .heading {
+                        font-family: var(--font-regular);
+                        font-size: 16px;
+                        font-weight: normal; 
+                        margin-right: 10px;   
+                    }
+                
+                    .content {
+                        font-family: var(--font-medium);
+                        font-size: 16px;
+                        font-weight: normal;    
+                    }
+                
+                }        
+            }
+
+            .policy-details {
+                margin-left: -24px;
+                margin-right: -24px;
+                margin-bottom: -28px;
+                
+                .coverage-details {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 11px 10px;
+                    
+                    background: #f5f5f5;
+                    border: 1px solid #bdcacd;
+                    border-radius: 2px;
+                    margin-bottom: 10px;
+        
+                    .col-1 { 
+                        display: inline-block;
+                        width: 30%;
+                    }
+                
+                    .col-2 { 
+                        display: inline-block;
+                        width: 23%;
+                    }
+                    .col-3 { 
+                        display: inline-block;
+                        width: 36%;
+                    }
+        
+                    .heading {
+                        font-family: var(--font-regular);
+                        font-size: 14px;
+                        font-weight: normal; 
+                        margin-right: 10px;   
+                    }
+                
+                    .content {
+                        font-family: var(--font-medium);
+                        font-size: 16px;
+                        font-weight: normal;    
+                    }
+        
+                }    
+            }
+
+            .links {
+                padding: 15px 0 15px 0;
+                font-family: var(--font-medium);
+                font-size: 14px;
+                width: 100%;
+                text-align: right;
+                border: 1px solid var(--color-border-1);
+                box-sizing: border-box;
+                margin-bottom: 12px;        
+            }
+        }
+        
+    }
+}
