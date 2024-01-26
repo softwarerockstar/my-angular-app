@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InfoCardComponent } from 'src/app/shared/components/info-card/info-card.component';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
@@ -22,7 +22,8 @@ export interface SelectModel {
     HistoryItemComponent
   ],
   templateUrl: './history.component.html',
-  styleUrl: './history.component.scss'
+  styleUrl: './history.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class MyCoverageHistoryComponent {
 

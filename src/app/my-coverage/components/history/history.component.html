@@ -1,47 +1,55 @@
+
 <div class="my-coverage-history">    
     <div class="container">
         <info-card title="Coverage History" (closeButtonClicked)="closeButtonOnClick()">
             <div class="content" content>
                 <mat-divider />
 
-                <!-- TODO: uhcsr-font css defined? -->
-                <mat-form-field class="uhcsr-font">
-                    <mat-label class="uhcsr-font">Member Name</mat-label>
-                    <mat-select 
-                        [(value)]="memberNameSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
-                        @for (item of memberNames; track idx; let idx = $index) {
-                          <mat-option [value]="item.value">
-                            {{item.name}}
-                          </mat-option>  
-                        }
-                    </mat-select>
-                </mat-form-field>
+                <div class="filter">
+                  <div class="heading">
+                      Select Member Info
+                  </div>
 
-                <mat-form-field class="uhcsr-font">
-                    <mat-label class="uhcsr-font">Policy Year</mat-label>
-                    <mat-select 
-                        [(value)]="policyYearsSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
-                        @for (item of policyYears; track idx; let idx = $index) {
-                          <mat-option [value]="item.value">
-                            {{item.name}}
-                          </mat-option>  
-                        }
-                    </mat-select>
-                </mat-form-field>
+                  <div class="items" [class.small]="isSmallScreen">
+                    <!-- TODO: uhcsr-font css defined? -->
+                    <mat-form-field class="uhcsr-font">
+                      <mat-label class="uhcsr-font">Member Name</mat-label>
+                      <mat-select 
+                          [(value)]="memberNameSelectedValue" disableRipple="true" panelClass="uhcsr-font" class="uhcsr-font" appearance="outline">
+                          @for (item of memberNames; track idx; let idx = $index) {
+                            <mat-option [value]="item.value">
+                              {{item.name}}
+                            </mat-option>  
+                          }
+                      </mat-select>
+                  </mat-form-field>
 
-                <mat-form-field class="uhcsr-font">
-                    <mat-label class="uhcsr-font">Plan Info</mat-label>
-                    <mat-select 
-                        [(value)]="planInfoSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
-                        @for (item of planInfos; track idx; let idx = $index) {
-                          <mat-option [value]="item.value">
-                            {{item.name}}
-                          </mat-option>  
-                        }
-                    </mat-select>
-                </mat-form-field>
-                
-                
+                  <mat-form-field class="uhcsr-font">
+                      <mat-label class="uhcsr-font">Policy Year</mat-label>
+                      <mat-select 
+                          [(value)]="policyYearsSelectedValue" disableRipple="true" panelClass="uhcsr-font" class="uhcsr-font" appearance="outline">
+                          @for (item of policyYears; track idx; let idx = $index) {
+                            <mat-option [value]="item.value">
+                              {{item.name}}
+                            </mat-option>  
+                          }
+                      </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field class="uhcsr-font">
+                      <mat-label class="uhcsr-font">Plan Info</mat-label>
+                      <mat-select 
+                          [(value)]="planInfoSelectedValue" disableRipple="true" panelClass="uhcsr-font" ngClass="uhcsr-font" appearance="outline">
+                          @for (item of planInfos; track idx; let idx = $index) {
+                            <mat-option [value]="item.value">
+                              {{item.name}}
+                            </mat-option>  
+                          }
+                      </mat-select>
+                  </mat-form-field>                    
+                  </div>
+                </div>
+
                 <my-coverage-history-item 
                     accountType="Primary"
                     accountName="Acct Five Eis Test"
