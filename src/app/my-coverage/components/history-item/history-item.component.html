@@ -13,8 +13,7 @@
 
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    <!-- TODO: small screens transpose rows/cols -->
-                    <div class="coverage-header">
+                    <div class="coverage-header" [class.small]="isSmallScreen">
                         <div class="col-1">
                             <span class="heading">SRID</span>
                             <span class="content">{{ srId }}</span>
@@ -28,7 +27,7 @@
                             <span class="content">{{ clientName }}</span>
                         </div>
                     </div>
-                </mat-panel-title>
+            </mat-panel-title>
             </mat-expansion-panel-header>
 
             <div class="policy-details">

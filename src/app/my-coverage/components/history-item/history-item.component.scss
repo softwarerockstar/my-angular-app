@@ -31,6 +31,8 @@
             mat-expansion-panel-header {
                 border: solid 1px var(--color-border-2);    
                 background: var(--color-info);
+                padding-top: 12px;
+                padding-bottom: 12px;
 
                 .coverage-header {
                     width: 100%;    
@@ -47,6 +49,14 @@
                         display: inline-block;
                         width: 40%;
                     }
+                    &.small {
+                        .col-1, .col-2, .col-3 {
+                            display: block;
+                            width: 100%;
+                        }
+                        
+                    }
+                
                 
                     .heading {
                         font-family: var(--font-regular);
@@ -60,6 +70,18 @@
                         font-size: 16px;
                         font-weight: normal;    
                     }
+
+                    // &.small-container {
+                    //     .col-4 {
+                    //         display: inline-block;
+                    //         width: 53%;
+                    //     }
+
+                    //     .col-8 {
+                    //         display: inline-block;
+                    //         width: 46%;
+                    //     }
+                    // }
                 
                 }        
             }
