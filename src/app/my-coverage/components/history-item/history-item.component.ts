@@ -23,7 +23,7 @@ export class HistoryItemComponent {
   constructor(private router: Router, private breakpointObserver: BreakpointObserver) { }
   
   ngOnInit(): void {
-    this.breakpointObserver.observe(Breakpoints.HandsetPortrait)    
+    this.breakpointObserver.observe('(max-width: 775px)')    
       .subscribe((state: BreakpointState) => {
         if (state.matches)
           this.isSmallScreen = true;

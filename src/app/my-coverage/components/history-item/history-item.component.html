@@ -14,15 +14,15 @@
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     <div class="coverage-header" [class.small]="isSmallScreen">
-                        <div class="col-1">
+                        <div class="item-1">
                             <span class="heading">SRID</span>
                             <span class="content">{{ srId }}</span>
                         </div>
-                        <div class="col-2">
+                        <div class="item-2">
                             <span class="heading">Policy</span>
                             <span class="content">{{ policyNumber }}</span>
                         </div>
-                        <div class="col-3">
+                        <div class="item-3">
                             <span class="heading">Client Name</span>
                             <span class="content">{{ clientName }}</span>
                         </div>
@@ -51,16 +51,16 @@
                     }
                 </div>
             
-                <div class="coverage-details">
-                    <div class="col-1">
+                <div class="coverage-details" [class.small]="isSmallScreen">
+                    <div class="item-1">
                         <span class="heading">Coverage</span>
                         <span class="content">{{ coverageDate }}</span>
                     </div>
-                    <div class="col-2">
+                    <div class="item-2">
                         <span class="heading">Coverage Type</span>
                         <span class="content">{{ coverageType }}</span>
                     </div>
-                    <div class="col-3">
+                    <div class="item-3">
                         <span class="heading">Plan Info</span>
                         <span class="content">{{ planInfo }}</span>
                     </div>

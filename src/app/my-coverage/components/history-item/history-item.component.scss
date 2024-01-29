@@ -1,134 +1,113 @@
 .my-coverage-history-item {
-    
     .content {
-        margin-top: 15px;
-        margin-bottom: 30px;
-
+        
         mat-divider {
             border-top: none;
             border-bottom: dashed 1px var(--color-border-1);
-        }    
+        }
 
         .account-info {
             margin-bottom: 16px;
 
             .account-type {
                 font-family: var(--font-medium);
-                font-size: 16px;    
-            }
-            
-            // TODO: change to --font-bold
-            .account-name {
-                font-family: var(--font-medium);
                 font-size: 16px;
-                font-weight: bold;    
             }
-            
+
+            .account-name {
+                font-family: var(--font-bold);
+                font-size: 16px;
+                font-weight: bold;
+            }
+
         }
 
-        mat-expansion-panel.policy-info-header { 
-            
+        mat-expansion-panel.policy-info-header {
+
             mat-expansion-panel-header {
-                border: solid 1px var(--color-border-2);    
+                border: solid 1px var(--color-border-2);
                 background: var(--color-info);
                 padding-top: 12px;
                 padding-bottom: 12px;
 
                 .coverage-header {
-                    width: 100%;    
-                    .col-1 { 
+                    width: 100%;
+                    .item-1 {
                         display: inline-block;
-                        width: 30%;
+                        width: 21%;                        
                     }
-                
-                    .col-2 { 
+
+                    .item-2 {
                         display: inline-block;
-                        width: 21%;
+                        width: 30%;                        
                     }
-                    .col-3 { 
+                    .item-3 {
                         display: inline-block;
                         width: 40%;
+                        word-break: keep-all;
                     }
                     &.small {
-                        .col-1, .col-2, .col-3 {
+                        .item-1, .item-2, .item-3 {
                             display: block;
                             width: 100%;
                         }
-                        
+
                     }
-                
-                
+
                     .heading {
                         font-family: var(--font-regular);
                         font-size: 16px;
-                        font-weight: normal; 
-                        margin-right: 10px;   
+                        font-weight: normal;
+                        margin-right: 10px;
                     }
-                
+
                     .content {
                         font-family: var(--font-medium);
                         font-size: 16px;
-                        font-weight: normal;    
+                        font-weight: normal;
+                        text-wrap: nowrap;
                     }
-
-                    // &.small-container {
-                    //     .col-4 {
-                    //         display: inline-block;
-                    //         width: 53%;
-                    //     }
-
-                    //     .col-8 {
-                    //         display: inline-block;
-                    //         width: 46%;
-                    //     }
-                    // }
-                
-                }        
+                }
             }
 
             .policy-details {
                 margin-left: -24px;
                 margin-right: -24px;
                 margin-bottom: -28px;
-                
+
                 .coverage-details {
-                    display: inline-block;
+                    display: grid;
+                    gap: 16px;
+                    grid-template-columns:1fr 0.62fr 0.8fr 0.05fr ;                    
                     width: 100%;
                     padding: 11px 10px;
-                    
+
+                    &.small {
+                        grid-template-columns: repeat(1, 1fr) ;
+                    }
+
                     background: #f5f5f5;
                     border: 1px solid #bdcacd;
                     border-radius: 2px;
                     margin-bottom: 10px;
-        
-                    .col-1 { 
-                        display: inline-block;
-                        width: 30%;
-                    }
-                
-                    .col-2 { 
-                        display: inline-block;
-                        width: 23%;
-                    }
-                    .col-3 { 
-                        display: inline-block;
-                        width: 36%;
-                    }
-        
+
                     .heading {
+                        display: inline-block;
                         font-family: var(--font-regular);
                         font-size: 14px;
-                        font-weight: normal; 
-                        margin-right: 10px;   
+                        font-weight: normal;
+                        margin-right: 10px;
                     }
-                
+
                     .content {
+                        min-height: auto;
+                        display: inline-block;
                         font-family: var(--font-medium);
                         font-size: 16px;
-                        font-weight: normal;    
+                        font-weight: normal;
                     }
-        
-                }    
+
+                }
             }
 
             .links {
@@ -139,9 +118,9 @@
                 text-align: right;
                 border: 1px solid var(--color-border-1);
                 box-sizing: border-box;
-                margin-bottom: 12px;        
+                margin-bottom: 12px;
             }
         }
-        
+
     }
 }
