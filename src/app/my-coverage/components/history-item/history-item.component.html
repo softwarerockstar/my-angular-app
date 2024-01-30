@@ -6,12 +6,12 @@
 
         <mat-accordion multi>
             <mat-expansion-panel 
-                class="policy-info-header" 
+                class="policy-info-header"                 
                 [expanded]="true"   
                 (opened)="panelOpenState = true"
                 (closed)="panelOpenState = false">
 
-            <mat-expansion-panel-header>
+            <mat-expansion-panel-header [class.small]="isSmallScreen">
                 <mat-panel-title>
                     <div class="coverage-header" [class.small]="isSmallScreen">
                         <div class="item-1">

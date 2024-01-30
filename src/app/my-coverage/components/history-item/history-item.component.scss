@@ -27,8 +27,11 @@
             mat-expansion-panel-header {
                 border: solid 1px var(--color-border-2);
                 background: var(--color-info);
-                padding-top: 12px;
-                padding-bottom: 12px;
+
+                &.small {
+                    padding-top: 12px;
+                    padding-bottom: 12px;    
+                }
 
                 .coverage-header {
                     width: 100%;
